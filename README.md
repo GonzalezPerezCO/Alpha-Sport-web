@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-# Modulo de Estudiantes
+# Epic-Sport-_Estudiante
 
-Modulo con servicios para la creación y modificación de horarios para los estudiantes de la Escuela.
+Modulo con servicios para la creación y modificación de horarios para los estudiantes de la Escuela. Modulo de estudiantes en servidor LAMP , componente web 
 
 - Asignación de horario de inscripción aleatorio (Nuevos y Antiguos)
 - Registro de estudiantes
@@ -12,10 +11,3 @@ Modulo con servicios para la creación y modificación de horarios para los estu
 - Creación y modificación de horarios
     - En un día y hora especifico
     
-
-
-
-=======
-# Epic-Sport-_Estudiantes
-Modulo de estudiantes en servidor LAMP , componente web 
->>>>>>> 78319f95f7ca01a28c57a3326d91798eefa8c18a
