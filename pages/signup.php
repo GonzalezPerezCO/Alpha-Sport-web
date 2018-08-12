@@ -15,16 +15,18 @@
 
     if($_POST['password'] == $_POST['confirm_password']){
 
-      $query = "SELECT id FROM USERS WHERE email ='".$_POST['email']."'";
+      $query = "SELECT id FROM testudiantes WHERE email ='".$_POST['email']."'";
       $consul = mysqli_query($conn, $query);
       $results = mysqli_fetch_array($consul);
       
       if (count($results) == 0) {
 
-        $query = "INSERT INTO USERS (email, password) VALUES ('".$_POST['email']."' ,'".$_POST['confirm_password']."')";
+        $query = "INSERT INTO testudiantes (email, password) VALUES ('".$_POST['email']."' ,'".$_POST['confirm_password']."')";
         $consul = mysqli_query($conn, $query);     
            
         $message = 'Successfully created new user';
+
+        header('Location: logout.php');  
 
       }
       else{
@@ -47,7 +49,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>SignUp</title>
+    <title>Deportes - SignUp</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="../controller/assets/css/style.css">
   </head>

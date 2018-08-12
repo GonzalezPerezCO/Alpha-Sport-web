@@ -5,7 +5,7 @@
   require '../../controller/database.php';
   
   if (isset($_SESSION['user_id'])) {
-    $query = "SELECT id, email, password FROM USERS WHERE id ='".$_SESSION['user_id']."'";
+    $query = "SELECT id, email, password FROM testudiantes WHERE id ='".$_SESSION['user_id']."'";
     $consul = mysqli_query($conn, $query);
     $results = mysqli_fetch_array($consul);
   }
@@ -24,7 +24,7 @@
 <!DOCTYPE html>
 <html>
   <head>   
-    <title>My APP</title>
+    <title>Horario</title>
   </head>
   <body>
   <h1>Deportes de la Escuela!</h1>

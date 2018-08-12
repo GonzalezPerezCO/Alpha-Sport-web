@@ -17,7 +17,7 @@ try {
 
 # PROBAR CONEXION
 
-$query = "SELECT * from USERS";
+$query = "SELECT * from testudiantes";
 $results = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($results);
 

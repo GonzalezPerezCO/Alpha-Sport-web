@@ -10,7 +10,7 @@
 
   if (!empty($_POST['email']) && !empty($_POST['password'])) {    
     
-    $query = "SELECT id, email, password FROM USERS WHERE email ='".$_POST['email']."'AND password = '".$_POST['password']."'";
+    $query = "SELECT id, email, password FROM testudiantes WHERE email ='".$_POST['email']."'AND password = '".$_POST['password']."'";
     $consul = mysqli_query($conn, $query);
     $results = mysqli_fetch_array($consul);
     
@@ -31,7 +31,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Deportes - Login</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="../controller/assets/css/style.css">
   </head>
