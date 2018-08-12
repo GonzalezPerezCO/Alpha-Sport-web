@@ -19,7 +19,7 @@
     $user = $results;
   } 
 
-  $message = "<h3> Sesión iniciada como: ".$user["email"]."</h3>";
+  $message = "<h4> Sesión iniciada como: "."<b>".$user["email"]."</b>"."</h4  >";
 
 ?>
 
