@@ -1,29 +1,11 @@
 <?php
-  /*
-  require '../controller/database.php';
 
-  $message = '';
+  session_start();
 
-  if (!empty($_POST['email']) && !empty($_POST['password'])) {  
-    
-    $sql = "INSERT INTO USERS (email, password) VALUES (:email, :password)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':email', $_POST['email']);
-    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-    $stmt->bindParam(':password', $password);
 
-    $query = "INSERT INTO USERS (email, password) VALUES (:email, :password)";
-    $consul = mysqli_query($conn, $query);
-    $results = mysqli_fetch_array($consul);
-
-    if ($stmt->execute()) {
-      $message = 'Successfully created new user';
-    } else {
-      $message = 'Sorry there must have been an issue creating your account';
-    }
+  if (isset($_SESSION['user_id'])) {
+    header('Location: logout.php');    
   }
-  
-  */
 
   require '../controller/database.php';
 

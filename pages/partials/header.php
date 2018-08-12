@@ -1,19 +1,23 @@
 <?php
-    session_start();
-
-    require '../../controller/database.php';
     
-    if (isset($_SESSION['user_id'])) {
-      $query = "SELECT id, email, password FROM USERS WHERE id ='".$_SESSION['user_id']."'";
-      $consul = mysqli_query($conn, $query);
-      $results = mysqli_fetch_array($consul);
-    }
+  session_start();
+  
+  require '../../controller/database.php';
+  
+  if (isset($_SESSION['user_id'])) {
+    $query = "SELECT id, email, password FROM USERS WHERE id ='".$_SESSION['user_id']."'";
+    $consul = mysqli_query($conn, $query);
+    $results = mysqli_fetch_array($consul);
+  }
+  else{
+    header('Location: ../login.php');  
+  }
 
-    $user = null;
-    
-    if (count($results) > 0) {
-      $user = $results;
-    } 
+  $user = null;
+  
+  if (count($results) > 0) {
+    $user = $results;
+  } 
 
 ?>
 
