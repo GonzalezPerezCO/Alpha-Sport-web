@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 12-08-2018 a las 05:02:31
+-- Tiempo de generación: 12-08-2018 a las 06:57:09
 -- Versión del servidor: 5.7.23-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.30-0ubuntu0.16.04.1
 
@@ -36,17 +36,31 @@ CREATE TABLE `testudiantes` (
   `activo` tinyint(1) DEFAULT NULL,
   `email` varchar(100) NOT NULL COMMENT 'correo de la escuela',
   `ultimo_periodo` varchar(50) DEFAULT NULL COMMENT 'e.j: 2018-2, 2018-i',
-  `password` varchar(100) NOT NULL
+  `password` varchar(100) NOT NULL,
+  `bloqueado` tinyint(1) DEFAULT NULL COMMENT 'si esta bloqueado ',
+  `observacion` varchar(3000) DEFAULT NULL COMMENT 'observaciones al estudiante'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `testudiantes`
 --
 
-INSERT INTO `testudiantes` (`id`, `nombre`, `apellido`, `codigo`, `carrera`, `semestre`, `activo`, `email`, `ultimo_periodo`, `password`) VALUES
-(1, NULL, NULL, NULL, NULL, NULL, NULL, 'mama', NULL, '000'),
-(2, NULL, NULL, NULL, NULL, NULL, NULL, 'manuel.perez-e@mail.escuelaing.edu.co', NULL, '000'),
-(3, NULL, NULL, NULL, NULL, NULL, NULL, 'otro', NULL, '000');
+INSERT INTO `testudiantes` (`id`, `nombre`, `apellido`, `codigo`, `carrera`, `semestre`, `activo`, `email`, `ultimo_periodo`, `password`, `bloqueado`, `observacion`) VALUES
+(1, NULL, NULL, NULL, NULL, NULL, NULL, 'mama', NULL, '000', NULL, NULL),
+(2, NULL, NULL, NULL, NULL, NULL, NULL, 'manuel.perez-e@mail.escuelaing.edu.co', NULL, '000', NULL, NULL),
+(3, NULL, NULL, NULL, NULL, NULL, NULL, 'otro', NULL, '000', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `thorarios`
+--
+
+CREATE TABLE `thorarios` (
+  `id` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `horario` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Índices para tablas volcadas
