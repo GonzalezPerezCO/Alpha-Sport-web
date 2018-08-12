@@ -60,7 +60,7 @@
             echo '<th>'."Estudiante".'</th>';
             echo '<th>'."Día 1".'</th>';
             echo '<th>'."Día 2".'</th>';
-            echo '<th>'."Día 2".'</th>';
+            echo '<th>'."Día 3".'</th>';
           echo'</tr>'; 
           echo'<tr>'; 
             echo '<td>'.$results['codigo'].'</td>';
@@ -74,7 +74,7 @@
         
       }else{
 
-        echo "<br> <br>  <button type='button'>Modificar horario</button> ";
+        echo "<br> <br>  <button type='button'>Crear horario</button> ";
 
       }
       
