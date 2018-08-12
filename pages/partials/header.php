@@ -68,9 +68,16 @@
             echo '<td>'.$results['dia2'].'<br>'.$results['hora2'].'</td>';
             echo '<td>'.$results['dia3'].'<br>'.$results['hora3'].'</td>';        
           echo'</tr>';
-        echo'</table>';
+        echo'</table>';  
         
+        echo "<br> <br>  <button type='button'>Modificar horario</button> ";
+        
+      }else{
+
+        echo "<br> <br>  <button type='button'>Modificar horario</button> ";
+
       }
+      
 
             
       ?>
