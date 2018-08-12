@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 12-08-2018 a las 08:32:04
+-- Tiempo de generación: 12-08-2018 a las 10:00:24
 -- Versión del servidor: 5.7.23-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.30-0ubuntu0.16.04.1
 
@@ -61,9 +61,9 @@ CREATE TABLE `thorarios` (
   `dia1` varchar(15) DEFAULT NULL COMMENT 'lunes...sabado',
   `dia2` varchar(15) DEFAULT NULL COMMENT 'lunes...sabado',
   `dia3` varchar(15) DEFAULT NULL COMMENT 'lunes...sabado',
-  `hora1` varchar(10) DEFAULT NULL COMMENT '07:00...17:00',
-  `hora2` varchar(10) DEFAULT NULL COMMENT '07:00...17:00',
-  `hora3` varchar(10) DEFAULT NULL COMMENT '07:00...17:00'
+  `hora1` varchar(20) DEFAULT NULL COMMENT '07:00...17:00-07:00...17:00',
+  `hora2` varchar(20) DEFAULT NULL COMMENT '07:00...17:00-07:00...17:00',
+  `hora3` varchar(20) DEFAULT NULL COMMENT '07:00...17:00-07:00...17:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -72,7 +72,7 @@ CREATE TABLE `thorarios` (
 
 INSERT INTO `thorarios` (`id`, `email`, `dia1`, `dia2`, `dia3`, `hora1`, `hora2`, `hora3`) VALUES
 (1, 'manuel.perez-e@mail.escuelaing.edu.co', NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 'mama', NULL, NULL, NULL, NULL, NULL, NULL);
+(2, 'mama', 'Lunes', 'martes', 'Miercoles ', '07:00', '12:00', '17:00');
 
 --
 -- Índices para tablas volcadas
