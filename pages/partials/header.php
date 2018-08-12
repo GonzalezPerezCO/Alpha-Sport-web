@@ -34,8 +34,13 @@
    <br>
    <br>
    <br>
+    <div>
+      <!-- img src="../../media/logo.png" width="384,4" height="151,5" alt="Escuela Colombiana de Ingeniería Julio Garavito" align="middle" -->
+    </div>
+   <br>
+   <br>
    
-  <div>
+  <div class="logo_eci">
   TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO 
   TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO 
   TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO 
