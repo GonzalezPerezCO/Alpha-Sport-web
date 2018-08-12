@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 12-08-2018 a las 12:59:56
+-- Tiempo de generación: 12-08-2018 a las 13:17:23
 -- Versión del servidor: 5.7.23-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.30-0ubuntu0.16.04.1
 
@@ -31,15 +31,20 @@ CREATE TABLE `GLOBAL` (
   `MAX_ESTUDIANTES` int(11) NOT NULL,
   `MAX_NUEVOS` int(11) NOT NULL,
   `MAX_ANTIGUOS` int(11) NOT NULL,
-  `MAX_TURNOS_DIA` int(11) NOT NULL
+  `MAX_TURNOS_DIA` int(11) NOT NULL,
+  `cant_d1` int(11) NOT NULL DEFAULT '0',
+  `cant_d2` int(11) NOT NULL DEFAULT '0',
+  `cant_d3` int(11) NOT NULL DEFAULT '0',
+  `cant_nuevos` int(11) NOT NULL DEFAULT '0',
+  `cant_antiguos` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `GLOBAL`
 --
 
-INSERT INTO `GLOBAL` (`id`, `MAX_ESTUDIANTES`, `MAX_NUEVOS`, `MAX_ANTIGUOS`, `MAX_TURNOS_DIA`) VALUES
-(1, 350, 175, 175, 20);
+INSERT INTO `GLOBAL` (`id`, `MAX_ESTUDIANTES`, `MAX_NUEVOS`, `MAX_ANTIGUOS`, `MAX_TURNOS_DIA`, `cant_d1`, `cant_d2`, `cant_d3`, `cant_nuevos`, `cant_antiguos`) VALUES
+(1, 350, 175, 175, 20, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
