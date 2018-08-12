@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="controller/assets/css/style.css">
   </head>
   <body>
-    <h1>Your App</h1>
+    <h1>Deportes de la Escuela</h1>
     <?php if(!empty($user)): ?>      
       <a href="pages/logout.php">
         Logout

@@ -27,7 +27,7 @@
     <title>My APP</title>
   </head>
   <body>
-  <h1>YOUR APP!</h1>
+  <h1>Deportes de la Escuela!</h1>
     
   <div>
   TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO 
