@@ -19,9 +19,13 @@
   } 
 
   $message = "<h4> Sesión iniciada como: ".$user["nombre"]." ".$user["apellido"]."</h4>";
+  $message_h="";
 
-
-  if (!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['confirm_password'])) {  
+  if ($_POST['dia1']!="N/A" || $_POST['dia2']!="N/A" || $_POST['dia2']!="N/A" ) {  
+    $message_h="Solicitud realizada";
+  }
+  else{
+    $message_h="Tiene que inscribir por lo menos un día y una hora";
   }
 
 ?>
@@ -82,10 +86,12 @@
       }    
       ?>
 
-    
-    <form name="mod_horario" method="post">
+    <?php if(!empty($message_h)): ?>
+      <p> <?= $message_h ?></p>
+    <?php endif; ?>
+    <form name="mod_horario" action="header.php" method="post">
         Día1: <select name="dia1">
-                <option value="---">N/A</option>
+                <option selected="ninguno">N/A</option>                
                 <option value="Lunes">Lunes</option>
                 <option value="Martes">Martes</option>
                 <option value="Miércoles">Miércoles</option>
@@ -93,7 +99,7 @@
                 <option value="Viernes">Viernes</option>
                 <option value="Sábado">Sábado</option>                
                 </select>
-               Hora día 1: <select name="hora1">
+        Hora día 1: <select name="hora1">
                 <option value="7:00">7:00</option>
                 <option value="8:00">8:00</option>
                 <option value="9:00">9:00</option>
@@ -108,7 +114,7 @@
                 </select>
         <br><br>      
         Día2: <select name="dia2">
-                <option value="---">N/A</option>
+                <option selected="ninguno">N/A</option> 
                 <option value="Lunes">Lunes</option>
                 <option value="Martes">Martes</option>
                 <option value="Miércoles">Miércoles</option>
@@ -133,7 +139,7 @@
                 </select>
         <br><br>      
         Día3: <select name="dia3">
-                <option value="---">N/A</option>
+                <option selected="ninguno">N/A</option> 
                 <option value="Lunes">Lunes</option>
                 <option value="Martes">Martes</option>
                 <option value="Miércoles">Miércoles</option>
