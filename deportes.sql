@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 12-08-2018 a las 06:57:09
+-- Tiempo de generación: 12-08-2018 a las 07:15:55
 -- Versión del servidor: 5.7.23-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.30-0ubuntu0.16.04.1
 
@@ -47,8 +47,7 @@ CREATE TABLE `testudiantes` (
 
 INSERT INTO `testudiantes` (`id`, `nombre`, `apellido`, `codigo`, `carrera`, `semestre`, `activo`, `email`, `ultimo_periodo`, `password`, `bloqueado`, `observacion`) VALUES
 (1, NULL, NULL, NULL, NULL, NULL, NULL, 'mama', NULL, '000', NULL, NULL),
-(2, NULL, NULL, NULL, NULL, NULL, NULL, 'manuel.perez-e@mail.escuelaing.edu.co', NULL, '000', NULL, NULL),
-(3, NULL, NULL, NULL, NULL, NULL, NULL, 'otro', NULL, '000', NULL, NULL);
+(2, NULL, NULL, NULL, NULL, NULL, NULL, 'manuel.perez-e@mail.escuelaing.edu.co', NULL, '000', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -59,8 +58,16 @@ INSERT INTO `testudiantes` (`id`, `nombre`, `apellido`, `codigo`, `carrera`, `se
 CREATE TABLE `thorarios` (
   `id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `horario` varchar(100) DEFAULT NULL
+  `horario` varchar(100) DEFAULT NULL COMMENT 'formato: #{lunes: 8:00, martes: 10:00, miércoles: 15:00}#'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `thorarios`
+--
+
+INSERT INTO `thorarios` (`id`, `email`, `horario`) VALUES
+(1, 'manuel.perez-e@mail.escuelaing.edu.co', '#{lunes: 8:00, martes: 10:00, miércoles: 15:00}#'),
+(2, 'mama', '#{lunes: 8:00, martes: 10:00, miércoles: 15:00}#');
 
 --
 -- Índices para tablas volcadas
@@ -75,6 +82,14 @@ ALTER TABLE `testudiantes`
   ADD UNIQUE KEY `codigo` (`codigo`);
 
 --
+-- Indices de la tabla `thorarios`
+--
+ALTER TABLE `thorarios`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email_2` (`email`),
+  ADD KEY `email` (`email`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -83,6 +98,11 @@ ALTER TABLE `testudiantes`
 --
 ALTER TABLE `testudiantes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT de la tabla `thorarios`
+--
+ALTER TABLE `thorarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

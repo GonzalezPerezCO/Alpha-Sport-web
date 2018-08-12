@@ -27,8 +27,12 @@
     <title>Horario</title>
   </head>
   <body>
-  <h1>Deportes de la Escuela!</h1>
-    
+  <h1>Deportes de la Escuela</h1>
+   <br> <span><a href="../logout.php">LogOut</a></span> 
+   <br>
+   <br>
+   <br>
+   
   <div>
   TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO 
   TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO 
@@ -50,9 +54,6 @@
   TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO 
   TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO 
   TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO TEXTO  TEXTO 
-
-   <br>
-   <span><a href="../logout.php">LogOut</a></span>
 
   </div>
 
