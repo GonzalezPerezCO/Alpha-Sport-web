@@ -20,6 +20,10 @@
 
   $message = "<h4> Sesión iniciada como: ".$user["nombre"]." ".$user["apellido"]."</h4>";
 
+
+  if (!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['confirm_password'])) {  
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -28,9 +32,6 @@
     <title>Horario</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="../../controller/assets/css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
   <h1>Deportes de la Escuela</h1>
@@ -84,15 +85,15 @@
     
     <form name="mod_horario" method="post">
         Día1: <select name="dia1">
+                <option value="---">N/A</option>
                 <option value="Lunes">Lunes</option>
                 <option value="Martes">Martes</option>
                 <option value="Miércoles">Miércoles</option>
                 <option value="Jueves">Jueves</option>
                 <option value="Viernes">Viernes</option>
-                <option value="Sábado">Sábado</option>
+                <option value="Sábado">Sábado</option>                
                 </select>
-        <br><br>
-        Hora día 1: <select name="hora1">
+               Hora día 1: <select name="hora1">
                 <option value="7:00">7:00</option>
                 <option value="8:00">8:00</option>
                 <option value="9:00">9:00</option>
@@ -105,18 +106,19 @@
                 <option value="16:00">16:00</option>
                 <option value="17:00">17:00</option>
                 </select>
-        <br> <br>       
-        Día2: <select name="dia1">
+        <br><br>      
+        Día2: <select name="dia2">
+                <option value="---">N/A</option>
                 <option value="Lunes">Lunes</option>
                 <option value="Martes">Martes</option>
                 <option value="Miércoles">Miércoles</option>
                 <option value="Jueves">Jueves</option>
                 <option value="Viernes">Viernes</option>
-                <option value="Sábado">Sábado</option>
+                <option value="Sábado">Sábado</option>                
                 </select>
               
-        <br><br>
-        Hora día 2: <select name="hora1">
+        
+        Hora día 2: <select name="hora2">
                 <option value="7:00">7:00</option>
                 <option value="8:00">8:00</option>
                 <option value="9:00">9:00</option>
@@ -129,17 +131,18 @@
                 <option value="16:00">16:00</option>
                 <option value="17:00">17:00</option>
                 </select>
-        <br>  <br>      
-        Día3: <select name="dia1">
+        <br><br>      
+        Día3: <select name="dia3">
+                <option value="---">N/A</option>
                 <option value="Lunes">Lunes</option>
                 <option value="Martes">Martes</option>
                 <option value="Miércoles">Miércoles</option>
                 <option value="Jueves">Jueves</option>
                 <option value="Viernes">Viernes</option>
-                <option value="Sábado">Sábado</option>
+                <option value="Sábado">Sábado</option>                
                 </select>               
-        <br><br>
-        Hora día 3: <select name="hora1">
+        
+        Hora día 3: <select name="hora3">
                 <option value="7:00">7:00</option>
                 <option value="8:00">8:00</option>
                 <option value="9:00">9:00</option>
