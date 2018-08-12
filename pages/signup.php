@@ -22,7 +22,7 @@
       if (count($results) == 0) {
 
         $query = "INSERT INTO testudiantes (email, password) VALUES ('".$_POST['email']."' ,'".$_POST['confirm_password']."')";
-        $consul = mysqli_query($conn, $query);     
+        $consul = mysqli_query($conn, $query) or die("Ha ocurrido un error, recarguela página y vuelva a intentarlo");     
            
         $message = 'Successfully created new user';
 
@@ -41,10 +41,8 @@
   else{
     $message="Hay campos vacios, llene los campos";
   }
-
-
-  
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>

@@ -40,15 +40,39 @@
    <br>
    <br>
    <br>
-    <div>
-      <!-- img src="../../media/logo.png" width="384,4" height="151,5" alt="Escuela Colombiana de Ingeniería Julio Garavito" align="middle" -->
-    </div>
-   <br>
-   <br>
-   
     
+    <!-- img src="../../media/logo.png" width="384,4" height="151,5" alt="Escuela Colombiana de Ingeniería Julio Garavito" align="middle" -->
+    <div id = "tabla">
+    
+    <?php
+    
+    $query = "SELECT thorarios.email as email, dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE thorarios.email= 'mama'";
+    $consul = mysqli_query($conn, $query);
+    $results = mysqli_fetch_array($consul);
 
-  </div>
+    
+    echo'<table class="gridtable" align="center">'; 
+      echo'<tr>'; 
+        echo '<th>'."Estudiante".'</th>';
+        echo '<th>'."Día 1".'</th>';
+        echo '<th>'."Día 2".'</th>';
+        echo '<th>'."Día 2".'</th>';
+      echo'</tr>'; 
+      echo'<tr>'; 
+        echo '<td>'.$results['email'].'</td>';
+        echo '<td>'.$results['dia1'].'<br>'.$results['hora1'].'</td>';
+        echo '<td>'.$results['dia2'].'<br>'.$results['hora2'].'</td>';
+        echo '<td>'.$results['dia3'].'<br>'.$results['hora3'].'</td>';        
+      echo'</tr>';
+    echo'</table>';
+      
+    ?>
+   
+   
+    </div>
 
-  </body>
+
+  </body>  
 </html>
+
+
