@@ -1,11 +1,11 @@
 <?php
 
-$server = 'localhost';
-$username = 'root';
-$password = 'admin';
-$database = 'php_login_database';
+$server = 'proyecto.com';
+$username = 'deportes';
+$password = 'deportes20182';
+$database = 'deportes';
 
-$conn = mysqli_connect($server, $username, $password, $database) or die('Error al conectar con MySQL Server.');
+$conn = mysqli_connect($server, $username, $password, $database) or die('Error al conectar con SQLServer.');
 
 /*
 # CONEXION ANTIGUA

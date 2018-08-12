@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 11-08-2018 a las 11:49:57
+-- Tiempo de generación: 12-08-2018 a las 04:38:33
 -- Versión del servidor: 5.7.23-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.30-0ubuntu0.16.04.1
 
@@ -17,51 +17,48 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `php_login_database`
+-- Base de datos: `deportes`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `USERS`
+-- Estructura de tabla para la tabla `testudiantes`
 --
 
-CREATE TABLE `USERS` (
+CREATE TABLE `testudiantes` (
   `id` int(11) NOT NULL,
-  `email` varchar(200) COLLATE latin1_spanish_ci NOT NULL,
-  `password` varchar(200) COLLATE latin1_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
-
---
--- Volcado de datos para la tabla `USERS`
---
-
-INSERT INTO `USERS` (`id`, `email`, `password`) VALUES
-(1, '1@correo.com', '123'),
-(2, '2@correo.com', '1234'),
-(3, 'xyz', 'xyz');
+  `nombre` varchar(100) NOT NULL,
+  `apellido` varchar(100) NOT NULL,
+  `codigo` int(11) NOT NULL,
+  `carrera` varchar(1000) NOT NULL,
+  `semestre` int(11) NOT NULL,
+  `activo` tinyint(1) NOT NULL,
+  `correo` varchar(100) NOT NULL,
+  `ultimo_periodo` varchar(50) NOT NULL COMMENT 'e.j: 2018-2, 2018-i'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `USERS`
+-- Indices de la tabla `testudiantes`
 --
-ALTER TABLE `USERS`
+ALTER TABLE `testudiantes`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `codigo` (`codigo`),
+  ADD UNIQUE KEY `correo` (`correo`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `USERS`
+-- AUTO_INCREMENT de la tabla `testudiantes`
 --
-ALTER TABLE `USERS`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `testudiantes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
