@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 12-08-2018 a las 04:38:33
+-- Tiempo de generación: 12-08-2018 a las 05:02:31
 -- Versión del servidor: 5.7.23-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.30-0ubuntu0.16.04.1
 
@@ -28,15 +28,25 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `testudiantes` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
-  `apellido` varchar(100) NOT NULL,
-  `codigo` int(11) NOT NULL,
-  `carrera` varchar(1000) NOT NULL,
-  `semestre` int(11) NOT NULL,
-  `activo` tinyint(1) NOT NULL,
-  `correo` varchar(100) NOT NULL,
-  `ultimo_periodo` varchar(50) NOT NULL COMMENT 'e.j: 2018-2, 2018-i'
+  `nombre` varchar(100) DEFAULT NULL,
+  `apellido` varchar(100) DEFAULT NULL,
+  `codigo` int(11) DEFAULT NULL,
+  `carrera` varchar(1000) DEFAULT NULL,
+  `semestre` int(11) DEFAULT NULL,
+  `activo` tinyint(1) DEFAULT NULL,
+  `email` varchar(100) NOT NULL COMMENT 'correo de la escuela',
+  `ultimo_periodo` varchar(50) DEFAULT NULL COMMENT 'e.j: 2018-2, 2018-i',
+  `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `testudiantes`
+--
+
+INSERT INTO `testudiantes` (`id`, `nombre`, `apellido`, `codigo`, `carrera`, `semestre`, `activo`, `email`, `ultimo_periodo`, `password`) VALUES
+(1, NULL, NULL, NULL, NULL, NULL, NULL, 'mama', NULL, '000'),
+(2, NULL, NULL, NULL, NULL, NULL, NULL, 'manuel.perez-e@mail.escuelaing.edu.co', NULL, '000'),
+(3, NULL, NULL, NULL, NULL, NULL, NULL, 'otro', NULL, '000');
 
 --
 -- Índices para tablas volcadas
@@ -47,8 +57,8 @@ CREATE TABLE `testudiantes` (
 --
 ALTER TABLE `testudiantes`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `codigo` (`codigo`),
-  ADD UNIQUE KEY `correo` (`correo`);
+  ADD UNIQUE KEY `correo` (`email`),
+  ADD UNIQUE KEY `codigo` (`codigo`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -58,7 +68,7 @@ ALTER TABLE `testudiantes`
 -- AUTO_INCREMENT de la tabla `testudiantes`
 --
 ALTER TABLE `testudiantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
