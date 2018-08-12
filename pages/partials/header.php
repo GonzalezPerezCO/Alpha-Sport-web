@@ -25,6 +25,8 @@
 <html>
   <head>   
     <title>Horario</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="../../controller/assets/css/style.css">
   </head>
   <body>
   <h1>Deportes de la Escuela</h1>
