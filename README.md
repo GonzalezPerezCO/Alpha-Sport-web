@@ -49,8 +49,8 @@ si están cerrados:
 
 `sudo mysql_secure_installation`
 
-*password: 000*
-*eliminar usuarios anónimos: SI*
+- *password: 000*
+- *eliminar usuarios anónimos: SI*
 
 **Entrar a mysql así:**
 
