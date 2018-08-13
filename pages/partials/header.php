@@ -39,11 +39,6 @@
 
       <?php
       #require 'horario.php';
-
-      $query_d = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE thorarios.email= '".$user["email"]."'";
-      $consul_d = mysqli_query($conn, $query_d) or die(mysqli_error($conn));
-      $results_d = mysqli_fetch_array($consul_d);
-
       
       echo '<form name="mod_horario" action="header.php" method="post">';
       echo '    Día1: <select name="dia1">';
