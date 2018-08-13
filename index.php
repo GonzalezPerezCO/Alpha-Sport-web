@@ -43,7 +43,7 @@
     <br>
     Equipo de trabajo:<br>
     Ing. Claudia Patricia Castañeda<br>
-    Juan Francisco Gonzales<br>
+    Juan Francisco Gonzalez<br>
     Manuel Sergio Pérez<br>
     <i>Decanatura de Ingeniería de Sistemas</i>
     <br>
