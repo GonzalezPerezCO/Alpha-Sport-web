@@ -3,18 +3,13 @@
   session_start();
   
   require '../../controller/database.php';
-  require 'horario.php';
+  
   
   if (!isset($_SESSION['user_id'])) {
     header('Location: ../login.php');
   }
-  $user = null; 
-
-  if (count($results_u) > 0) {
-    $user = $results_u;
-  } 
-
-  $message = "<h4> Sesión iniciada como: ".$user["nombre"]." ".$user["apellido"]."</h4>";
+  
+  $message = "<h4> Sesión iniciada como: ".$_SESSION["user_nombre1"]." ".$_SESSION["user_apellido1"]."</h4>";
   
 ?>
 
@@ -36,16 +31,17 @@
    <br>
    <br>
 
-    <div id = "tabla">  
-      
+    <div id = "tabla">        
 
       <?php if(!empty($message_h)): ?>
         <p> <?= $message_h ?></p>
       <?php endif; ?>
 
       <?php
+      #require 'horario.php';
+
       $query_d = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE thorarios.email= '".$user["email"]."'";
-      $consul_d = mysqli_query($conn, $query_d);
+      $consul_d = mysqli_query($conn, $query_d) or die(mysqli_error($conn));
       $results_d = mysqli_fetch_array($consul_d);
 
       

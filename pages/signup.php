@@ -14,13 +14,13 @@
       if($_POST['password'] == $_POST['confirm_password']){
 
         $query = "SELECT id FROM testudiantes WHERE email ='".$_POST['email']."'";
-        $consul = mysqli_query($conn, $query);
+        $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
         $results = mysqli_fetch_array($consul);
         
         if (count($results) == 0) {
 
           $query = "INSERT INTO testudiantes (email, password) VALUES ('".$_POST['email']."' ,'".$_POST['confirm_password']."')";
-          $consul = mysqli_query($conn, $query) or die("Ha ocurrido un error, recarguela página y vuelva a intentarlo");     
+          $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
             
           $message = 'Successfully created new user';
 
