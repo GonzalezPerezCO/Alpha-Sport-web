@@ -27,7 +27,7 @@
         $_SESSION['user_hora2'] = $results["hora2"];
         $_SESSION['user_hora3'] = $results["hora3"];
         
-        #header("Location: partials/header.php");
+        header("Location: partials/header.php");
       } else {
         $message = 'Sorry, those credentials do not match';
       }

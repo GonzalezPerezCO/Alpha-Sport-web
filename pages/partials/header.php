@@ -9,7 +9,7 @@
     header('Location: ../login.php');
   }
   
-  $message = "<h4> Sesión iniciada como: ".$_SESSION["user_nombre1"]." ".$_SESSION["user_apellido1"]."</h4>";
+  $message = "<h4> Sesión iniciada como: ".$_SESSION["user_nombre"]." ".$_SESSION["user_apellido"]."</h4>";
   
 ?>
 
