@@ -15,7 +15,7 @@
       
       $message = '';   
       
-      if (count($results) >0) {
+      if ( !empty($results)) {
         $_SESSION['user_id'] = $results["id"];
         $_SESSION['user_email'] = $results["email"];
         $_SESSION['user_nombre'] = $results["nombre"];
