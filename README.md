@@ -15,7 +15,7 @@ Modulo con servicios para la creación y modificación de horarios para los estu
 
 # Configuración Servidor LAMP (Linux-Apache-Mysql-PHP)
 
-Este documento contiene la guía de instalación y configuración del servidor LAMP para el proyecto en PGR2. Para dar facilidad comprensión y lectura, se usará la siguiente convención de colores: **color verde** para linea de comandos bash, **color rojo** para lineas en consola de mysql y **color gris** para rutas o lineas de archivos.
+Este documento contiene la guía de instalación y configuración del servidor LAMP para el proyecto en PGR2. Para dar facilidad comprensión y lectura, se usará la siguiente convención de colores: color verde para linea de comandos bash, color rojo para lineas en consola de mysql y color gris para rutas o lineas de archivos.
 
 El software requerido sobre Ubuntu 16 es el siguiente:
 
@@ -45,14 +45,14 @@ si están cerrados:
 
 ## Configuración:
 
-*SEGURIDAD ADICIONAL (seleccionar no)*
+SEGURIDAD ADICIONAL (seleccionar no)
 
 `sudo mysql_secure_installation`
 
-- *password: 000*
-- *eliminar usuarios anónimos: SI*
+- password: 000
+- eliminar usuarios anónimos: SI
 
-**Entrar a mysql así:**
+Entrar a mysql así:
 
 `sudo mysql -u root -p`
 
@@ -66,9 +66,9 @@ Aplicar configuraciones
 
 `sudo service apache2 restart`
 
-verificar archivo de **index**
+verificar archivo de index
 
-*cat /var/www/html/index.html*
+cat /var/www/html/index.html
 
 Agregar permisos:
 
@@ -89,7 +89,7 @@ modificar las siguientes lineas:
 `error_reporting=E_ALL & ~E_NOTICE`
 `display_errors=On`
 
-Resumen de **phpinfo**, crear: 
+Resumen de phpinfo, crear: 
 
 `echo “<?php phpinfo(); ?>” > /var/www/html/info.php`
 
@@ -105,7 +105,7 @@ Instalación phpmyadmin:
 `uso de dbconfig-ommon: SI`
 `contraseña conexión de Mysql para phpmyadmin: 000`
 
-Configurar apache y phpmyadmin, editar **apache2.conf**
+Configurar apache y phpmyadmin, editar apache2.conf
 
 `sudo xed /etc/apache2/apache2.conf`
 
@@ -139,7 +139,7 @@ Modificar a "por contraseña"
 
 `UPDATE mysql.user SET plugin='mysql_native_password' WHERE user = 'root';`
 
-Verificar inicio de sesión: user: **root** , password: **admin**
+Verificar inicio de sesión: user: root , password: admin
 
 ![phpmyadmin][img1]
 
