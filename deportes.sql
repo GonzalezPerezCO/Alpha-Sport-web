@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 12-08-2018 a las 13:17:23
+-- Tiempo de generación: 13-08-2018 a las 08:20:24
 -- Versión del servidor: 5.7.23-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.30-0ubuntu0.16.04.1
 
@@ -73,7 +73,8 @@ CREATE TABLE `testudiantes` (
 
 INSERT INTO `testudiantes` (`id`, `nombre`, `apellido`, `codigo`, `carrera`, `semestre`, `activo`, `email`, `ultimo_periodo`, `password`, `bloqueado`, `observacion`) VALUES
 (1, 'Nombre1 Nombre2', 'Apellido1 Apellido2', 99699699, 'Ingeniería de Sistemas', 12, 1, 'mama', NULL, '000', 0, NULL),
-(2, 'Manuel Sergio', 'Pérez Espitia', 2095112, 'Ingeniería de Sistemas', 10, 1, 'manuel.perez-e@mail.escuelaing.edu.co', NULL, '000', 0, 'Ninguna Ob--');
+(2, 'Manuel Sergio', 'Pérez Espitia', 2095112, 'Ingeniería de Sistemas', 10, 1, 'manuel.perez-e@mail.escuelaing.edu.co', NULL, '000', 0, 'Ninguna Ob--'),
+(3, NULL, NULL, NULL, NULL, NULL, 1, 'otro', NULL, '000', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -84,13 +85,13 @@ INSERT INTO `testudiantes` (`id`, `nombre`, `apellido`, `codigo`, `carrera`, `se
 CREATE TABLE `thorarios` (
   `id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `done` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'si ya hizo horario',
-  `dia1` varchar(15) NOT NULL DEFAULT '---' COMMENT 'lunes...sabado',
-  `dia2` varchar(15) NOT NULL DEFAULT '---' COMMENT 'lunes...sabado',
-  `dia3` varchar(15) NOT NULL DEFAULT '---' COMMENT 'lunes...sabado',
-  `hora1` varchar(20) NOT NULL DEFAULT '---' COMMENT '07:00...17:00-07:00...17:00',
-  `hora2` varchar(20) NOT NULL DEFAULT '---' COMMENT '07:00...17:00-07:00...17:00',
-  `hora3` varchar(20) NOT NULL DEFAULT '---' COMMENT '07:00...17:00-07:00...17:00'
+  `done` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'hizo horario? 0 es NO',
+  `dia1` varchar(15) NOT NULL DEFAULT 'N/A' COMMENT 'lunes...sabado',
+  `dia2` varchar(15) NOT NULL DEFAULT 'N/A' COMMENT 'lunes...sabado',
+  `dia3` varchar(15) NOT NULL DEFAULT 'N/A' COMMENT 'lunes...sabado',
+  `hora1` varchar(20) NOT NULL DEFAULT 'N/A' COMMENT '07:00...17:00-07:00...17:00',
+  `hora2` varchar(20) NOT NULL DEFAULT 'N/A' COMMENT '07:00...17:00-07:00...17:00',
+  `hora3` varchar(20) NOT NULL DEFAULT 'N/A' COMMENT '07:00...17:00-07:00...17:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -98,8 +99,8 @@ CREATE TABLE `thorarios` (
 --
 
 INSERT INTO `thorarios` (`id`, `email`, `done`, `dia1`, `dia2`, `dia3`, `hora1`, `hora2`, `hora3`) VALUES
-(1, 'manuel.perez-e@mail.escuelaing.edu.co', 0, '---', '---', '---', '---', '---', '---'),
-(2, 'mama', 0, '---', '---', '---', '---', '---', '---');
+(1, 'manuel.perez-e@mail.escuelaing.edu.co', 0, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'),
+(2, 'mama', 0, 'Lunes', 'Martes', 'Miercoles', '07:00', '11:00', '13:00');
 
 --
 -- Índices para tablas volcadas
