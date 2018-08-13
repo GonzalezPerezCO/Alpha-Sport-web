@@ -1,5 +1,4 @@
 <?php
-    
   session_start();
   
   require '../../controller/database.php';
@@ -38,7 +37,7 @@
       <?php endif; ?>
 
       <?php
-      #require 'horario.php';
+      
       
       echo '<form name="mod_horario" action="header.php" method="post">';
       echo '    Día1: <select name="dia1">';
