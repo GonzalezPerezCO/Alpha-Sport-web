@@ -1,6 +1,6 @@
 <?php
 
-$server = 'estudiantes.is.escuelaing.edu.co';
+$server = 'localhost';
 $username = 'deportes';
 $password = 'deportes20182';
 $database = 'deportes';
