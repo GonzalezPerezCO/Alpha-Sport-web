@@ -80,13 +80,13 @@ Agregar permisos:
 
 ## Configuración
 
-`cd /etc/php/7.0/apache2/`
+`cd /etc/php/7.0/apache2/`  
 `sudo xed php.ini`
 
 modificar las siguientes lineas:
 
-`short_open_tag = On`
-`error_reporting=E_ALL & ~E_NOTICE`
+`short_open_tag = On`  
+`error_reporting=E_ALL & ~E_NOTICE`  
 `display_errors=On`
 
 Resumen de phpinfo, crear: 
@@ -101,9 +101,9 @@ Instalación phpmyadmin:
 
 ## Configuración:
 
-` usar: apache2`
-`uso de dbconfig-ommon: SI`
-`contraseña conexión de Mysql para phpmyadmin: 000`
+`usar: apache2`  
+`uso de dbconfig-ommon: SI`  
+`contraseña conexión de Mysql para phpmyadmin: 000`  
 
 Configurar apache y phpmyadmin, editar apache2.conf
 
@@ -111,7 +111,7 @@ Configurar apache y phpmyadmin, editar apache2.conf
 
 Agregar al final:
 
-`# Include phpmyadmin file`
+`# Include phpmyadmin file`  
 `Include /etc/phpmyadmin/apache.conf`
 
 Aplicar cambios:
@@ -122,7 +122,7 @@ Probar phpmyadmin:
 
 En: __localhost/phpmyadmin__
 
-`usuario: phpmyadmin`
+`usuario: phpmyadmin`  
 `contraseña: 000`
 
 Agregar configuración para conexiones a BD con root:
@@ -135,7 +135,7 @@ ver modo de autenticación:
 
 `select user, plugin from mysql.user;`
 
-Modificar a "por contraseña"
+Modificar para pedir "por contraseña"
 
 `UPDATE mysql.user SET plugin='mysql_native_password' WHERE user = 'root';`
 
@@ -149,9 +149,51 @@ editar hotst
 
 `sudo nano etc/hosts`
 
-agregar:
+# CONFIGURACIONES PARA EL OPTIMO DESEMPEÑO DEL SERVIDOR
 
-`127.0.0.1        proyecto.com`
+Para **php**:
+
+Agregar la linea:
+
+`sudo xed /etc/phpmyadmin/config.inc.php`
+
+`$cfg['ExecTimeLimit'] = 6000;`
+
+Colocar los valores:
+
+`sudo xed /etc/php/7.0/apache2/php.ini`
+
+`post_max_size = 750M`
+
+`upload_max_filesize = 750M`
+
+`max_execution_time = 5000`
+
+`max_input_time = 5000`
+
+`memory_limit = 1000M`
+
+`short_open_tag = On`
+
+`error_reporting=E_ALL & ~E_NOTICE`
+ 
+ para ver errores:
+
+`display_errors=On`
+ 
+ Para MySQL:
+ 
+aumentar conexiones de mysql a minimo 300:
+
+`set GLOBAL max_connections = 300;`
+
+Aplicar cambios:
+
+`sudo service apache2 restart`
+
+`sudo service mysql restart`
+
+`sudo service php7.0-fpmrestart`
 
 # Bibliografía
 
