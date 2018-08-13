@@ -4,13 +4,8 @@
   
   require '../../controller/database.php';
   
-  if (isset($_SESSION['user_id'])) {
-    #$query_u = "SELECT * FROM testudiantes WHERE id ='".$_SESSION['user_id']."'";
-    #$consul_u = mysqli_query($conn, $query_u);
-    #$results_u = mysqli_fetch_array($consul_u);
-  }
-  else{
-    header('Location: ../login.php');  
+  if (!isset($_SESSION['user_id'])) {
+    header('Location: ../login.php');
   }
   $user = null; 
 

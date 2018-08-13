@@ -4,26 +4,26 @@
 
   if (isset($_SESSION['user_id'])) {
     header('Location: partials/header.php');    
-  }
+  }else{
+    require '../controller/database.php';
 
-  require '../controller/database.php';
-
-  if (!empty($_POST['email']) && !empty($_POST['password'])) {    
+    if (!empty($_POST['email']) && !empty($_POST['password'])) {   
     
-    $query = "SELECT id, email, password FROM testudiantes WHERE email ='".$_POST['email']."'AND password = '".$_POST['password']."'";
-    $consul = mysqli_query($conn, $query);
-    $results = mysqli_fetch_array($consul);
-    
-    $message = '';   
-    
-    if (count($results) >0) {
-      $_SESSION['user_id'] = $results["id"];
-      header("Location: partials/header.php");
-      #echo '<script>location.href="partials/header.php;</script>';
-    } else {
-      $message = 'Sorry, those credentials do not match';
+      $query = "SELECT id, email, password FROM testudiantes WHERE email ='".$_POST['email']."'AND password = '".$_POST['password']."'";
+      $consul = mysqli_query($conn, $query);
+      $results = mysqli_fetch_array($consul);
+      
+      $message = '';   
+      
+      if (count($results) >0) {
+        $_SESSION['user_id'] = $results["id"];
+        header("Location: partials/header.php");
+      } else {
+        $message = 'Sorry, those credentials do not match';
+      }
     }
-  }
+
+  }  
 ?>
 
 
