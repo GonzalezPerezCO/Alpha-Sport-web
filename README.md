@@ -33,11 +33,11 @@ El software requerido sobre Ubuntu 16 es el siguiente:
 
 verificar puertos:
 
-`sudo ufw app info &quot;Apache Full&quot;_`
+`sudo ufw app info "Apache Full"`
 
 si están cerrados:
 
-`sudo ufw allow in &quot;Apache Full&quot;`
+`sudo ufw allow in "Apache Full"`
 
 #Instalación de Mysql:
 
@@ -47,7 +47,7 @@ si están cerrados:
 
 *SEGURIDAD ADICIONAL (seleccionar no)*
 
-`sudo mysql\_secure\_installation`
+`sudo mysql_secure_installation`
 
 *password: 000*
 *eliminar usuarios anónimos: SI*
@@ -85,15 +85,15 @@ Agregar permisos:
 
 modificar las siguientes lineas:
 
-`short\_open\_tag = On`
-`error\_reporting=E\_ALL &amp; ~E\_NOTICE`
-`display\_errors=On`
+`short_open_tag = On`
+`error_reporting=E_ALL & ~E_NOTICE`
+`display_errors=On`
 
-Resumen de **phpinfo**
+Resumen de **phpinfo**, crear: 
 
-crear: `echo &quot;\&lt;?php phpinfo(); ?\&gt;&quot; \&gt; /var/www/html/info.php`
+`echo “<?php phpinfo(); ?>” > /var/www/html/info.php`
 
-_ver:_ [_http://localhost/info.php_](http://localhost/info.php)
+ver: [_http://localhost/info.php_](http://localhost/info.php)
 
 Instalación phpmyadmin:
 
@@ -129,15 +129,15 @@ Agregar configuración para conexiones a BD con root:
 
 `sudo mysql -u root -p`
 
-`UPDATE mysql.user SET authentication_string=password(&#39;admin&#39;) WHERE user=&#39;root&#39;;`
+`UPDATE mysql.user SET authentication_string=password('admin') WHERE user='root';`
 
 ver modo de autenticación:
 
 `select user, plugin from mysql.user;`
 
-Modificar a &quot;por contraseña&quot;
+Modificar a "por contraseña"
 
-`UPDATE mysql.user SET plugin=&#39;mysql_native_password&#39; WHERE user = &#39;root&#39;;`
+`UPDATE mysql.user SET plugin='mysql_native_password' WHERE user = 'root';`
 
 Verificar inicio de sesión: user: **root** , password: **admin**
 
@@ -155,9 +155,8 @@ agregar:
 
 # Bibliografía
 
-[https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04)
+[digitalocean.com](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04)
 
-[https://www.youtube.com/watch?v=YggXN\_xJKbs](https://www.youtube.com/watch?v=YggXN_xJKbs)
-
+[Apache PHP MYSQL + PHPMyadmin](https://www.youtube.com/watch?v=YggXN_xJKbs)
 
 [img1]: media/php.jpg "Ventana Login phpmyadmin"
