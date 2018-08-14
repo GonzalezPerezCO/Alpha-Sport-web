@@ -7,6 +7,7 @@
   #session_destroy();
 
   require '../controller/global.php';
+  $ADATA="";
 
   header('Location: ../index.php');
 ?>
