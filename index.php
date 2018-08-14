@@ -1,8 +1,14 @@
 <?php         
-    session_start();
+    #session_start();
 
-    if (isset($_SESSION['user_id'])) {
+    /*if (isset($_SESSION['user_id'])) {
       $user=$_SESSION['user_nombre']." ".$_SESSION['user_nombre'];      
+    }*/
+
+    require 'controller/global.php';
+
+    if(empty($ADATA)){
+      
     }
 ?>
 

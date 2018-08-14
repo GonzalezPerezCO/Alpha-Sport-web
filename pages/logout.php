@@ -1,10 +1,12 @@
 <?php
 
-  session_start();
+  #session_start();
 
-  session_unset();
+  #session_unset();
 
-  session_destroy();
+  #session_destroy();
+
+  require '../controller/global.php';
 
   header('Location: ../index.php');
 ?>
