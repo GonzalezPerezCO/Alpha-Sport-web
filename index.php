@@ -48,8 +48,7 @@
     <i>Decanatura de Ingeniería de Sistemas</i>
     <br>
     <br>
-    
-
     </p>
+    
   </body>
 </html>
