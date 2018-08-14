@@ -1,9 +1,7 @@
-
-<?php          
-    
+<?php         
+    session_start();
 
     if (isset($_SESSION['user_id'])) {
-      //header('Location: pages/partials/header.php');    
       $user=$_SESSION['user_nombre']." ".$_SESSION['user_nombre'];      
     }
 ?>
