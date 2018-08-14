@@ -1,6 +1,5 @@
-
 <?php          
-    
+  # https://stackoverflow.com/questions/28807338/i-changed-mysql-port-in-xampp-now-how-do-i-listen-to-the-new-port    
 
     if (isset($_SESSION['user_id'])) {
       //header('Location: pages/partials/header.php');    
