@@ -35,7 +35,7 @@
 
     <form name="mod_horario" action="header.php" method="post">
       Día1: <select name="dia1">
-        <option selected="'.$_SESSION['user_dia1'].'" >'.$_SESSION['user_dia1'].'</option>                
+        <option selected="<?= $_SESSION['user_dia1'] ?>" ><?= $_SESSION['user_dia1'] ?> </option>                
         <option value="ninguno">N/A</option>
         <option value="Lunes">Lunes</option>
         <option value="Martes">Martes</option>
@@ -45,7 +45,7 @@
         <option value="Sábado">Sábado</option>                
       </select>
       Hora día 1: <select name="hora1">
-        <option selected="'.$_SESSION['user_hora1'].'" >'.$_SESSION['user_hora1'].'</option>                
+        <option selected="<?= $_SESSION['user_hora1'] ?>" ><?= $_SESSION['user_hora1'] ?> </option>                
         <option value="7:00">7:00</option>
         <option value="8:00">8:00</option>
         <option value="9:00">9:00</option>
@@ -61,7 +61,7 @@
       <br>
       <br>      
       Día2: <select name="dia2">
-        <option selected="'.$_SESSION['user_dia2'].'" >'.$_SESSION['user_dia2'].'</option>                
+        <option selected="<?= $_SESSION['user_dia2'] ?>" ><?= $_SESSION['user_dia2'] ?> </option>                
         <option value="Lunes">Lunes</option>
         <option value="Martes">Martes</option>
         <option value="Miércoles">Miércoles</option>
@@ -72,7 +72,7 @@
 
 
       Hora día 2: <select name="hora2">
-        <option selected="'.$_SESSION['user_hora2'].'" >'.$_SESSION['user_hora2'].'</option>                
+        <option selected="<?= $_SESSION['user_hora2'] ?>" ><?= $_SESSION['user_hora2'] ?> </option>                
         <option value="7:00">7:00</option>
         <option value="8:00">8:00</option>
         <option value="9:00">9:00</option>
@@ -88,7 +88,7 @@
       <br>
       <br>   
       Día3: <select name="dia3">
-        <option selected="'.$_SESSION['user_dia3'].'" >'.$_SESSION['user_dia3'].'</option>                
+        <option selected="<?= $_SESSION['user_dia3'] ?>" ><?= $_SESSION['user_dia3'] ?> </option>                
         <option value="Lunes">Lunes</option>
         <option value="Martes">Martes</option>
         <option value="Miércoles">Miércoles</option>
@@ -98,7 +98,7 @@
       </select>               
 
       Hora día 3: <select name="hora3">
-        <option selected="'.$_SESSION['user_hora3'].'" >'.$_SESSION['user_hora3'].'</option>                
+        <option selected="<?= $_SESSION['user_hora3'] ?>" ><?= $_SESSION['user_hora3'] ?> </option>                
         <option value="7:00">7:00</option>
         <option value="8:00">8:00</option>
         <option value="9:00">9:00</option>
