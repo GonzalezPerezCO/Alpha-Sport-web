@@ -42,7 +42,7 @@
     <p><?= $message_h ?></p>
     <?php endif; ?>           
 
-    <form name="mod_horario" action="header.php" method="post">
+    <form name="mod_horario" action="horario.php" method="post">
       Día1: <select name="dia1">
         <option selected="<?= $_COOKIE['user_dia1'] ?>" ><?= $_COOKIE['user_dia1'] ?> </option>                
         <option value="ninguno">N/A</option>

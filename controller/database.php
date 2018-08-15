@@ -1,6 +1,6 @@
 <?php
 
-$server = 'localhost';
+$server = 'p:localhost';
 $username = 'deportes';
 $password = 'deportes20182';
 $database = 'deportes';
@@ -8,4 +8,3 @@ $database = 'deportes';
 $conn = mysqli_connect($server, $username, $password, $database) or die(mysqli_error($conn));
 
 ?>
-

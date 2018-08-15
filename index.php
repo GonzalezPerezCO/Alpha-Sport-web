@@ -1,5 +1,5 @@
 <?php  
-
+  ini_set('display_errors', '1');
   if (isset($_COOKIE['user_id'])) {
       $user=$_COOKIE['user_nombre']." ".$_COOKIE['user_nombre'];      
     }
@@ -11,6 +11,7 @@
       $user=$_SESSION['user_nombre']." ".$_SESSION['user_nombre'];      
     }*/
 ?>
+
 
 <!DOCTYPE html>
 <html>
