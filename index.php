@@ -5,11 +5,10 @@
       $user=$_SESSION['user_nombre']." ".$_SESSION['user_nombre'];      
     }*/
 
-    require 'controller/global.php';
-
-    if(empty($ADATA)){
-      
+    if(!isset($_COOKIE["user"])){
+      setcookie("user", "email", time() + (86400 * 30), "/");
     }
+    
 ?>
 
 <!DOCTYPE html>
