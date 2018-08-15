@@ -1,6 +1,6 @@
 <?php
 
-  if(isset($_COOKIE["user_id"])){
+  if(isset($_COOKIE['user_id'])){
     header('Location: partials/header.php');    
   }else{
     require '../controller/database.php';    

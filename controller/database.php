@@ -5,7 +5,7 @@ $username = 'deportes';
 $password = 'deportes20182';
 $database = 'deportes';
 
-$conn = mysqli_connect($server, $username, $password, $database) or die('Error al conectar con la Base de datos.');
+$conn = mysqli_connect($server, $username, $password, $database) or die(mysqli_error($conn));
 
 ?>
 
