@@ -32,7 +32,7 @@
   setcookie('user_hora3', null, -1);
 
 
-  #header('Location: ../index.php');
+  header('Location: ../index.php');
 
 
 
