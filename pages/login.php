@@ -1,5 +1,38 @@
 <?php
 
+  if(isset($_COOKIE['user_id'])){
+    header('Location: partials/header.php');    
+  }else{
+    require '../controller/database.php';    
+
+    if (!empty($_POST['email']) && !empty($_POST['password'])) {   
+    
+      $query = "SELECT testudiantes.id as id, testudiantes.nombre as nombre, testudiantes.apellido as apellido, testudiantes.email as email, dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE thorarios.email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+      $results = mysqli_fetch_array($consul);
+      
+      $message = '';   
+      
+      if ( !empty($results)) {
+        setcookie('user_id', $results["id"], time() + 86400);
+        setcookie('user_email', $results["email"], time() + 86400);
+        setcookie('user_nombre', $results["nombre"], time() + 86400);
+        setcookie('user_apellido', $results["apellido"], time() + 86400);
+        setcookie('user_dia1', $results["dia1"], time() + 86400);
+        setcookie('user_dia2', $results["dia2"], time() + 86400);
+        setcookie('user_dia3', $results["dia3"], time() + 86400);
+        setcookie('user_hora1', $results["hora1"], time() + 86400);
+        setcookie('user_hora2', $results["hora2"], time() + 86400);
+        setcookie('user_hora3', $results["hora3"], time() + 86400);
+        
+        header("Location: partials/header.php");
+      } else {
+        $message = 'Sorry, those credentials do not match';
+      }
+    }
+  } 
+
+  /*
   session_start();
 
   if (isset($_SESSION['user_id'])) {
@@ -33,7 +66,7 @@
       }
     }
 
-  }  
+  }  */
 ?>
 
 

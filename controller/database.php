@@ -1,11 +1,11 @@
 <?php
 
-$server = 'localhost';
+$server = 'localhost:3307';
 $username = 'deportes';
 $password = 'deportes20182';
 $database = 'deportes';
 
-$conn = mysqli_connect($server, $username, $password, $database) or die('Error al conectar con SQLServer.');
+$conn = mysqli_connect($server, $username, $password, $database) or die(mysqli_error($conn));
 
 ?>
 
