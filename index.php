@@ -1,9 +1,17 @@
-<?php         
+<?php  
+
+    session_start();
+
+    if (isset($_COOKIE['user_id'])) {
+      $user=$_COOKIE['user_nombre']." ".$_COOKIE['user_nombre'];      
+    }
+
+    /*
     session_start();
 
     if (isset($_SESSION['user_id'])) {
       $user=$_SESSION['user_nombre']." ".$_SESSION['user_nombre'];      
-    }
+    }*/
 ?>
 
 <!DOCTYPE html>
