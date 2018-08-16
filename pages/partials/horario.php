@@ -76,5 +76,18 @@ if ($_POST['dia1']!="N/A" || $_POST['dia2']!="N/A" || $_POST['dia2']!="N/A" ) {
     $message_h=" <font color='red'> <b>Tiene que inscribir por lo menos un día y una hora</b> </font>";
   }
 
+  $query = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios WHERE thorarios.email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+  $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+  $results = mysqli_fetch_array($consul);
+  
+  # Actualziación de COOKIEs
+  setcookie('user_dia1', $results["dia1"]);
+  setcookie('user_dia2', $results["dia2"]);
+  setcookie('user_dia3', $results["dia3"]);
+  setcookie('user_hora1', $results["hora1"]);
+  setcookie('user_hora2', $results["hora2"]);
+  setcookie('user_hora3', $results["hora3"]);
+
+
   header('Location: header.php');
 ?>
