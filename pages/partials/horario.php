@@ -68,7 +68,7 @@
   #$message_h=" <font color='red'> <b>Tiene que inscribir por lo menos un día y una hora</b> </font>";
 
 
-  $query_u = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios WHERE thorarios.email= '".$_COOKIE["user_email"]."'";
+  $query_u = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios WHERE thorarios.email= '".$_COOKIE["email"]."'";
   $consul_u = mysqli_query($conn, $query_u) or die(mysqli_error($conn));
   $results_u = mysqli_fetch_array($consul_u);
   
