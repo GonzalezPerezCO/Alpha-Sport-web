@@ -33,15 +33,15 @@ if ($_POST['dia1']!="N/A" || $_POST['dia2']!="N/A" || $_POST['dia2']!="N/A" ) {
 
     # Eliminar un día/hora, por consiguiente elimina una hora/día
     if($_POST['dia1']=="N/A" || $_POST['hora1'=="N/A"]){
-      $query_u = "UPDATE thorarios SET dia1='N/A', hora1='N/A' WHERE email='".$_COOKIE['email']."'";
+      $query_u = "UPDATE thorarios SET dia1='N/A', hora1='N/A' WHERE email='".$_COOKIE['user_email']."'";
       $consul_u= mysqli_query($conn, $query_u) or die(mysqli_error($conn));
     
     }elseif($_POST['dia2']=="N/A" || $_POST['hora2'=="N/A"]){
-      $query_u = "UPDATE thorarios SET dia2='N/A', hora2='N/A' WHERE email='".$_COOKIE['email']."'";
+      $query_u = "UPDATE thorarios SET dia2='N/A', hora2='N/A' WHERE email='".$_COOKIE['user_email']."'";
       $consul_u= mysqli_query($conn, $query_u) or die(mysqli_error($conn));
           
     }elseif($_POST['dia3']=="N/A" || $_POST['hora4'=="N/A"]){
-      $query_u = "UPDATE thorarios SET dia3='N/A', hora3='N/A' WHERE email='".$_COOKIE['email']."'";
+      $query_u = "UPDATE thorarios SET dia3='N/A', hora3='N/A' WHERE email='".$_COOKIE['user_email']."'";
       $consul_u= mysqli_query($conn, $query_u) or die(mysqli_error($conn));
 
     }else{
