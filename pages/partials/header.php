@@ -5,17 +5,7 @@
   if (!isset($_COOKIE['user_id'])) {
     header('Location: ../login.php');
   }
-
-  /*
-  session_start();
-
-  require '../../controller/database.php';
-
-  if (!isset($_SESSION['user_id'])) {
-    header('Location: ../login.php');
-  }
-  */
-
+  
   $message = "<h4> Sesión iniciada como: ".$_COOKIE["user_nombre"]." ".$_COOKIE["user_apellido"]."</h4>";
 ?>
 
