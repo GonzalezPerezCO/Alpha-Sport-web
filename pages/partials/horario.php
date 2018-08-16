@@ -35,7 +35,7 @@ if ($_POST['dia1']!="N/A" || $_POST['dia2']!="N/A" || $_POST['dia2']!="N/A" ) {
      --------------------------------------------------------------------
      1. Caso por días
      2. Solo hay cambios si POST es diferente a lo que esta en COOKIE
-     3. Eliminar un día/hora, por consiguiente elimina una hora/día
+     3. N/A para un día/hora, por consiguiente N/A para una hora/día
      -------------------------------------------------------------------- */
 
     # PARA DIA 1
@@ -43,7 +43,8 @@ if ($_POST['dia1']!="N/A" || $_POST['dia2']!="N/A" || $_POST['dia2']!="N/A" ) {
       if($_POST['dia1']=="N/A" || $_POST['hora1'=="N/A"]){
         $query_u = "UPDATE thorarios SET dia1='N/A', hora1='N/A' WHERE email='".$_COOKIE['user_email']."'";
         $consul_u= mysqli_query($conn, $query_u) or die(mysqli_error($conn));
-      
+        
+        $message_h.=" | Elimanado dia 1 | ";
       }
 
     }
@@ -53,7 +54,8 @@ if ($_POST['dia1']!="N/A" || $_POST['dia2']!="N/A" || $_POST['dia2']!="N/A" ) {
       if($_POST['dia2']=="N/A" || $_POST['hora2'=="N/A"]){
         $query_u = "UPDATE thorarios SET dia2='N/A', hora2='N/A' WHERE email='".$_COOKIE['user_email']."'";
         $consul_u= mysqli_query($conn, $query_u) or die(mysqli_error($conn));
-            
+
+        $message_h.=" | Elimanado dia 2 | ";    
       }
 
     }
@@ -63,7 +65,8 @@ if ($_POST['dia1']!="N/A" || $_POST['dia2']!="N/A" || $_POST['dia2']!="N/A" ) {
       if($_POST['dia3']=="N/A" || $_POST['hora4'=="N/A"]){
         $query_u = "UPDATE thorarios SET dia3='N/A', hora3='N/A' WHERE email='".$_COOKIE['user_email']."'";
         $consul_u= mysqli_query($conn, $query_u) or die(mysqli_error($conn));
-  
+
+        $message_h.=" | Elimanado dia 3 | ";
       }
       
     }
