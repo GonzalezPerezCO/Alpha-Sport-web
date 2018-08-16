@@ -72,14 +72,20 @@
   $query = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios WHERE thorarios.email= '".$_COOKIE["user_email"]."'";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
   $results = mysqli_fetch_array($consul);
-  
-  # Actualziación de COOKIEs
-  setcookie('user_dia1', $results["dia1"]);
-  setcookie('user_dia2', $results["dia2"]);
-  setcookie('user_dia3', $results["dia3"]);
-  setcookie('user_hora1', $results["hora1"]);
-  setcookie('user_hora2', $results["hora2"]);
-  setcookie('user_hora3', $results["hora3"]);
+   
+
+  $tiempo_cook=time()+900; // tiempo
+
+  setcookie('user_id', $results["id"], $tiempo_cook, "/");
+  setcookie('user_email', $results["email"], $tiempo_cook, "/");
+  setcookie('user_nombre', $results["nombre"], $tiempo_cook, "/");
+  setcookie('user_apellido', $results["apellido"], $tiempo_cook, "/");
+  setcookie('user_dia1', $results["dia1"], $tiempo_cook, "/");
+  setcookie('user_dia2', $results["dia2"], $tiempo_cook, "/");
+  setcookie('user_dia3', $results["dia3"], $tiempo_cook, "/");
+  setcookie('user_hora1', $results["hora1"], $tiempo_cook, "/");
+  setcookie('user_hora2', $results["hora2"], $tiempo_cook, "/");
+  setcookie('user_hora3', $results["hora3"], $tiempo_cook, "/");
 
   header('Location: header.php');
 ?>
