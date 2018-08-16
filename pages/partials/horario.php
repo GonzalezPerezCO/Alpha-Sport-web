@@ -1,5 +1,4 @@
 <?php
-
   require '../../controller/database.php';
     
   if (!isset($_COOKIE['user_id'])) {

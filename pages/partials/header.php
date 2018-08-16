@@ -1,11 +1,10 @@
-<?php
-  
+<?php  
   require '../../controller/database.php';
 
   if (!isset($_COOKIE['user_id'])) {
     header('Location: ../login.php');
   }
-  
+
   $message = "<h4> Sesión iniciada como: ".$_COOKIE["user_nombre"]." ".$_COOKIE["user_apellido"]."</h4>";
 ?>
 
