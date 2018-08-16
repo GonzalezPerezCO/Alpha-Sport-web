@@ -15,7 +15,7 @@
       
       if ( !empty($results)) {
 
-        $tiempo_cook=time()+86400;
+        $tiempo_cook=time()+1800; // 30 min
 
         setcookie('user_id', $results["id"], $tiempo_cook);
         setcookie('user_email', $results["email"], $tiempo_cook);
