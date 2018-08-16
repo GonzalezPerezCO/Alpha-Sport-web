@@ -31,15 +31,26 @@ if ($_POST['dia1']!="N/A" || $_POST['dia2']!="N/A" || $_POST['dia2']!="N/A" ) {
     #$hora2=$results_d["hora2"];
     #$hora3=$results_d["hora3"];
 
-    if($_POST['dia1']!="N/A"){
+    # Elimar un día, por consiguiente elimina una hora
+    if($_POST['dia1']=="N/A" || $_POST['hora1'=="N/A"]){
+      $query_u = "UPDATE thorarios SET dia1='N/A', hora1='N/A' WHERE email='".$_COOKIE['email']."'";
+      $consul_u= mysqli_query($conn, $query_u) or die(mysqli_error($conn));
+          
+    }elseif($_POST['dia2']=="N/A" || $_POST['hora2'=="N/A"]){
+      $query_u = "UPDATE thorarios SET dia2='N/A', hora2='N/A' WHERE email='".$_COOKIE['email']."'";
+      $consul_u= mysqli_query($conn, $query_u) or die(mysqli_error($conn));
+          
+    }elseif($_POST['dia3']=="N/A" || $_POST['hora4'=="N/A"]){
+      $query_u = "UPDATE thorarios SET dia3='N/A', hora3='N/A' WHERE email='".$_COOKIE['email']."'";
+      $consul_u= mysqli_query($conn, $query_u) or die(mysqli_error($conn));
 
-    
     }else{
-
-    
+      $message_h="Otro";    
     }
   }
   else{
     $message_h="Tiene que inscribir por lo menos un día y una hora";
   }
+
+  header('Location: header.php');
 ?>
