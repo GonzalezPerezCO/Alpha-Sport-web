@@ -1,11 +1,12 @@
 <?php
 
 if(isset($_COOKIE['user_id'])){
-  header('Location: partials/header.php');    
+  header('Location: partials/header.php');
+}    
 
 require '../controller/database.php';    
 
-if (!empty($_POST['email']) && !empty($_POST['password'])) {   
+if (!empty($_POST['email']) && !empty($_POST['password'])) { 
 
   $query = "SELECT testudiantes.id as id, testudiantes.nombre as nombre, testudiantes.apellido as apellido, testudiantes.email as email, dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE thorarios.email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
