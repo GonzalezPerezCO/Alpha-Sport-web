@@ -15,6 +15,7 @@
     1. Caso por días
     2. Solo hay cambios si POST es diferente a lo que esta en COOKIE
     3. N/A para un día/hora, por consiguiente N/A para una hora/día
+    4. Solo un día de la semana por día de horario
     -------------------------------------------------------------------- */
     
   # PARA DIA 1
