@@ -17,14 +17,14 @@
     -------------------------------------------------------------------- */
     
   # PARA DIA 1
-  if($_POST['dia1']!=$_COOKIE['user_dia1'] || $_POST['hora1']!=$_COOKIE['user_hora1'] ){      
+  if($_POST['dia1']!=$_COOKIE['dia1'] || $_POST['hora1']!=$_COOKIE['hora1'] ){      
     if($_POST['dia1']=="N/A" || $_POST['hora1'] =="N/A"){
-      $query = "UPDATE thorarios SET dia1='N/A', hora1='N/A' WHERE email='".$_COOKIE['user_email']."'";
+      $query = "UPDATE thorarios SET dia1='N/A', hora1='N/A' WHERE email='".$_COOKIE['email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
 
       $message_h=$message_h." | Eliminado dia 1 | ";
     }else{
-      $query = "UPDATE thorarios SET dia1='".$_POST['dia1']."', hora1='".$_POST['hora1']."' WHERE email='".$_COOKIE['user_email']."'";
+      $query = "UPDATE thorarios SET dia1='".$_POST['dia1']."', hora1='".$_POST['hora1']."' WHERE email='".$_COOKIE['email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
 
       $message_h=$message_h." | Modificado dia 1 | ";
@@ -34,14 +34,14 @@
   }
   
   # PARA DIA 2
-  if($_POST['dia2']!=$_COOKIE['user_dia2'] || $_POST['hora2']!=$_COOKIE['user_hora2'] ){      
+  if($_POST['dia2']!=$_COOKIE['dia2'] || $_POST['hora2']!=$_COOKIE['hora2'] ){      
     if($_POST['dia2']=="N/A" || $_POST['hora2'] =="N/A"){
-      $query = "UPDATE thorarios SET dia2='N/A', hora2='N/A' WHERE email='".$_COOKIE['user_email']."'";
+      $query = "UPDATE thorarios SET dia2='N/A', hora2='N/A' WHERE email='".$_COOKIE['email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
 
       $message_h=$message_h." | Eliminado dia 2 | ";    
     }else{
-      $query = "UPDATE thorarios SET dia2='".$_POST['dia2']."', hora2='".$_POST['hora2']."' WHERE email='".$_COOKIE['user_email']."'";
+      $query = "UPDATE thorarios SET dia2='".$_POST['dia2']."', hora2='".$_POST['hora2']."' WHERE email='".$_COOKIE['email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
 
       $message_h=$message_h." | Modificado dia 2 | ";
@@ -50,14 +50,14 @@
   }
   
   # PARA DIA 3
-  if($_POST['dia3']!=$_COOKIE['user_dia3'] || $_POST['hora3']!=$_COOKIE['user_hora3'] ){      
+  if($_POST['dia3']!=$_COOKIE['dia3'] || $_POST['hora3']!=$_COOKIE['hora3'] ){      
     if($_POST['dia3']=="N/A" || $_POST['hora3'] =="N/A"){
-      $query = "UPDATE thorarios SET dia3='N/A', hora3='N/A' WHERE email='".$_COOKIE['user_email']."'";
+      $query = "UPDATE thorarios SET dia3='N/A', hora3='N/A' WHERE email='".$_COOKIE['email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
 
       $message_h=$message_h." | Eliminado dia 3 | ";
     }else{
-      $query = "UPDATE thorarios SET dia3='".$_POST['dia3']."', hora3='".$_POST['hora3']."' WHERE email='".$_COOKIE['user_email']."'";
+      $query = "UPDATE thorarios SET dia3='".$_POST['dia3']."', hora3='".$_POST['hora3']."' WHERE email='".$_COOKIE['email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
 
       $message_h=$message_h." | Modificado dia 3 | ";
@@ -68,17 +68,17 @@
   #$message_h=" <font color='red'> <b>Tiene que inscribir por lo menos un día y una hora</b> </font>";
 
 
-  $query = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios WHERE thorarios.email= '".$_COOKIE["user_email"]."'";
-  $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
-  $results = mysqli_fetch_array($consul);
+  $query_u = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios WHERE thorarios.email= '".$_COOKIE["user_email"]."'";
+  $consul_u = mysqli_query($conn, $query_u) or die(mysqli_error($conn));
+  $results_u = mysqli_fetch_array($consul_u);
   
   # Actualziación de COOKIEs
-  setcookie('user_dia1', $results["dia1"]);
-  setcookie('user_dia2', $results["dia2"]);
-  setcookie('user_dia3', $results["dia3"]);
-  setcookie('user_hora1', $results["hora1"]);
-  setcookie('user_hora2', $results["hora2"]);
-  setcookie('user_hora3', $results["hora3"]);
+  setcookie('dia1', $results_u["dia1"]);
+  setcookie('dia2', $results_u["dia2"]);
+  setcookie('dia3', $results_u["dia3"]);
+  setcookie('hora1', $results_u["hora1"]);
+  setcookie('hora2', $results_u["hora2"]);
+  setcookie('hora3', $results_u["hora3"]);
 
   header('Location: header.php');
 ?>
