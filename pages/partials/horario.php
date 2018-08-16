@@ -12,13 +12,18 @@
 
   /* CRITERIOS PARA MANEJAS EVENTOS DE POST
     --------------------------------------------------------------------
-    1. Caso por días
-    2. Solo hay cambios si POST es diferente a lo que esta en COOKIE
-    3. N/A para un día/hora, por consiguiente N/A para una hora/día
-    4. Solo un día de la semana por día de horario
+    1. Solo un día de la semana por día de horario
+    2. Caso por días
+    3. Solo hay cambios si POST es diferente a lo que esta en COOKIE
+    4. N/A para un día/hora, por consiguiente N/A para una hora/día    
     -------------------------------------------------------------------- */
     
-  # PARA DIA 1
+  if($_POST['dia1'] == $_POST['dia2'] || $_POST['dia1'] == $_POST['dia3'] || $_POST['dia3'] == $_POST['dia1']){
+
+    $message_h=" Hay días repetidos, no es posible asignar mas de una franja en un solo día ";
+  }else{
+
+    # PARA DIA 1
   if($_POST['dia1']!=$_COOKIE['user_dia1'] || $_POST['hora1']!=$_COOKIE['user_hora1'] ){      
     if($_POST['dia1']=="N/A" || $_POST['hora1'] =="N/A"){
       $query = "UPDATE thorarios SET dia1='N/A', hora1='N/A' WHERE email='".$_COOKIE['user_email']."'";
@@ -66,6 +71,8 @@
     }
     
   }
+
+  }  
 
   #$message_h=" <font color='red'> <b>Tiene que inscribir por lo menos un día y una hora</b> </font>";
 
