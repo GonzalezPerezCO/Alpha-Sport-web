@@ -1,13 +1,5 @@
 <?php
 
-  /*
-  session_start();
-
-  session_unset();
-
-  session_destroy();
-  */
-
   unset($_COOKIE['user_id']);
   unset($_COOKIE['user_email']);
   unset($_COOKIE['user_nombre']);
