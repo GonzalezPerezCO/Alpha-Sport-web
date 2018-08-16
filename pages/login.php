@@ -14,16 +14,19 @@
       $message = '';   
       
       if ( !empty($results)) {
-        setcookie('user_id', $results["id"], time() + 86400);
-        setcookie('user_email', $results["email"], time() + 86400);
-        setcookie('user_nombre', $results["nombre"], time() + 86400);
-        setcookie('user_apellido', $results["apellido"], time() + 86400);
-        setcookie('user_dia1', $results["dia1"], time() + 86400);
-        setcookie('user_dia2', $results["dia2"], time() + 86400);
-        setcookie('user_dia3', $results["dia3"], time() + 86400);
-        setcookie('user_hora1', $results["hora1"], time() + 86400);
-        setcookie('user_hora2', $results["hora2"], time() + 86400);
-        setcookie('user_hora3', $results["hora3"], time() + 86400);
+
+        $tiempo_cook=time()+86400;
+
+        setcookie('user_id', $results["id"], $tiempo_cook);
+        setcookie('user_email', $results["email"], $tiempo_cook);
+        setcookie('user_nombre', $results["nombre"], $tiempo_cook);
+        setcookie('user_apellido', $results["apellido"], $tiempo_cook);
+        setcookie('user_dia1', $results["dia1"], $tiempo_cook);
+        setcookie('user_dia2', $results["dia2"], $tiempo_cook);
+        setcookie('user_dia3', $results["dia3"], $tiempo_cook);
+        setcookie('user_hora1', $results["hora1"], $tiempo_cook);
+        setcookie('user_hora2', $results["hora2"], $tiempo_cook);
+        setcookie('user_hora3', $results["hora3"], $tiempo_cook);
         
         header("Location: partials/header.php");
       } else {
