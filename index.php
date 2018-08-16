@@ -1,16 +1,17 @@
 <?php  
-
+  ini_set('display_errors', '1');
   if (isset($_COOKIE['user_id'])) {
-      $user=$_COOKIE['user_nombre']." ".$_COOKIE['user_nombre'];      
+      $user=$_COOKIE['nombre']." ".$_COOKIE['nombre'];      
     }
 
     /*
     session_start();
 
-    /*if (isset($_SESSION['user_id'])) {
-      $user=$_SESSION['user_nombre']." ".$_SESSION['user_nombre'];      
+    if (isset($_SESSION['user_id'])) {
+      $user=$_SESSION['nombre']." ".$_SESSION['nombre'];      
     }*/
 ?>
+
 
 <!DOCTYPE html>
 <html>
