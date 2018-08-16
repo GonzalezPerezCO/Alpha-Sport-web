@@ -19,15 +19,15 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $tiempo_cook=time()+8000; // tiempo
 
     setcookie('user_id', $results["id"], $tiempo_cook);
-    setcookie('user_email', $results["email"], $tiempo_cook);
-    setcookie('user_nombre', $results["nombre"], $tiempo_cook);
-    setcookie('user_apellido', $results["apellido"], $tiempo_cook);
-    setcookie('user_dia1', $results["dia1"], $tiempo_cook);
-    setcookie('user_dia2', $results["dia2"], $tiempo_cook);
-    setcookie('user_dia3', $results["dia3"], $tiempo_cook);
-    setcookie('user_hora1', $results["hora1"], $tiempo_cook);
-    setcookie('user_hora2', $results["hora2"], $tiempo_cook);
-    setcookie('user_hora3', $results["hora3"], $tiempo_cook);
+    setcookie('email', $results["email"], $tiempo_cook);
+    setcookie('nombre', $results["nombre"], $tiempo_cook);
+    setcookie('apellido', $results["apellido"], $tiempo_cook);
+    setcookie('dia1', $results["dia1"], $tiempo_cook);
+    setcookie('dia2', $results["dia2"], $tiempo_cook);
+    setcookie('dia3', $results["dia3"], $tiempo_cook);
+    setcookie('hora1', $results["hora1"], $tiempo_cook);
+    setcookie('hora2', $results["hora2"], $tiempo_cook);
+    setcookie('hora3', $results["hora3"], $tiempo_cook);
     
     header("Location: partials/header.php");
 
