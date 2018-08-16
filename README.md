@@ -1,6 +1,6 @@
 # Epic-Sport-_Estudiante
 
-Modulo con servicios para la creación y modificación de horarios para los estudiantes de la Escuela. Modulo de estudiantes en servidor LAMP , componente web 
+Modulo con servicios para la creación y modificación de horarios para los estudiantes de la Escuela. Modulo de estudiantes en servidor LAMP, componente web 
 
 - Asignación de horario de inscripción aleatorio (Nuevos y Antiguos)
 - Registro de estudiantes
@@ -15,14 +15,12 @@ Modulo con servicios para la creación y modificación de horarios para los estu
 
 # Configuración Servidor LAMP (Linux-Apache-Mysql-PHP)
 
-Este documento contiene la guía de instalación y configuración del servidor LAMP para el proyecto en PGR2. Para dar facilidad comprensión y lectura, se usará la siguiente convención de colores: color verde para linea de comandos bash, color rojo para lineas en consola de mysql y color gris para rutas o lineas de archivos.
-
-El software requerido sobre Ubuntu 16 es el siguiente:
+El software requerido para instalar es el siguiente:
 
 - Linux Mint 19/ Ubuntu 16/ Slackware
 - Apache2: Servidor WEB
-- Mysql: Motor de Base de datos
-- PHP: 7.0: Lenguaje de desarrollo
+- Mysql / MariaDB: Motor de Base de datos
+- PHP 7.0: Lenguaje de scripting del servidor
 - phpmyadmin: Gestor de base de datos
 
 # Instalación de Apache:
@@ -31,15 +29,15 @@ El software requerido sobre Ubuntu 16 es el siguiente:
 
 ## Configuración:
 
-verificar puertos:
+Verificar puertos:
 
 `sudo ufw app info "Apache Full"`
 
-si están cerrados:
+Si están cerrados:
 
 `sudo ufw allow in "Apache Full"`
 
-#Instalación de Mysql:
+# Instalación de Mysql:
 
 `sudo apt-get install mysql-server`
 
@@ -145,11 +143,11 @@ Verificar inicio de sesión: user: root , password: admin
 
 Configuración del dominio: Usar proyecto.com
 
-editar hotst
+editar hosts
 
 `sudo nano etc/hosts`
 
-# CONFIGURACIONES PARA EL OPTIMO DESEMPEÑO DEL SERVIDOR
+# Configuraciones para el optimo desempeño del servidor
 
 Para **php**:
 

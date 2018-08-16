@@ -1,6 +1,6 @@
 <?php
 
-$server = 'p:localhost';
+$server = 'localhost';
 $username = 'deportes';
 $password = 'deportes20182';
 $database = 'deportes';
