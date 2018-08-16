@@ -16,9 +16,9 @@
     2. Solo hay cambios si POST es diferente a lo que esta en COOKIE
     3. N/A para un día/hora, por consiguiente N/A para una hora/día
     -------------------------------------------------------------------- */
-
+    
   # PARA DIA 1
-  if($_POST['dia1']!=$_COOKIE['user_dia1']){   
+  if($_POST['dia1']!=$_COOKIE['user_dia1'] || $_POST['hora1']!=$_COOKIE['user_hora1'] ){      
     if($_POST['dia1']=="N/A" || $_POST['hora1'=="N/A"]){
       $query = "UPDATE thorarios SET dia1='N/A', hora1='N/A' WHERE email='".$_COOKIE['user_email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -35,7 +35,7 @@
   }
   
   # PARA DIA 2
-  if($_POST['dia2']!=$_COOKIE['user_dia2']){
+  if($_POST['dia2']!=$_COOKIE['user_dia2'] || $_POST['hora2']!=$_COOKIE['user_hora2'] ){      
     if($_POST['dia2']=="N/A" || $_POST['hora2'=="N/A"]){
       $query = "UPDATE thorarios SET dia2='N/A', hora2='N/A' WHERE email='".$_COOKIE['user_email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -51,7 +51,7 @@
   }
   
   # PARA DIA 3
-  if($_POST['dia3']!=$_COOKIE['user_dia3']){
+  if($_POST['dia3']!=$_COOKIE['user_dia3'] || $_POST['hora3']!=$_COOKIE['user_hora3'] ){      
     if($_POST['dia3']=="N/A" || $_POST['hora3'=="N/A"]){
       $query = "UPDATE thorarios SET dia3='N/A', hora3='N/A' WHERE email='".$_COOKIE['user_email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
