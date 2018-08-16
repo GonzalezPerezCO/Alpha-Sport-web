@@ -15,7 +15,7 @@
   }
   */
 
-  $message_h="Sin cambios";
+  $message_h=" Sin cambios";
 
 if ($_POST['dia1']!="N/A" || $_POST['dia2']!="N/A" || $_POST['dia2']!="N/A" ) {
     $message_h="Solicitud realizada";    
@@ -44,7 +44,7 @@ if ($_POST['dia1']!="N/A" || $_POST['dia2']!="N/A" || $_POST['dia2']!="N/A" ) {
         $query_u = "UPDATE thorarios SET dia1='N/A', hora1='N/A' WHERE email='".$_COOKIE['user_email']."'";
         $consul_u= mysqli_query($conn, $query_u) or die(mysqli_error($conn));
         
-        $message_h.=" | Elimanado dia 1 | ";
+        $message_h.=" | Eliminado dia 1 | ";
       }
 
     }
@@ -55,7 +55,7 @@ if ($_POST['dia1']!="N/A" || $_POST['dia2']!="N/A" || $_POST['dia2']!="N/A" ) {
         $query_u = "UPDATE thorarios SET dia2='N/A', hora2='N/A' WHERE email='".$_COOKIE['user_email']."'";
         $consul_u= mysqli_query($conn, $query_u) or die(mysqli_error($conn));
 
-        $message_h.=" | Elimanado dia 2 | ";    
+        $message_h.=" | Eliminado dia 2 | ";    
       }
 
     }
@@ -66,14 +66,14 @@ if ($_POST['dia1']!="N/A" || $_POST['dia2']!="N/A" || $_POST['dia2']!="N/A" ) {
         $query_u = "UPDATE thorarios SET dia3='N/A', hora3='N/A' WHERE email='".$_COOKIE['user_email']."'";
         $consul_u= mysqli_query($conn, $query_u) or die(mysqli_error($conn));
 
-        $message_h.=" | Elimanado dia 3 | ";
+        $message_h.=" | Eliminado dia 3 | ";
       }
       
     }
     
   }
   else{
-    $message_h="Tiene que inscribir por lo menos un día y una hora";
+    $message_h=" <font color='red'> <b>Tiene que inscribir por lo menos un día y una hora</b> </font>";
   }
 
   header('Location: header.php');
