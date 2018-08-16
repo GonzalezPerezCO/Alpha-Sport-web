@@ -5,7 +5,7 @@
     header('Location: ../login.php');
   }
 
-  $message = "<h4> Sesión iniciada como: ".$_COOKIE["user_nombre"]." ".$_COOKIE["user_apellido"]."</h4>";
+  $message = "<h4> Sesión iniciada como: ".$_COOKIE["nombre"]." ".$_COOKIE["apellido"]."</h4>";
 ?>
 
 <!DOCTYPE html>
