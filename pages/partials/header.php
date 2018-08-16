@@ -48,10 +48,10 @@
         <option value="N/A">N/A</option>
         <option value="Lunes">Lunes</option>
         <option value="Martes">Martes</option>
-        <option value="Miércoles">Miércoles</option>
+        <option value="Miercoles">Miercoles</option>
         <option value="Jueves">Jueves</option>
         <option value="Viernes">Viernes</option>
-        <option value="Sábado">Sábado</option>                
+        <option value="Sabado">Sabado</option>                
       </select>
       Hora día 1: <select name="hora1">
         <option selected="<?= $_COOKIE['user_hora1'] ?>" ><?= $_COOKIE['user_hora1'] ?> </option>                
@@ -75,10 +75,10 @@
         <option value="N/A">N/A</option>
         <option value="Lunes">Lunes</option>
         <option value="Martes">Martes</option>
-        <option value="Miércoles">Miércoles</option>
+        <option value="Miercoles">Miercoles</option>
         <option value="Jueves">Jueves</option>
         <option value="Viernes">Viernes</option>
-        <option value="Sábado">Sábado</option>                
+        <option value="Sabado">Sabado</option>                
       </select>
 
 
@@ -104,10 +104,10 @@
         <option value="N/A">N/A</option>
         <option value="Lunes">Lunes</option>
         <option value="Martes">Martes</option>
-        <option value="Miércoles">Miércoles</option>
+        <option value="Miercoles">Miercoles</option>
         <option value="Jueves">Jueves</option>
         <option value="Viernes">Viernes</option>
-        <option value="Sábado">Sábado</option>                
+        <option value="Sabado">Sabado</option>                
       </select>               
 
       Hora día 3: <select name="hora3">
