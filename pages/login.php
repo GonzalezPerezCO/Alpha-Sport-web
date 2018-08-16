@@ -29,6 +29,7 @@
         setcookie('user_hora3', $results["hora3"], $tiempo_cook);
         
         header("Location: partials/header.php");
+        
       } else {
         $message = 'Sorry, those credentials do not match';
       }
