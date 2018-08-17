@@ -30,7 +30,7 @@
     <?php else: ?>      
       <h2>Please Login or SignUp</h2>
       <a href="pages/login.php">Login</a> or
-      <a href="pages/signup.php">SignUp</a>
+      <a href="">SignUp</a> <!-- a href="pages/signup.php">SignUp</a-->
     <?php endif; ?>
     <br>
     <br>
