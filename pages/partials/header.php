@@ -57,7 +57,7 @@
       <th>Viernes</th>
     </tr>
     <tr>
-      <td>8-9</td>
+      <td class="cajon">8-9</td>
       <td></td>
       <td></td>
       <td></td>
@@ -65,7 +65,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>9-10</td>
+      <td class="cajon">9-10</td>
       <td></td>
       <td></td>
       <td></td>
@@ -73,7 +73,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>10-11</td>
+      <td class="cajon">10-11</td>
       <td></td>
       <td></td>
       <td></td>
@@ -81,7 +81,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>11-12</td>
+      <td class="cajon">11-12</td>
       <td></td>
       <td></td>
       <td></td>
@@ -89,7 +89,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>12-13</td>
+      <td class="cajon">12-13</td>
       <td></td>
       <td></td>
       <td></td>
@@ -97,7 +97,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>13-14</td>
+      <td class="cajon">13-14</td>
       <td></td>
       <td></td>
       <td></td>
@@ -105,7 +105,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>14-15</td>
+      <td class="cajon">14-15</td>
       <td></td>
       <td></td>
       <td></td>
@@ -113,7 +113,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>15-16</td>
+      <td class="cajon">15-16</td>
       <td></td>
       <td></td>
       <td></td>
@@ -121,7 +121,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>16-17</td>
+      <td class="cajon">16-17</td>
       <td></td>
       <td></td>
       <td></td>
