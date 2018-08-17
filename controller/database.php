@@ -10,7 +10,7 @@ $database = 'deportes';
 
 $conn = mysqli_connect($server, $username, $password, $database) or die(mysqli_error($conn));
 
-echo $actual_link.", ".$uri;
+echo $actual_link.", ".$uri." - ".$_SERVER[$actual_link];
 
 
 ?>
