@@ -44,11 +44,13 @@
     <b>Cordialmente:</b>
     <br>
     <br>
-    Equipo de trabajo:<br>
-    Ing. Claudia Patricia Castañeda<br>
+    Desarrolladores:<br>    
     Juan Francisco Gonzalez<br>
     Manuel Sergio Pérez<br>
-    <i>Decanatura de Ingeniería de Sistemas</i>
+    Directora:
+    Ing. Claudia Patricia Castañeda<br>
+    <i>Decanatura de Ingeniería de Sistemas</i><br>
+    <i>PGR - 2018-i - 2018-2</i>
     <br>
     <br>
     </p>
