@@ -8,7 +8,7 @@
 
     if (!empty($_POST['email']) && !empty($_POST['password'])) {   
     
-      $query = "SELECT id FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+      $query = "SELECT email FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
       $results = mysqli_fetch_array($consul);
 
@@ -17,7 +17,7 @@
       if ( !empty($results)) {
 
         $tiempo_cook=time()+900; // 15min
-        setcookie('user_id', $results["id"], $tiempo_cook, "/");
+        setcookie('user_id', $results["email"], $tiempo_cook, "/");
         
         header("Location: partials/header.php");
       } else {
