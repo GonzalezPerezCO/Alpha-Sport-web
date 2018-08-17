@@ -53,13 +53,11 @@
         <option value="Martes">Martes</option>
         <option value="Miercoles">Miercoles</option>
         <option value="Jueves">Jueves</option>
-        <option value="Viernes">Viernes</option>
-        <option value="Sabado">Sabado</option>                
+        <option value="Viernes">Viernes</option>              
       </select>
       Hora día 1: <select name="hora1">
         <option selected="<?= $ADATA['user_hora1'] ?>" ><?= $ADATA['user_hora1'] ?> </option>                
         <option value="N/A">N/A</option>
-        <option value="7:00">7:00</option>
         <option value="8:00">8:00</option>
         <option value="9:00">9:00</option>
         <option value="10:00">10:00</option>
@@ -80,15 +78,13 @@
         <option value="Martes">Martes</option>
         <option value="Miercoles">Miercoles</option>
         <option value="Jueves">Jueves</option>
-        <option value="Viernes">Viernes</option>
-        <option value="Sabado">Sabado</option>                
+        <option value="Viernes">Viernes</option>               
       </select>
 
 
       Hora día 2: <select name="hora2">
         <option selected="<?= $ADATA['user_hora2'] ?>" ><?= $ADATA['user_hora2'] ?> </option>                
         <option value="N/A">N/A</option>
-        <option value="7:00">7:00</option>
         <option value="8:00">8:00</option>
         <option value="9:00">9:00</option>
         <option value="10:00">10:00</option>
@@ -109,14 +105,12 @@
         <option value="Martes">Martes</option>
         <option value="Miercoles">Miercoles</option>
         <option value="Jueves">Jueves</option>
-        <option value="Viernes">Viernes</option>
-        <option value="Sabado">Sabado</option>                
+        <option value="Viernes">Viernes</option>               
       </select>               
 
       Hora día 3: <select name="hora3">
         <option selected="<?= $ADATA['user_hora3'] ?>" ><?= $ADATA['user_hora3'] ?> </option>                
         <option value="N/A">N/A</option>
-        <option value="7:00">7:00</option>
         <option value="8:00">8:00</option>
         <option value="9:00">9:00</option>
         <option value="10:00">10:00</option>
