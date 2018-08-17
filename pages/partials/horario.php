@@ -25,14 +25,14 @@
   }else{
 
     # PARA DIA 1
-  if($_POST['dia1']!=$_COOKIE['user_dia1'] || $_POST['hora1']!=$_COOKIE['user_hora1'] ){      
+  if($_POST['dia1']!=$ADATA['user_dia1'] || $_POST['hora1']!=$ADATA['user_hora1'] ){      
     if($_POST['dia1']=="N/A" || $_POST['hora1'] =="N/A"){
-      $query = "UPDATE thorarios SET dia1='N/A', hora1='N/A' WHERE email='".$_COOKIE['user_email']."'";
+      $query = "UPDATE thorarios SET dia1='N/A', hora1='N/A' WHERE email='".$ADATA['user_email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
 
       $message_h=$message_h." | Eliminado dia 1 | ";
     }else{
-      $query = "UPDATE thorarios SET dia1='".$_POST['dia1']."', hora1='".$_POST['hora1']."' WHERE email='".$_COOKIE['user_email']."'";
+      $query = "UPDATE thorarios SET dia1='".$_POST['dia1']."', hora1='".$_POST['hora1']."' WHERE email='".$ADATA['user_email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
 
       $message_h=$message_h." | Modificado dia 1 | ";
@@ -42,14 +42,14 @@
   }
   
   # PARA DIA 2
-  if($_POST['dia2']!=$_COOKIE['user_dia2'] || $_POST['hora2']!=$_COOKIE['user_hora2'] ){      
+  if($_POST['dia2']!=$ADATA['user_dia2'] || $_POST['hora2']!=$ADATA['user_hora2'] ){      
     if($_POST['dia2']=="N/A" || $_POST['hora2'] =="N/A"){
-      $query = "UPDATE thorarios SET dia2='N/A', hora2='N/A' WHERE email='".$_COOKIE['user_email']."'";
+      $query = "UPDATE thorarios SET dia2='N/A', hora2='N/A' WHERE email='".$ADATA['user_email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
 
       $message_h=$message_h." | Eliminado dia 2 | ";    
     }else{
-      $query = "UPDATE thorarios SET dia2='".$_POST['dia2']."', hora2='".$_POST['hora2']."' WHERE email='".$_COOKIE['user_email']."'";
+      $query = "UPDATE thorarios SET dia2='".$_POST['dia2']."', hora2='".$_POST['hora2']."' WHERE email='".$ADATA['user_email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
 
       $message_h=$message_h." | Modificado dia 2 | ";
@@ -58,14 +58,14 @@
   }
   
   # PARA DIA 3
-  if($_POST['dia3']!=$_COOKIE['user_dia3'] || $_POST['hora3']!=$_COOKIE['user_hora3'] ){      
+  if($_POST['dia3']!=$ADATA['user_dia3'] || $_POST['hora3']!=$ADATA['user_hora3'] ){      
     if($_POST['dia3']=="N/A" || $_POST['hora3'] =="N/A"){
-      $query = "UPDATE thorarios SET dia3='N/A', hora3='N/A' WHERE email='".$_COOKIE['user_email']."'";
+      $query = "UPDATE thorarios SET dia3='N/A', hora3='N/A' WHERE email='".$ADATA['user_email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
 
       $message_h=$message_h." | Eliminado dia 3 | ";
     }else{
-      $query = "UPDATE thorarios SET dia3='".$_POST['dia3']."', hora3='".$_POST['hora3']."' WHERE email='".$_COOKIE['user_email']."'";
+      $query = "UPDATE thorarios SET dia3='".$_POST['dia3']."', hora3='".$_POST['hora3']."' WHERE email='".$ADATA['user_email']."'";
       $consul= mysqli_query($conn, $query) or die(mysqli_error($conn));
 
       $message_h=$message_h." | Modificado dia 3 | ";

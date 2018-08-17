@@ -6,7 +6,7 @@
     header('Location: ../login.php');
   }
 
-  $message = "<h4> Sesión iniciada como: ".$_COOKIE["user_nombre"]." ".$_COOKIE["user_apellido"]."</h4>";
+  $message = "<h4> Sesión iniciada como: ".$ADATA["user_nombre"]." ".$ADATA["user_apellido"]."</h4>";
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +34,7 @@
 
     <form name="mod_horario" action="horario.php" method="post">
       Día1: <select name="dia1">
-        <option selected="<?= $_COOKIE['user_dia1'] ?>" ><?= $_COOKIE['user_dia1'] ?> </option>                
+        <option selected="<?= $ADATA['user_dia1'] ?>" ><?= $ADATA['user_dia1'] ?> </option>                
         <option value="N/A">N/A</option>
         <option value="Lunes">Lunes</option>
         <option value="Martes">Martes</option>
@@ -44,7 +44,7 @@
         <option value="Sabado">Sabado</option>                
       </select>
       Hora día 1: <select name="hora1">
-        <option selected="<?= $_COOKIE['user_hora1'] ?>" ><?= $_COOKIE['user_hora1'] ?> </option>                
+        <option selected="<?= $ADATA['user_hora1'] ?>" ><?= $ADATA['user_hora1'] ?> </option>                
         <option value="N/A">N/A</option>
         <option value="7:00">7:00</option>
         <option value="8:00">8:00</option>
@@ -61,7 +61,7 @@
       <br>
       <br>      
       Día2: <select name="dia2">
-        <option selected="<?= $_COOKIE['user_dia2'] ?>" ><?= $_COOKIE['user_dia2'] ?> </option>                
+        <option selected="<?= $ADATA['user_dia2'] ?>" ><?= $ADATA['user_dia2'] ?> </option>                
         <option value="N/A">N/A</option>
         <option value="Lunes">Lunes</option>
         <option value="Martes">Martes</option>
@@ -73,7 +73,7 @@
 
 
       Hora día 2: <select name="hora2">
-        <option selected="<?= $_COOKIE['user_hora2'] ?>" ><?= $_COOKIE['user_hora2'] ?> </option>                
+        <option selected="<?= $ADATA['user_hora2'] ?>" ><?= $ADATA['user_hora2'] ?> </option>                
         <option value="N/A">N/A</option>
         <option value="7:00">7:00</option>
         <option value="8:00">8:00</option>
@@ -90,7 +90,7 @@
       <br>
       <br>   
       Día3: <select name="dia3">
-        <option selected="<?= $_COOKIE['user_dia3'] ?>" ><?= $_COOKIE['user_dia3'] ?> </option>                
+        <option selected="<?= $ADATA['user_dia3'] ?>" ><?= $ADATA['user_dia3'] ?> </option>                
         <option value="N/A">N/A</option>
         <option value="Lunes">Lunes</option>
         <option value="Martes">Martes</option>
@@ -101,7 +101,7 @@
       </select>               
 
       Hora día 3: <select name="hora3">
-        <option selected="<?= $_COOKIE['user_hora3'] ?>" ><?= $_COOKIE['user_hora3'] ?> </option>                
+        <option selected="<?= $ADATA['user_hora3'] ?>" ><?= $ADATA['user_hora3'] ?> </option>                
         <option value="N/A">N/A</option>
         <option value="7:00">7:00</option>
         <option value="8:00">8:00</option>
