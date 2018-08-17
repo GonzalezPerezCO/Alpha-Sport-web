@@ -64,7 +64,8 @@ table.gridtable td {
 	border-width: 1px;
 	padding: 8px;
 	border-style: solid;
-	border-color: #666666;
+  border-color: #666666;
+  color:#000;
 	background-color: #ffffff;
 }
 

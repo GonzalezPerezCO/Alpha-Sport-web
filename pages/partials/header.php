@@ -55,6 +55,7 @@
   $cupos['viernesf13']=$results['viernesf13'];
   $cupos['viernesf14']=$results['viernesf14'];
   $cupos['viernesf15']=$results['viernesf15'];
+  $cupos['viernesf16']=$results['viernesf16'];
 
 
 
@@ -110,75 +111,75 @@
     </tr>
     <tr>
       <td class="cajon">8-9</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?= $cupos['lunesf8'] ?></td>
+      <td><?= $cupos['martesf8'] ?></td>
+      <td><?= $cupos['miercolesf8'] ?></td>
+      <td><?= $cupos['juevesf8'] ?></td>
+      <td><?= $cupos['viernesf8'] ?></td>
     </tr>
     <tr>
       <td class="cajon">9-10</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?= $cupos['lunesf9'] ?></td>
+      <td><?= $cupos['martesf9'] ?></td>
+      <td><?= $cupos['miercolesf9'] ?></td>
+      <td><?= $cupos['juevesf9'] ?></td>
+      <td><?= $cupos['viernesf9'] ?></td>
     </tr>
     <tr>
       <td class="cajon">10-11</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <<td><?= $cupos['lunesf10'] ?></td>
+      <td><?= $cupos['martesf10'] ?></td>
+      <td><?= $cupos['miercolesf10'] ?></td>
+      <td><?= $cupos['juevesf10'] ?></td>
+      <td><?= $cupos['viernesf10'] ?></td>
     </tr>
     <tr>
       <td class="cajon">11-12</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?= $cupos['lunesf11'] ?></td>
+      <td><?= $cupos['martesf11'] ?></td>
+      <td><?= $cupos['miercolesf11'] ?></td>
+      <td><?= $cupos['juevesf11'] ?></td>
+      <td><?= $cupos['viernesf11'] ?></td>
     </tr>
     <tr>
       <td class="cajon">12-13</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?= $cupos['lunesf12'] ?></td>
+      <td><?= $cupos['martesf12'] ?></td>
+      <td><?= $cupos['miercolesf12'] ?></td>
+      <td><?= $cupos['juevesf12'] ?></td>
+      <td><?= $cupos['viernesf12'] ?></td>
     </tr>
     <tr>
       <td class="cajon">13-14</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?= $cupos['lunesf13'] ?></td>
+      <td><?= $cupos['martesf13'] ?></td>
+      <td><?= $cupos['miercolesf13'] ?></td>
+      <td><?= $cupos['juevesf13'] ?></td>
+      <td><?= $cupos['viernesf13'] ?></td>
     </tr>
     <tr>
       <td class="cajon">14-15</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?= $cupos['lunesf14'] ?></td>
+      <td><?= $cupos['martesf14'] ?></td>
+      <td><?= $cupos['miercolesf14'] ?></td>
+      <td><?= $cupos['juevesf14'] ?></td>
+      <td><?= $cupos['viernesf14'] ?></td>
     </tr>
     <tr>
       <td class="cajon">15-16</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?= $cupos['lunesf15'] ?></td>
+      <td><?= $cupos['martesf15'] ?></td>
+      <td><?= $cupos['miercolesf15'] ?></td>
+      <td><?= $cupos['juevesf15'] ?></td>
+      <td><?= $cupos['viernesf15'] ?></td>
     </tr>
     <tr>
       <td class="cajon">16-17</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?= $cupos['lunesf16'] ?></td>
+      <td><?= $cupos['martesf16'] ?></td>
+      <td><?= $cupos['miercolesf16'] ?></td>
+      <td><?= $cupos['juevesf16'] ?></td>
+      <td><?= $cupos['viernesf16'] ?></td>
     </tr>
   </table>
     
