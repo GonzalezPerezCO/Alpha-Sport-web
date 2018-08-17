@@ -77,7 +77,7 @@
   #$message_h=" <font color='red'> <b>Tiene que inscribir por lo menos un día y una hora</b> </font>";
 
 
-  $query = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios WHERE thorarios.email= '".$_COOKIE["user_email"]."'";
+  $query = "SELECT testudiantes.id as id, testudiantes.nombre as nombre, testudiantes.apellido as apellido, testudiantes.email as email, dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE thorarios.email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
   $results = mysqli_fetch_array($consul);
    
@@ -93,7 +93,7 @@
   setcookie('user_dia3', $results["dia3"], $tiempo_cook, "/");
   setcookie('user_hora1', $results["hora1"], $tiempo_cook, "/");
   setcookie('user_hora2', $results["hora2"], $tiempo_cook, "/");
-  setcookie('user_hora3', $results["hora3"], $tiempo_cook, "/");
+  setcookie('user_hora3', $results["hora3"], $tiempo_cook, "/");;
 
   header('Location: header.php');
 ?>
