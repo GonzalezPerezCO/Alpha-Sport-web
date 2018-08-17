@@ -10,12 +10,12 @@ $query = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios WHERE emai
 $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
 $results = mysqli_fetch_array($consul);
 
-$old['dia1']= $results['dia1'];
-$old['dia2']= $results['dia2'];
-$old['dia3']= $results['dia3'];
-$old['hora1']= $results['hora1'];
-$old['hora2']= $results['hora2'];
-$old['hora3']= $results['hora3'];
+$bd['dia1']= $results['dia1'];
+$bd['dia2']= $results['dia2'];
+$bd['dia3']= $results['dia3'];
+$bd['hora1']= $results['hora1'];
+$bd['hora2']= $results['hora2'];
+$bd['hora3']= $results['hora3'];
 
 $new['dia1']= $_POST['dia1'];
 $new['dia2']= $_POST['dia2'];
