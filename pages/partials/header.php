@@ -127,7 +127,7 @@
     </tr>
     <tr>
       <td class="cajon">10-11</td>
-      <<td><?= $cupos['lunesf10'] ?></td>
+      <td><?= $cupos['lunesf10'] ?></td>
       <td><?= $cupos['martesf10'] ?></td>
       <td><?= $cupos['miercolesf10'] ?></td>
       <td><?= $cupos['juevesf10'] ?></td>
