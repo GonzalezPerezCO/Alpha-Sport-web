@@ -24,8 +24,32 @@ $new['hora1']= $_POST['hora1'];
 $new['hora2']= $_POST['hora2'];
 $new['hora3']= $_POST['hora3'];
 
+# SABER CUANTOS APARICIONES HAY DE CADA DIA
+$lunes=0;
+$martes=0;
+$miercoles=0;
+$jueves=0;
+$viernes=0;
+$sabado=0;
+$nada=0;
 
-die();
+foreach($new as $value){
+  if($value=="Lunes"){
+    $lunes+=1;
+  }elseif($value=="Martes"){
+    $martes+=1;
+  }elseif($value=="Miercoles"){
+    $miercoles+=1;
+  }elseif($value=="Jueves"){
+    $jueves+=1;
+  }elseif($value=="Viernes"){
+    $viernes+=1;
+  }elseif($value=="Sabado"){
+    $sabado+=1;
+  }else{
+    $nada+=1;
+  }
+}
 
 /* CRITERIOS PARA MANEJAS EVENTOS DE POST
 --------------------------------------------------------------------
@@ -35,6 +59,20 @@ die();
 4. N/A para un día/hora, por consiguiente N/A para una hora/día    
 -------------------------------------------------------------------- */   
 
+if($lunes>0){
+  if($lunes==1){
+    $mensaje_l="Inscrito Lunes a las".$new['hora1'].".";
+  }elseif(!$cupos_lunes>=1){
+    $mensaje_l="No hay cupos para el Lunes a las ".$new['hora1'].".";;
+  }
+  else{
+    $mensaje_l="No es posible inscribir mas de una vez el mismo día";
+  }
 
-header('Location: header.php?message_h="MENSAJE DE ALERTA"');
+}
+
+
+
+
+header('Location: header.php?message_h='.$mensaje_l.'');
 ?>
