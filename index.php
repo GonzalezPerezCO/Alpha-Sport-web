@@ -1,8 +1,9 @@
 <?php  
+
+  require 'controller/global.php';
   
-  if (isset($_COOKIE['user_id'])) {
-      require 'controller/global.php';
-      $user=$ADATA['user_nombre']." ".$ADATA['user_nombre'];      
+  if (isset($_COOKIE['user_id'])) {      
+      $user=$ADATA['user_nombre']." ".$ADATA['user_apellido'];      
     }
 ?>
 
