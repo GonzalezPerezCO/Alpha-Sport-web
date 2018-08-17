@@ -25,26 +25,26 @@ $new['hora2']= $_POST['hora2'];
 $new['hora3']= $_POST['hora3'];
 
 # SABER CUANTOS APARICIONES HAY DE CADA DIA
-$lunes=0;
-$martes=0;
-$miercoles=0;
-$jueves=0;
-$viernes=0;
-$sabado=0;
-$nada=0;
+$tlunes=0;
+$tmartes=0;
+$tmiercoles=0;
+$tjueves=0;
+$tviernes=0;
+$tsabado=0;
+$tnada=0;
 
 foreach($new as $value){
-  if($value=="Lunes"){
+  if($value=="tlunes"){
     $lunes+=1;
-  }elseif($value=="Martes"){
+  }elseif($value=="tmartes"){
     $martes+=1;
-  }elseif($value=="Miercoles"){
+  }elseif($value=="tmiercoles"){
     $miercoles+=1;
-  }elseif($value=="Jueves"){
+  }elseif($value=="tjueves"){
     $jueves+=1;
-  }elseif($value=="Viernes"){
+  }elseif($value=="tviernes"){
     $viernes+=1;
-  }elseif($value=="Sabado"){
+  }elseif($value=="tsabado"){
     $sabado+=1;
   }else{
     $nada+=1;
@@ -59,8 +59,8 @@ foreach($new as $value){
 4. N/A para un día/hora, por consiguiente N/A para una hora/día    
 -------------------------------------------------------------------- */   
 
-if($lunes>0){
-  if($lunes==1){
+if($tlunes>0){
+  if($tlunes==1){
     $mensaje_l="Inscrito Lunes a las".$new['hora1'].".";
   }elseif(!$cupos_lunes>=1){
     $mensaje_l="No hay cupos para el Lunes a las ".$new['hora1'].".";;
@@ -70,7 +70,14 @@ if($lunes>0){
   }
 
 }
-echo $new['hora1'];
+
+echo $tlunes;
+echo $tmartes;
+echo $tmiercoles;
+echo $tjueves;
+echo $tviernes;
+echo $tsabado;
+echo $tnada;
 die();
 
 

@@ -49,11 +49,11 @@
       Día1: <select name="dia1">
         <option selected="<?= $ADATA['user_dia1'] ?>" ><?= $ADATA['user_dia1'] ?> </option>                
         <option value="N/A">N/A</option>
-        <option value="lunes">Lunes</option>
-        <option value="martes">Martes</option>
-        <option value="miercoles">Miercoles</option>
-        <option value="jueves">Jueves</option>
-        <option value="viernes">Viernes</option>          
+        <option value="tlunes">Lunes</option>
+        <option value="tmartes">Martes</option>
+        <option value="tmiercoles">Miercoles</option>
+        <option value="tjueves">Jueves</option>
+        <option value="tviernes">Viernes</option>          
       </select>
       Hora día 1: <select name="hora1">
         <option selected="<?= $ADATA['user_hora1'] ?>" ><?= $ADATA['user_hora1'] ?> </option>                
@@ -73,11 +73,11 @@
       Día2: <select name="dia2">
         <option selected="<?= $ADATA['user_dia2'] ?>" ><?= $ADATA['user_dia2'] ?> </option>                
         <option value="N/A">N/A</option>
-        <option value="lunes">Lunes</option>
-        <option value="martes">Martes</option>
-        <option value="miercoles">Miercoles</option>
-        <option value="jueves">Jueves</option>
-        <option value="viernes">Viernes</option>            
+        <option value="tlunes">Lunes</option>
+        <option value="tmartes">Martes</option>
+        <option value="tmiercoles">Miercoles</option>
+        <option value="tjueves">Jueves</option>
+        <option value="tviernes">Viernes</option>            
       </select>
 
 
@@ -99,11 +99,11 @@
       Día3: <select name="dia3">
         <option selected="<?= $ADATA['user_dia3'] ?>" ><?= $ADATA['user_dia3'] ?> </option>                
         <option value="N/A">N/A</option>
-        <option value="lunes">Lunes</option>
-        <option value="martes">Martes</option>
-        <option value="miercoles">Miercoles</option>
-        <option value="jueves">Jueves</option>
-        <option value="viernes">Viernes</option>            
+        <option value="tlunes">Lunes</option>
+        <option value="tmartes">Martes</option>
+        <option value="tmiercoles">Miercoles</option>
+        <option value="tjueves">Jueves</option>
+        <option value="tviernes">Viernes</option>            
       </select>               
 
       Hora día 3: <select name="hora3">
