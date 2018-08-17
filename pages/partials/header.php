@@ -49,75 +49,75 @@
       Día1: <select name="dia1">
         <option selected="<?= $ADATA['user_dia1'] ?>" ><?= $ADATA['user_dia1'] ?> </option>                
         <option value="N/A">N/A</option>
-        <option value="tlunes">Lunes</option>
-        <option value="tmartes">Martes</option>
-        <option value="tmiercoles">Miercoles</option>
-        <option value="tjueves">Jueves</option>
-        <option value="tviernes">Viernes</option>          
+        <option value="Lunes">Lunes</option>
+        <option value="Martes">Martes</option>
+        <option value="Miercoles">Miercoles</option>
+        <option value="Jueves">Jueves</option>
+        <option value="Viernes">Viernes</option>          
       </select>
       Hora día 1: <select name="hora1">
         <option selected="<?= $ADATA['user_hora1'] ?>" ><?= $ADATA['user_hora1'] ?> </option>                
         <option value="N/A">N/A</option>
-        <option value="f8">8:00</option>
-        <option value="f9">9:00</option>
-        <option value="f10">10:00</option>
-        <option value="f11">11:00</option>
-        <option value="f12">12:00</option>
-        <option value="f13">13:00</option>
-        <option value="f14">14:00</option>
-        <option value="f15">15:00</option>
-        <option value="f16">16:00</option>
+        <option value="8:00<">8:00</option>
+        <option value="9:00<">9:00</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="12:00">12:00</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
       </select>
       <br>
       <br>      
       Día2: <select name="dia2">
         <option selected="<?= $ADATA['user_dia2'] ?>" ><?= $ADATA['user_dia2'] ?> </option>                
         <option value="N/A">N/A</option>
-        <option value="tlunes">Lunes</option>
-        <option value="tmartes">Martes</option>
-        <option value="tmiercoles">Miercoles</option>
-        <option value="tjueves">Jueves</option>
-        <option value="tviernes">Viernes</option>            
+        <option value="Lunes">Lunes</option>
+        <option value="Martes">Martes</option>
+        <option value="Miercoles">Miercoles</option>
+        <option value="Jueves">Jueves</option>
+        <option value="Viernes">Viernes</option>            
       </select>
 
 
       Hora día 2: <select name="hora2">
         <option selected="<?= $ADATA['user_hora2'] ?>" ><?= $ADATA['user_hora2'] ?> </option>                
         <option value="N/A">N/A</option>
-        <option value="f8">8:00</option>
-        <option value="f9">9:00</option>
-        <option value="f10">10:00</option>
-        <option value="f11">11:00</option>
-        <option value="f12">12:00</option>
-        <option value="f13">13:00</option>
-        <option value="f14">14:00</option>
-        <option value="f15">15:00</option>
-        <option value="f16">16:00</option>
+        <option value="8:00<">8:00</option>
+        <option value="9:00<">9:00</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="12:00">12:00</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
       </select>
       <br>
       <br>   
       Día3: <select name="dia3">
         <option selected="<?= $ADATA['user_dia3'] ?>" ><?= $ADATA['user_dia3'] ?> </option>                
         <option value="N/A">N/A</option>
-        <option value="tlunes">Lunes</option>
-        <option value="tmartes">Martes</option>
-        <option value="tmiercoles">Miercoles</option>
-        <option value="tjueves">Jueves</option>
-        <option value="tviernes">Viernes</option>            
+        <option value="Lunes">Lunes</option>
+        <option value="Martes">Martes</option>
+        <option value="Miercoles">Miercoles</option>
+        <option value="Jueves">Jueves</option>
+        <option value="Viernes">Viernes</option>            
       </select>               
 
       Hora día 3: <select name="hora3">
         <option selected="<?= $ADATA['user_hora3'] ?>" ><?= $ADATA['user_hora3'] ?> </option>                
         <option value="N/A">N/A</option>
-        <option value="f8">8:00</option>
-        <option value="f9">9:00</option>
-        <option value="f10">10:00</option>
-        <option value="f11">11:00</option>
-        <option value="f12">12:00</option>
-        <option value="f13">13:00</option>
-        <option value="f14">14:00</option>
-        <option value="f15">15:00</option>
-        <option value="f16">16:00</option>
+        <option value="8:00<">8:00</option>
+        <option value="9:00<">9:00</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="12:00">12:00</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
       </select>        
       <br>
       <input type="submit" name="submit" />

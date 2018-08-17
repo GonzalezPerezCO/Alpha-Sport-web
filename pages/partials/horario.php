@@ -34,18 +34,16 @@ $tsabado=0;
 $tnada=0;
 
 foreach($new as $value){
-  if($value=="tlunes"){
-    $lunes+=1;
-  }elseif($value=="tmartes"){
-    $martes+=1;
-  }elseif($value=="tmiercoles"){
-    $miercoles+=1;
-  }elseif($value=="tjueves"){
-    $jueves+=1;
-  }elseif($value=="tviernes"){
-    $viernes+=1;
-  }elseif($value=="tsabado"){
-    $sabado+=1;
+  if($value=="Lunes"){
+    $tlunes+=1;
+  }elseif($value=="Martes"){
+    $tmartes+=1;
+  }elseif($value=="Miercoles"){
+    $tmiercoles+=1;
+  }elseif($value=="Jueves"){
+    $tjueves+=1;
+  }elseif($value=="Viernes"){
+    $tviernes+=1;
   }else{
     $nada+=1;
   }
