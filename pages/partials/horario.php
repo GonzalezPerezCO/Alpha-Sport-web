@@ -6,13 +6,10 @@
     header('Location: ../login.php');
   }  
 
-  $query = "SELECT testudiantes.nombre as nombre, testudiantes.apellido as apellido, testudiantes.email as email, dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE testudiantes.email = thorarios.email AND testudiantes.email= '".$_COOKIE['user_id']."'";
+  $query = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios WHERE email = '".$_COOKIE['user_id']."'";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
   $results = mysqli_fetch_array($consul);
 
-  $ADATA['user_nombre']= $results["nombre"];
-  $ADATA['user_apellido']= $results["apellido"];
-  $ADATA['user_email']= $results["email"];
   $ADATA['user_dia1']= $results["dia1"];
   $ADATA['user_dia2']= $results["dia2"];
   $ADATA['user_dia3']= $results["dia3"];
