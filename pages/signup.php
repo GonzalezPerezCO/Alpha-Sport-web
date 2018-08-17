@@ -4,6 +4,7 @@
     header('Location: logout.php');    
   }else{
     require '../controller/database.php';
+    require '../controller/global.php';
 
     $message = '';
 
