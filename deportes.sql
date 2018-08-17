@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 17-08-2018 a las 16:15:01
+-- Tiempo de generación: 17-08-2018 a las 16:19:40
 -- Versión del servidor: 5.7.23-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.30-0ubuntu0.16.04.1
 
@@ -54,7 +54,6 @@ INSERT INTO `GLOBAL` (`id`, `MAX_ESTUDIANTES`, `MAX_NUEVOS`, `MAX_ANTIGUOS`, `MA
 
 CREATE TABLE `tcupos` (
   `id` int(11) NOT NULL,
-  `lunesf7` int(11) NOT NULL DEFAULT '0',
   `lunesf8` int(11) NOT NULL DEFAULT '0',
   `lunesf9` int(11) NOT NULL DEFAULT '0',
   `lunesf10` int(11) NOT NULL DEFAULT '0',
@@ -64,7 +63,6 @@ CREATE TABLE `tcupos` (
   `lunesf14` int(11) NOT NULL DEFAULT '0',
   `lunesf15` int(11) NOT NULL DEFAULT '0',
   `lunesf16` int(11) NOT NULL DEFAULT '0',
-  `martesf7` int(11) NOT NULL DEFAULT '0',
   `martesf8` int(11) NOT NULL DEFAULT '0',
   `martesf9` int(11) NOT NULL DEFAULT '0',
   `martesf10` int(11) NOT NULL DEFAULT '0',
@@ -74,7 +72,6 @@ CREATE TABLE `tcupos` (
   `martesf14` int(11) NOT NULL DEFAULT '0',
   `martesf15` int(11) NOT NULL DEFAULT '0',
   `martesf16` int(11) NOT NULL DEFAULT '0',
-  `miercolesf7` int(11) NOT NULL DEFAULT '0',
   `miercolesf8` int(11) NOT NULL DEFAULT '0',
   `miercolesf9` int(11) NOT NULL DEFAULT '0',
   `miercolesf10` int(11) NOT NULL DEFAULT '0',
@@ -84,7 +81,6 @@ CREATE TABLE `tcupos` (
   `miercolesf14` int(11) NOT NULL DEFAULT '0',
   `miercolesf15` int(11) NOT NULL DEFAULT '0',
   `miercolesf16` int(11) NOT NULL DEFAULT '0',
-  `juevesf7` int(11) NOT NULL DEFAULT '0',
   `juevesf8` int(11) NOT NULL DEFAULT '0',
   `juevesf9` int(11) NOT NULL DEFAULT '0',
   `juevesf10` int(11) NOT NULL DEFAULT '0',
@@ -94,7 +90,6 @@ CREATE TABLE `tcupos` (
   `juevesf14` int(11) NOT NULL DEFAULT '0',
   `juevesf15` int(11) NOT NULL DEFAULT '0',
   `juevesf16` int(11) NOT NULL DEFAULT '0',
-  `viernesf7` int(11) NOT NULL DEFAULT '0',
   `viernesf8` int(11) NOT NULL DEFAULT '0',
   `viernesf9` int(11) NOT NULL DEFAULT '0',
   `viernesf10` int(11) NOT NULL DEFAULT '0',
@@ -110,8 +105,8 @@ CREATE TABLE `tcupos` (
 -- Volcado de datos para la tabla `tcupos`
 --
 
-INSERT INTO `tcupos` (`id`, `lunesf7`, `lunesf8`, `lunesf9`, `lunesf10`, `lunesf11`, `lunesf12`, `lunesf13`, `lunesf14`, `lunesf15`, `lunesf16`, `martesf7`, `martesf8`, `martesf9`, `martesf10`, `martesf11`, `martesf12`, `martesf13`, `martesf14`, `martesf15`, `martesf16`, `miercolesf7`, `miercolesf8`, `miercolesf9`, `miercolesf10`, `miercolesf11`, `miercolesf12`, `miercolesf13`, `miercolesf14`, `miercolesf15`, `miercolesf16`, `juevesf7`, `juevesf8`, `juevesf9`, `juevesf10`, `juevesf11`, `juevesf12`, `juevesf13`, `juevesf14`, `juevesf15`, `juevesf16`, `viernesf7`, `viernesf8`, `viernesf9`, `viernesf10`, `viernesf11`, `viernesf12`, `viernesf13`, `viernesf14`, `viernesf15`, `viernesf16`) VALUES
-(1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5);
+INSERT INTO `tcupos` (`id`, `lunesf8`, `lunesf9`, `lunesf10`, `lunesf11`, `lunesf12`, `lunesf13`, `lunesf14`, `lunesf15`, `lunesf16`, `martesf8`, `martesf9`, `martesf10`, `martesf11`, `martesf12`, `martesf13`, `martesf14`, `martesf15`, `martesf16`, `miercolesf8`, `miercolesf9`, `miercolesf10`, `miercolesf11`, `miercolesf12`, `miercolesf13`, `miercolesf14`, `miercolesf15`, `miercolesf16`, `juevesf8`, `juevesf9`, `juevesf10`, `juevesf11`, `juevesf12`, `juevesf13`, `juevesf14`, `juevesf15`, `juevesf16`, `viernesf8`, `viernesf9`, `viernesf10`, `viernesf11`, `viernesf12`, `viernesf13`, `viernesf14`, `viernesf15`, `viernesf16`) VALUES
+(1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5);
 
 -- --------------------------------------------------------
 
