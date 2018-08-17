@@ -44,6 +44,94 @@
   <p><?= $_GET['message_h']?></p>
   <?php endif; ?>
 
+  <hr>
+  <div id="cupos">
+  <table>
+  <tr>
+    <th>Hora</th>
+    <th>Lunes</th>
+    <th>Martes</th>
+    <th>Miercoles</th>
+    <th>Jueves</th>
+    <th>Viernes</th>
+  </tr>
+  <tr>
+    <td>8-9</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>9-10</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>10-11</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>11-12</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>12-13</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>13-14</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>14-15</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>15-16</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>16-17</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+    
+  </div>
+
+
   <div id = "tabla"> 
     <form name="mod_horario" action="horario.php" method="post">
       Día1: <select name="dia1">
