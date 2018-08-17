@@ -19,7 +19,7 @@
     4. N/A para un día/hora, por consiguiente N/A para una hora/día    
     -------------------------------------------------------------------- */
     
-  if($_POST['dia1'] == $_POST['dia2'] || $_POST['dia1'] == $_POST['dia3'] || $_POST['dia3'] == $_POST['dia1']){
+  if($_POST['dia1'] == $_POST['dia2'] || $_POST['dia1'] == $_POST['dia3'] || $_POST['dia3'] == $_POST['dia2']){
 
     $message_h=" Hay días repetidos, no es posible asignar mas de una franja en un solo día ";
   }else{
