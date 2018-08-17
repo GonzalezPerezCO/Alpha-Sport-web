@@ -3,8 +3,7 @@
   if (isset($_COOKIE['user_id'])) {
     header('Location: logout.php');    
   }else{
-    require '../controller/database.php';
-    require '../controller/global.php';
+    require '../controller/database.php';  
 
     $message = '';
 

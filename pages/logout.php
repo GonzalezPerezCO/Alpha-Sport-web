@@ -1,5 +1,6 @@
 <?php
 
+  require '../../controller/global.php';
   /*unset($_COOKIE['user_id']);
   unset($_COOKIE['user_email']);
   unset($_COOKIE['user_nombre']);
