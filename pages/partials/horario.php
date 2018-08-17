@@ -70,8 +70,8 @@ if($lunes>0){
   }
 
 }
-
-
+echo $new['hora1'];
+die();
 
 
 header('Location: header.php?message_h='.$mensaje_l.'');
