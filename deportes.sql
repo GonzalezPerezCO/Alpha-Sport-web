@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 14-08-2018 a las 09:43:41
+-- Tiempo de generación: 17-08-2018 a las 10:26:15
 -- Versión del servidor: 5.7.23-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.30-0ubuntu0.16.04.1
 
@@ -61,6 +61,7 @@ CREATE TABLE `testudiantes` (
   `semestre` int(11) DEFAULT NULL,
   `activo` tinyint(1) NOT NULL DEFAULT '1',
   `email` varchar(100) NOT NULL COMMENT 'correo de la escuela',
+  `documento` int(11) DEFAULT NULL,
   `ultimo_periodo` varchar(50) DEFAULT NULL COMMENT 'e.j: 2018-2, 2018-i',
   `password` varchar(100) NOT NULL,
   `bloqueado` tinyint(1) DEFAULT '0' COMMENT 'si esta bloqueado ',
@@ -71,10 +72,10 @@ CREATE TABLE `testudiantes` (
 -- Volcado de datos para la tabla `testudiantes`
 --
 
-INSERT INTO `testudiantes` (`id`, `nombre`, `apellido`, `codigo`, `carrera`, `semestre`, `activo`, `email`, `ultimo_periodo`, `password`, `bloqueado`, `observacion`) VALUES
-(1, 'Nombre Prueba', 'Apellido Prueba', 10101, 'Ingeniería de Sistemas', 99, 1, 'prueba', NULL, '000', 0, NULL),
-(2, 'Manuel Sergio', 'Pérez Espitia', 2095112, 'Ingeniería de Sistemas', 10, 1, 'manuel.perez-e@mail.escuelaing.edu.co', NULL, '000', 0, 'Ninguna Ob--'),
-(4, 'Juan Francisco', 'Gonzalez Rojas', 2081391, 'Ingeniería de Sistemas', 10, 1, 'juan.gonzales@mail.escuelaing.edu.co', NULL, '000', 0, 'Ninguna para Juan G.');
+INSERT INTO `testudiantes` (`id`, `nombre`, `apellido`, `codigo`, `carrera`, `semestre`, `activo`, `email`, `documento`, `ultimo_periodo`, `password`, `bloqueado`, `observacion`) VALUES
+(1, 'Nombre Prueba', 'Apellido Prueba', 10101, 'Ingeniería de Sistemas', 99, 1, 'prueba', NULL, NULL, '000', 0, NULL),
+(2, 'Manuel Sergio', 'Perez Espitia', 2095112, 'Ingenieria de Sistemas', 10, 1, 'manuel.perez-e@mail.escuelaing.edu.co', NULL, NULL, '000', 0, 'Ninguna Ob--'),
+(4, 'Juan Francisco', 'Gonzalez Rojas', 2081391, 'Ingeniería de Sistemas', 10, 1, 'juan.gonzales@mail.escuelaing.edu.co', NULL, NULL, '000', 0, 'Ninguna para Juan G.');
 
 --
 -- Disparadores `testudiantes`
@@ -116,8 +117,8 @@ CREATE TABLE `thorarios` (
 --
 
 INSERT INTO `thorarios` (`id`, `email`, `done`, `dia1`, `dia2`, `dia3`, `hora1`, `hora2`, `hora3`) VALUES
-(1, 'manuel.perez-e@mail.escuelaing.edu.co', 0, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'),
-(2, 'prueba', 0, 'Lunes', 'Martes', 'Miercoles', '07:00', '11:00', '13:00'),
+(1, 'manuel.perez-e@mail.escuelaing.edu.co', 0, 'Lunes', 'Lunes', 'Lunes', '7:00', '7:00', '7:00'),
+(2, 'prueba', 0, 'Martes', 'Lunes', 'Jueves', '13:00', '9:00', '15:00'),
 (3, 'juan.gonzales@mail.escuelaing.edu.co', 0, 'Martes', 'Miercoles', 'Viernes', '10:00', '12:00', '14:00');
 
 --
@@ -159,12 +160,12 @@ ALTER TABLE `GLOBAL`
 -- AUTO_INCREMENT de la tabla `testudiantes`
 --
 ALTER TABLE `testudiantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `thorarios`
 --
 ALTER TABLE `thorarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

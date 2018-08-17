@@ -1,6 +1,5 @@
 <?php
 
-  require '../controller/global.php';
   /*unset($_COOKIE['user_id']);
   unset($_COOKIE['user_email']);
   unset($_COOKIE['user_nombre']);
@@ -23,16 +22,6 @@
   #setcookie('user_hora1', false, time()-1, "/");
   #setcookie('user_hora2', false, time()-1, "/");
   #setcookie('user_hora3', false, time()-1, "/");
-
-  $GLOBALS['user_email']= "Retry Logout";
-  $GLOBALS['user_nombre']= "Retry Logout";
-  $GLOBALS['user_apellido']= "Retry Logout";
-  $GLOBALS['user_dia1']= "Retry Logout";
-  $GLOBALS['user_dia2']= "Retry Logout";
-  $GLOBALS['user_dia3']= "Retry Logout";
-  $GLOBALS['user_hora1']= "Retry Logout";
-  $GLOBALS['user_hora2']= "Retry Logout";
-  $GLOBALS['user_hora3']= "Retry Logout";
 
   header('Location: ../index.php');
 
