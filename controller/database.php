@@ -1,7 +1,6 @@
 <?php
 
 $actual_link = $_SERVER[HTTP_HOST];
-$uri = $_SERVER['REQUEST_URI'];
 
 $server = $actual_link;
 $username = 'deportes';
@@ -10,7 +9,7 @@ $database = 'deportes';
 
 $conn = mysqli_connect($server, $username, $password, $database) or die(mysqli_error($conn));
 
-echo $actual_link.", ".$uri." - ".$_SERVER[$actual_link];
+echo $actual_link;
 
 
 ?>
