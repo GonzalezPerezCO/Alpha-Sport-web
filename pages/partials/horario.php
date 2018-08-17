@@ -10,13 +10,22 @@ $query = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios WHERE emai
 $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
 $results = mysqli_fetch_array($consul);
 
-$ADATA['user_dia1']= $results["dia1"];
-$ADATA['user_dia2']= $results["dia2"];
-$ADATA['user_dia3']= $results["dia3"];
-$ADATA['user_hora1']= $results["hora1"];
-$ADATA['user_hora2']= $results["hora2"];
-$ADATA['user_hora3']= $results["hora3"];
+$old['dia1']= $results['dia1'];
+$old['dia2']= $results['dia2'];
+$old['dia3']= $results['dia3'];
+$old['hora1']= $results['hora1'];
+$old['hora2']= $results['hora2'];
+$old['hora3']= $results['hora3'];
 
+$new['dia1']= $_POST['dia1'];
+$new['dia2']= $_POST['dia2'];
+$new['dia3']= $_POST['dia3'];
+$new['hora1']= $_POST['hora1'];
+$new['hora2']= $_POST['hora2'];
+$new['hora3']= $_POST['hora3'];
+
+
+die();
 
 /* CRITERIOS PARA MANEJAS EVENTOS DE POST
 --------------------------------------------------------------------
