@@ -78,6 +78,7 @@ echo $tjueves;
 echo $tviernes;
 echo $tsabado;
 echo $tnada;
+
 die();
 
 
