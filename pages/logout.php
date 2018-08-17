@@ -24,10 +24,4 @@
   #setcookie('user_hora3', false, time()-1, "/");
 
   header('Location: ../index.php');
-
-
-
- 
-
-
 ?>
