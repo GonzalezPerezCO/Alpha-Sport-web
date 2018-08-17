@@ -29,17 +29,6 @@
         #setcookie('user_hora2', $results["hora2"], $tiempo_cook, "/");
         #setcookie('user_hora3', $results["hora3"], $tiempo_cook, "/");
         
-        $ADATA['user_email']= $results["email"];
-        $ADATA['user_nombre']= $results["nombre"];
-        $ADATA['user_apellido']= $results["apellido"];
-        $ADATA['user_dia1']= $results["dia1"];
-        $ADATA['user_dia2']= $results["dia2"];
-        $ADATA['user_dia3']= $results["dia3"];
-        $ADATA['user_hora1']= $results["hora1"];
-        $ADATA['user_hora2']= $results["hora2"];
-        $ADATA['user_hora3']= $results["hora3"];
-        
-        
         header("Location: partials/header.php");
       } else {
         $message = 'Sorry, those credentials do not match';
