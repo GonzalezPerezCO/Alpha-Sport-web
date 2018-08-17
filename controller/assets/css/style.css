@@ -4,6 +4,29 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  background: #F4F4F4;
+}
+
+.container {
+  background: #fff;
+  width: 650px;
+	padding:0;
+	margin:0 auto;
+}
+
+.desc {
+  padding:20px 20px 30px 20px;
+  margin:20px 0;
+}
+
+h1 {
+  margin: 20px;
+  padding: 10px;
+}
+
+h3 {
+  margin: 5px;
+  padding: 5px 2px 10px 2px;
 }
 
 /* Input Forms*/
@@ -22,12 +45,13 @@ input[type="submit"] {
   color: #fff;
   background: #0098cb;
   width: 320px;
-  margin: 20px auto;
-  margin-top: 0;
+  margin: 30px auto;
+  margin-top: 10px;
   border: 0;
   border-radius: 3px;
   cursor: pointer;
 }
+
 input[type="submit"]:hover {
   background-color: #00b8eb;
 }
@@ -39,10 +63,6 @@ header {
   margin-bottom: 10px;
   width: 100%;
   text-align: center;
-}
-header a {
-  text-decoration: none;
-  color: #333;
 }
 
 table.gridtable {
@@ -66,4 +86,9 @@ table.gridtable td {
 	border-style: solid;
 	border-color: #666666;
 	background-color: #ffffff;
+}
+
+/* Footer */
+footer {
+  padding: 10px
 }
