@@ -3,7 +3,7 @@
   require 'controller/global.php';
   
   if (isset($_COOKIE['user_id'])) {   
-      $query = "SELECT nombres, apellido FROM testudiantes WHERE id = '".$_COOKIE['user_id']."'";
+      $query = "SELECT nombre, apellido FROM testudiantes WHERE id = '".$_COOKIE['user_id']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
       $results = mysqli_fetch_array($consul);   
       $user=$results["nombre"]." ".$results["apellido"];
