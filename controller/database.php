@@ -2,7 +2,7 @@
 
 $actual_link = $_SERVER[HTTP_HOST];
 
-$server = $actual_link;
+$server = 'p:'.$actual_link;
 $username = 'deportes';
 $password = 'deportes20182';
 $database = 'deportes';
