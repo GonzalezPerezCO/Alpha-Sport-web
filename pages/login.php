@@ -4,14 +4,14 @@
     header('Location: partials/header.php');    
   }else{
     require '../controller/database.php';    
-    require '../controller/global.php';  
+      
 
     if (!empty($_POST['email']) && !empty($_POST['password'])) {   
     
-      $query = "SELECT testudiantes.id as id, testudiantes.nombre as nombre, testudiantes.apellido as apellido, testudiantes.email as email, dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE thorarios.email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+      $query = "SELECT id FROM estudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
       $results = mysqli_fetch_array($consul);
-      
+
       $message = '';   
       
       if ( !empty($results)) {

@@ -94,14 +94,7 @@
   #setcookie('user_dia3', $results["dia3"], $tiempo_cook, "/");
   #setcookie('user_hora1', $results["hora1"], $tiempo_cook, "/");
   #setcookie('user_hora2', $results["hora2"], $tiempo_cook, "/");
-  #setcookie('user_hora3', $results["hora3"], $tiempo_cook, "/");
-  
-  $ADATA['user_dia1']= $results["dia1"];
-  $ADATA['user_dia2']= $results["dia2"];
-  $ADATA['user_dia3']= $results["dia3"];
-  $ADATA['user_hora1']= $results["hora1"];
-  $ADATA['user_hora2']= $results["hora2"];
-  $ADATA['user_hora3']= $results["hora3"];
+  #setcookie('user_hora3', $results["hora3"], $tiempo_cook, "/"); 
 
   header('Location: header.php');
 ?>
