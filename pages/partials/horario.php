@@ -20,6 +20,24 @@
   $ADATA['user_hora2']= $results["hora2"];
   $ADATA['user_hora3']= $results["hora3"];
 
+  /*echo $ADATA['user_nombre'];
+  echo $ADATA['user_apellido'];
+  echo $ADATA['user_email'];
+  echo $ADATA['user_dia1'];
+  echo $ADATA['user_dia2'];
+  echo $ADATA['user_dia3'];
+  echo $ADATA['user_hora1'];
+  echo $ADATA['user_hora2'];
+  echo $ADATA['user_hora3'];
+  echo "<br>";
+  echo $_POST['dia1'];
+  echo $_POST['dia2'];
+  echo $_POST['dia3'];
+  echo $_POST['hora1'];
+  echo $_POST['hora2'];
+  echo $_POST['hora3'];*/
+
+
   #$message_h=" Sin cambios";
 
   $message_h=" Solicitud realizada ";    
@@ -32,7 +50,8 @@
     4. N/A para un día/hora, por consiguiente N/A para una hora/día    
     -------------------------------------------------------------------- */
     
-  if($_POST['dia1'] == $_POST['dia2'] || $_POST['dia1'] == $_POST['dia3'] || $_POST['dia3'] == $_POST['dia2']){
+  #if($_POST['dia1'] == $_POST['dia2'] || $_POST['dia1'] == $_POST['dia3'] || $_POST['dia3'] == $_POST['dia2']){
+    if(false){
 
     $message_h=" Hay días repetidos, no es posible asignar mas de una franja en un solo día ";
   }else{
