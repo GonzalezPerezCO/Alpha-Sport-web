@@ -6,7 +6,7 @@
     header('Location: ../login.php');
   }
 
-  $query = "SELECT testudiantes.nombre as nombre, testudiantes.apellido as apellido, dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE testudiantes.email = thorarios.email AND testudiantes.id= '".$_COOKIE['id']."'" ;
+  $query = "SELECT testudiantes.nombre as nombre, testudiantes.apellido as apellido, dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE testudiantes.email = thorarios.email AND testudiantes.id= '".$_COOKIE['user_id']."'";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
   $results = mysqli_fetch_array($consul);
 
@@ -19,7 +19,6 @@
   $ADATA['user_hora2']= $results["hora2"];
   $ADATA['user_hora3']= $results["hora3"];
   
-
   $message = "<h4> Sesión iniciada como: ".$ADATA['user_nombre']." ".$ADATA['user_apellido']."</h4>";
 ?>
 

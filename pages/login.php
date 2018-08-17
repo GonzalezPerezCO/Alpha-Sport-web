@@ -8,7 +8,7 @@
 
     if (!empty($_POST['email']) && !empty($_POST['password'])) {   
     
-      $query = "SELECT id FROM estudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+      $query = "SELECT id FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
       $results = mysqli_fetch_array($consul);
 
