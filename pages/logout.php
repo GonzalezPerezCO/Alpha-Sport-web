@@ -13,16 +13,17 @@
 
 
   setcookie('user_id', false, time()-1, "/");
-  setcookie('user_email', false, time()-1, "/");
-  setcookie('user_nombre', false, time()-1, "/");
-  setcookie('user_apellido', false, time()-1, "/");
-  setcookie('user_dia1', false, time()-1, "/");
-  setcookie('user_dia2', false, time()-1, "/");
-  setcookie('user_dia3', false, time()-1, "/");
-  setcookie('user_hora1', false, time()-1, "/");
-  setcookie('user_hora2', false, time()-1, "/");
-  setcookie('user_hora3', false, time()-1, "/");
+  #setcookie('user_email', false, time()-1, "/");
+  #setcookie('user_nombre', false, time()-1, "/");
+  #setcookie('user_apellido', false, time()-1, "/");
+  #setcookie('user_dia1', false, time()-1, "/");
+  #setcookie('user_dia2', false, time()-1, "/");
+  #setcookie('user_dia3', false, time()-1, "/");
+  #setcookie('user_hora1', false, time()-1, "/");
+  #setcookie('user_hora2', false, time()-1, "/");
+  #setcookie('user_hora3', false, time()-1, "/");
 
+  $ADATA=array();
 
   header('Location: ../index.php');
 

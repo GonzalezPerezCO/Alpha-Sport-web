@@ -1,7 +1,8 @@
 <?php  
-  ini_set('display_errors', '1');
+  
   if (isset($_COOKIE['user_id'])) {
-      $user=$_COOKIE['user_nombre']." ".$_COOKIE['user_nombre'];      
+      require 'controller/global.php';
+      $user=$ADATA['user_nombre']." ".$ADATA['user_nombre'];      
     }
 ?>
 

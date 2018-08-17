@@ -4,6 +4,7 @@
     header('Location: partials/header.php');    
   }else{
     require '../controller/database.php';    
+    require '../controller/global.php';  
 
     if (!empty($_POST['email']) && !empty($_POST['password'])) {   
     
@@ -18,15 +19,26 @@
         $tiempo_cook=time()+900; // 15min
 
         setcookie('user_id', $results["id"], $tiempo_cook, "/");
-        setcookie('user_email', $results["email"], $tiempo_cook, "/");
-        setcookie('user_nombre', $results["nombre"], $tiempo_cook, "/");
-        setcookie('user_apellido', $results["apellido"], $tiempo_cook, "/");
-        setcookie('user_dia1', $results["dia1"], $tiempo_cook, "/");
-        setcookie('user_dia2', $results["dia2"], $tiempo_cook, "/");
-        setcookie('user_dia3', $results["dia3"], $tiempo_cook, "/");
-        setcookie('user_hora1', $results["hora1"], $tiempo_cook, "/");
-        setcookie('user_hora2', $results["hora2"], $tiempo_cook, "/");
-        setcookie('user_hora3', $results["hora3"], $tiempo_cook, "/");
+        #setcookie('user_email', $results["email"], $tiempo_cook, "/");
+        #setcookie('user_nombre', $results["nombre"], $tiempo_cook, "/");
+        #setcookie('user_apellido', $results["apellido"], $tiempo_cook, "/");
+        #setcookie('user_dia1', $results["dia1"], $tiempo_cook, "/");
+        #setcookie('user_dia2', $results["dia2"], $tiempo_cook, "/");
+        #setcookie('user_dia3', $results["dia3"], $tiempo_cook, "/");
+        #setcookie('user_hora1', $results["hora1"], $tiempo_cook, "/");
+        #setcookie('user_hora2', $results["hora2"], $tiempo_cook, "/");
+        #setcookie('user_hora3', $results["hora3"], $tiempo_cook, "/");
+        
+        $ADATA['user_email']= $results["email"];
+        $ADATA['user_nombre']= $results["nombre"];
+        $ADATA['user_apellido']= $results["apellido"];
+        $ADATA['user_dia1']= $results["dia1"];
+        $ADATA['user_dia2']= $results["dia2"];
+        $ADATA['user_dia3']= $results["dia3"];
+        $ADATA['user_hora1']= $results["hora1"];
+        $ADATA['user_hora2']= $results["hora2"];
+        $ADATA['user_hora3']= $results["hora3"];
+        
         
         header("Location: partials/header.php");
       } else {
