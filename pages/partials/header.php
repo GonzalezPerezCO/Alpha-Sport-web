@@ -40,11 +40,11 @@
   <br>
   <br>
 
-  <div id = "tabla">       
-    <?php if(!empty($message_h)): ?>
-    <p><?= $message_h ?></p>
-    <?php endif; ?>           
+  <?php if(!empty($_GET['message_h'])): ?>
+  <p><?= $_GET['message_h']?></p>
+  <?php endif; ?>
 
+  <div id = "tabla"> 
     <form name="mod_horario" action="horario.php" method="post">
       Día1: <select name="dia1">
         <option selected="<?= $ADATA['user_dia1'] ?>" ><?= $ADATA['user_dia1'] ?> </option>                

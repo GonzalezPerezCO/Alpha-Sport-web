@@ -27,6 +27,5 @@ $ADATA['user_hora3']= $results["hora3"];
 -------------------------------------------------------------------- */   
 
 
-
-header('Location: header.php');
+header('Location: header.php?message_h="MENSAJE DE ALERTA"');
 ?>
