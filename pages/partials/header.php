@@ -90,12 +90,9 @@
   <?php endif; ?>
   <span><a href="../logout.php">LogOut</a></span> 
   <br>
-  
-  <?php if(!empty($_GET['message_h'])): ?>
-  <p><?= $_GET['message_h']?></p>
-  <?php endif; ?>
 
   <hr>
+
   <div id="cupos">
     <h3>Disponibilidad de cupos para franja horaria</h3>
     <table class="gridtable" align="center">
@@ -184,8 +181,10 @@
   </div>
 
   <br>
-
-
+  <?php if(!empty($_GET['mensaje_d1'])): ?>
+  <p><?= $_GET['mensaje_d1']?></p>
+  <?php endif; ?>
+  <br>
   <div id = "tabla"> 
     <form name="mod_horario" action="horario.php" method="post">
       Día1: <select name="dia1">
