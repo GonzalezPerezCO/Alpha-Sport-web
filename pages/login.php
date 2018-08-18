@@ -47,7 +47,7 @@
       </header>
       <h1>Ingreso</h1>      
       <span>o <a href="signup.php">Registrarse</a></span><br><br>
-      <iframe src="http://free.timeanddate.com/clock/i6dk1lhx/n41/tlco4/pa5/tt0" frameborder="0" width="310" height="26"></iframe>
+      <iframe src="http://free.timeanddate.com/clock/i6dk1lhx/n41/tlco4/pa5/tt0" frameborder="0" width="310" height="26"></iframe>      
       <form action="login.php" method="POST">
         <input name="email" type="text" placeholder="Correo escuela">
         <input name="password" type="password" placeholder="Contraseña correo">
