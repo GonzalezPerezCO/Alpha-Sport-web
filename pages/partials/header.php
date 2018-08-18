@@ -84,6 +84,7 @@
   </head>
 <body>
   <h1>Deportes de la Escuela</h1>
+  <iframe src="http://free.timeanddate.com/clock/i6dk1lhx/n41/tlco4/pa5/tt0" frameborder="0" width="310" height="26"></iframe>
   <br> 
   <?php if(!empty($message)): ?>
   <p> <?= $message ?></p>

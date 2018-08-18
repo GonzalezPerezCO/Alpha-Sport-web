@@ -28,6 +28,8 @@
     </header>
     <section>
         <h1>Deportes de la Escuela</h1>
+        <iframe src="http://free.timeanddate.com/clock/i6dk1lhx/n41/tlco4/pa5/tt0" frameborder="0" width="310" height="26"></iframe>
+        <br>
       <?php if(!empty($user)): ?>      
         <h3> Sesión iniciada como: <?= $user; ?> </h3>         
         <a href="pages/logout.php">
@@ -37,7 +39,7 @@
         <h3>Por favor ingrese o regístrese</h3>
         <a href="pages/login.php">Ingresar</a> <br>
         o
-        <br><a href="">Registrarse</a> <!-- a href="pages/signup.php">SignUp</a-->
+        <br><a href="pages/signup.php">Registrase</a>
       <?php endif; ?>
       <p class="desc">
         Esta es una <a href=""> iniciativa </a> propia con el apoyo del <a href="http://laboratorio.is.escuelaing.edu.co/"> Laboratorio de Sistemas </a> <br>

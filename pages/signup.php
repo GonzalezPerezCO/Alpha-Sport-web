@@ -48,8 +48,8 @@
     <?php if(!empty($message)): ?>
     <p> <?= $message ?></p>
     <?php endif; ?>
-
-    <h1>Registrarse</h1>
+    <iframe src="http://free.timeanddate.com/clock/i6dk1lhx/n41/tlco4/pa5/tt0" frameborder="0" width="310" height="26"></iframe>
+    <h1>Registrarse</h1>    
     <span>o <a href="login.php">Ingresar</a></span>
 
     <form action="signup.php" method="POST">
