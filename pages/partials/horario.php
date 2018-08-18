@@ -24,6 +24,16 @@ $new['hora1']= $_POST['hora1'];
 $new['hora2']= $_POST['hora2'];
 $new['hora3']= $_POST['hora3'];
 
+
+echo $new['dia1'];
+echo $new['dia2'];
+echo $new['dia3'];
+echo $new['hora1'];
+echo $new['hora2'];
+echo $new['hora3'];
+
+die();
+
 # Convertir a dia de la semana y hora
 
 $new['dia1']= $_POST['dia1'];
@@ -91,6 +101,8 @@ if($tlunes>0){
       $query = "UPDATE tcupos SET lunesf8 = '".$cupos['lunesf8']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
+      $mensaje_d1 = " Agregado Lunes a las 8. ";
+
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='9' && $cupos['lunesf9']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='9' WHERE email=".$_COOKIE['user_id']."";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -98,6 +110,8 @@ if($tlunes>0){
       $cupos['lunesf9']-=$cupos['lunesf9'];
       $query = "UPDATE tcupos SET lunesf9 = '".$cupos['lunesf9']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $mensaje_d1 = " Agregado Lunes a las 9. ";
    
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='10' && $cupos['lunesf10']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='10' WHERE email=".$_COOKIE['user_id']."";
@@ -106,6 +120,8 @@ if($tlunes>0){
       $cupos['lunesf10']-=$cupos['lunesf10'];
       $query = "UPDATE tcupos SET lunesf10 = '".$cupos['lunesf10']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $mensaje_d1 = " Agregado Lunes a las 10. ";
       
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='11' && $cupos['lunesf11']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='11' WHERE email=".$_COOKIE['user_id']."";
@@ -114,6 +130,8 @@ if($tlunes>0){
       $cupos['lunesf11']-=$cupos['lunesf11'];
       $query = "UPDATE tcupos SET lunesf11 = '".$cupos['lunesf11']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $mensaje_d1 = " Agregado Lunes a las 11. ";
     
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='12' && $cupos['lunesf12']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='12' WHERE email=".$_COOKIE['user_id']."";
@@ -122,6 +140,8 @@ if($tlunes>0){
       $cupos['lunesf12']-=$cupos['lunesf12'];
       $query = "UPDATE tcupos SET lunesf12 = '".$cupos['lunesf12']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $mensaje_d1 = " Agregado Lunes a las 12. ";
     
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='13' && $cupos['lunesf13']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='13' WHERE email=".$_COOKIE['user_id']."";
@@ -130,6 +150,8 @@ if($tlunes>0){
       $cupos['lunesf13']-=$cupos['lunesf13'];
       $query = "UPDATE tcupos SET lunesf13 = '".$cupos['lunesf13']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $mensaje_d1 = " Agregado Lunes a las 13. ";
    
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='14' && $cupos['lunesf14']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='14' WHERE email=".$_COOKIE['user_id']."";
@@ -138,6 +160,8 @@ if($tlunes>0){
       $cupos['lunesf14']-=$cupos['lunesf14'];
       $query = "UPDATE tcupos SET lunesf14 = '".$cupos['lunesf14']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $mensaje_d1 = " Agregado Lunes a las 14. ";
    
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='15' && $cupos['lunesf15']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='15' WHERE email=".$_COOKIE['user_id']."";
@@ -146,6 +170,8 @@ if($tlunes>0){
       $cupos['lunesf15']-=$cupos['lunesf15'];
       $query = "UPDATE tcupos SET lunesf15 = '".$cupos['lunesf15']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $mensaje_d1 = " Agregado Lunes a las 15. ";
     
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='16' && $cupos['lunesf16']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='16' WHERE email=".$_COOKIE['user_id']."";
@@ -155,23 +181,16 @@ if($tlunes>0){
       $query = "UPDATE tcupos SET lunesf16 = '".$cupos['lunesf16']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
-    }else{
-      $query = "UPDATE thorarios SET dia='N/A', hora1='N/A' WHERE email=".$_COOKIE['user_id']."";
-      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+      $mensaje_d1 = " Agregado Lunes a las 16. ";
 
-      $query = "UPDATE tcupos SET 
+    }else{
       
-      $cupos['
-    }else']}else = '".$cupos['-=$cupos['
-    }else'];
-    }else']."'";
-    $cupos['
-    }
+      $mensaje_d1 = " No hay cupos el Lunes. ";
     
-    
+    }   
   
   }else{
-    $mensaje_l="No es posible inscribir mas de una vez el mismo día";
+    $mensaje_d1="No es posible inscribir mas de una vez el mismo día";
   }
 
 }
