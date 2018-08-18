@@ -42,7 +42,7 @@
       <?php endif; ?>
       <header>
         <div class="logoescuela">
-          <img src="media/logo-ESCUELA.svg" width="650" height="auto">
+          <img src="../media/logo-ESCUELA.svg" width="650" height="auto">
         </div>
       </header>
       <h1>Ingreso</h1>
