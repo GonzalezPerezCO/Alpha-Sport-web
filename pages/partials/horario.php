@@ -87,41 +87,85 @@ if($tlunes>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='8' WHERE email=".$_COOKIE['user_id']."";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
+      $cupos['lunesf8']-=$cupos['lunesf8'];
+      $query = "UPDATE tcupos SET lunesf8 = '".$cupos['lunesf8']."'";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='9' && $cupos['lunesf9']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='9' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $cupos['lunesf9']-=$cupos['lunesf9'];
+      $query = "UPDATE tcupos SET lunesf9 = '".$cupos['lunesf9']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
    
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='10' && $cupos['lunesf10']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='10' WHERE email=".$_COOKIE['user_id']."";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $cupos['lunesf10']-=$cupos['lunesf10'];
+      $query = "UPDATE tcupos SET lunesf10 = '".$cupos['lunesf10']."'";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
       
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='11' && $cupos['lunesf11']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='11' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $cupos['lunesf11']-=$cupos['lunesf11'];
+      $query = "UPDATE tcupos SET lunesf11 = '".$cupos['lunesf11']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
     
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='12' && $cupos['lunesf12']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='12' WHERE email=".$_COOKIE['user_id']."";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $cupos['lunesf12']-=$cupos['lunesf12'];
+      $query = "UPDATE tcupos SET lunesf12 = '".$cupos['lunesf12']."'";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
     
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='13' && $cupos['lunesf13']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='13' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $cupos['lunesf13']-=$cupos['lunesf13'];
+      $query = "UPDATE tcupos SET lunesf13 = '".$cupos['lunesf13']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
    
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='14' && $cupos['lunesf14']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='14' WHERE email=".$_COOKIE['user_id']."";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $cupos['lunesf14']-=$cupos['lunesf14'];
+      $query = "UPDATE tcupos SET lunesf14 = '".$cupos['lunesf14']."'";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
    
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='15' && $cupos['lunesf15']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='15' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $cupos['lunesf15']-=$cupos['lunesf15'];
+      $query = "UPDATE tcupos SET lunesf15 = '".$cupos['lunesf15']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
     
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='16' && $cupos['lunesf16']>0){
       $query = "UPDATE thorarios SET dia='Lunes', hora1='16' WHERE email=".$_COOKIE['user_id']."";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
+      $cupos['lunesf16']-=$cupos['lunesf16'];
+      $query = "UPDATE tcupos SET lunesf16 = '".$cupos['lunesf16']."'";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
     }else{
       $query = "UPDATE thorarios SET dia='N/A', hora1='N/A' WHERE email=".$_COOKIE['user_id']."";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+      $query = "UPDATE tcupos SET 
+      
+      $cupos['
+    }else']}else = '".$cupos['-=$cupos['
+    }else'];
+    }else']."'";
+    $cupos['
     }
     
     
