@@ -90,12 +90,9 @@
   <?php endif; ?>
   <span><a href="../logout.php">LogOut</a></span> 
   <br>
-  
-  <?php if(!empty($_GET['message_h'])): ?>
-  <p><?= $_GET['message_h']?></p>
-  <?php endif; ?>
 
   <hr>
+
   <div id="cupos">
     <h3>Disponibilidad de cupos para franja horaria</h3>
     <table class="gridtable" align="center">
@@ -184,13 +181,14 @@
   </div>
 
   <br>
-
-
+  <?php if(!empty($_GET['mensajes'])): ?>
+  <p><?= $_GET['mensajes']?></p>
+  <?php endif; ?>
+  
   <div id = "tabla"> 
     <form name="mod_horario" action="horario.php" method="post">
       Día1: <select name="dia1">
-        <option selected="<?= $ADATA['user_dia1'] ?>" ><?= $ADATA['user_dia1'] ?> </option>                
-        <option value="N/A">N/A</option>
+        <option selected="<?= $ADATA['user_dia1'] ?>" ><?= $ADATA['user_dia1'] ?> </option>                    
         <option value="Lunes">Lunes</option>
         <option value="Martes">Martes</option>
         <option value="Miercoles">Miercoles</option>
@@ -198,7 +196,7 @@
         <option value="Viernes">Viernes</option>          
       </select>
       Hora día 1: <select name="hora1">
-        <option selected="<?= $ADATA['user_hora1'] ?>" ><?= $ADATA['user_hora1'] ?> </option>                
+        <option selected="<?= $ADATA['user_hora1'] ?>" ><?= $ADATA['user_hora1'] ?> </option> 
         <option value="N/A">N/A</option>
         <option value="8">8</option>
         <option value="9">9</option>
@@ -213,8 +211,7 @@
       <br>
       <br>      
       Día2: <select name="dia2">
-        <option selected="<?= $ADATA['user_dia2'] ?>" ><?= $ADATA['user_dia2'] ?> </option>                
-        <option value="N/A">N/A</option>
+        <option selected="<?= $ADATA['user_dia2'] ?>" ><?= $ADATA['user_dia2'] ?> </option>    
         <option value="Lunes">Lunes</option>
         <option value="Martes">Martes</option>
         <option value="Miercoles">Miercoles</option>
@@ -224,8 +221,8 @@
 
 
       Hora día 2: <select name="hora2">
-        <option selected="<?= $ADATA['user_hora2'] ?>" ><?= $ADATA['user_hora2'] ?> </option>                
-        <option value="N/A">N/A</option>
+        <option selected="<?= $ADATA['user_hora2'] ?>" ><?= $ADATA['user_hora2'] ?> </option>   
+        <option value="N/A">N/A</option> 
         <option value="8">8</option>
         <option value="9">9</option>
         <option value="10">10</option>
@@ -239,8 +236,7 @@
       <br>
       <br>   
       Día3: <select name="dia3">
-        <option selected="<?= $ADATA['user_dia3'] ?>" ><?= $ADATA['user_dia3'] ?> </option>                
-        <option value="N/A">N/A</option>
+        <option selected="<?= $ADATA['user_dia3'] ?>" ><?= $ADATA['user_dia3'] ?> </option> 
         <option value="Lunes">Lunes</option>
         <option value="Martes">Martes</option>
         <option value="Miercoles">Miercoles</option>
