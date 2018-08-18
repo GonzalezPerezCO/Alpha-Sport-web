@@ -89,6 +89,10 @@ table.gridtable td {
 	background-color: #ffffff;
 }
 
+.cajon {
+  background-color: #0098cb !important;
+}
+
 /* Footer */
 footer {
   padding: 10px
