@@ -7,18 +7,19 @@
       
 
     if (!empty($_POST['email']) && !empty($_POST['password'])) {   
-    
-      $query = "SELECT email, CURRENT_TIME() as current, hora FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+      date_default_timezone_set('America/Bogota');     
+
+      $query = "SELECT email, hora, hora2 as horaS FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
       $results = mysqli_fetch_array($consul);
 
-      $current = $results['current'];
-      $hora= $results['hora'];
-      $maximo =  date('h:i:s', strtotime("+10 minutes", strtotime($results['hora'])));      
+      $actual = date('h:m:s');
+      $inferior= $results['hora'];
+      $superior = $results['horaS'];
 
       
       if ( !empty($results)) {
-        if(true || $current>=$hora && $current<=$maximo){         
+        if($actual>=$inferior && $actual<=$superior){         
           $tiempo_cook=time()+600; // 10min
           setcookie('user_id', $results["email"], $tiempo_cook, "/");        
           header("Location: partials/header.php");

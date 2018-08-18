@@ -7,18 +7,20 @@
   }
 
 
-  $query = "SELECT email, CURRENT_TIME() as current, hora FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+  date_default_timezone_set('America/Bogota');   
+
+  $query = "SELECT hora, hora2 as horaS FROM testudiantes WHERE email= '".$_COOKIE["user_id"]."'";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
   $results = mysqli_fetch_array($consul);
 
-  $current = $results['current'];
-  $hora= $results['hora'];
-  $maximo =  date('h:i:s', strtotime("+10 minutes", strtotime($results['hora'])));      
-
-  if(false){
+  $actual = date('h:m:s');
+  $inferior= $results['hora'];
+  $superior = $results['horaS'];
+  
+  if($actual<$inferior || $actual>$superior){
   header('Location: ../logout.php');
   }    
-
+  
   $nombres_tablas = "lunesf8, lunesf9, lunesf10, lunesf11, lunesf12, lunesf13, lunesf14, lunesf15, lunesf16, martesf8, martesf9, martesf10, martesf11, martesf12, martesf13, martesf14, martesf15, martesf16, miercolesf8, miercolesf9, miercolesf10, miercolesf11, miercolesf12, miercolesf13, miercolesf14, miercolesf15, miercolesf16, juevesf8, juevesf9, juevesf10, juevesf11, juevesf12, juevesf13, juevesf14, juevesf15, juevesf16, viernesf8, viernesf9, viernesf10, viernesf11, viernesf12, viernesf13, viernesf14, viernesf15, viernesf16";
   $query = "SELECT ".$nombres_tablas." FROM tcupos";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -72,18 +74,9 @@
 
 
 
-  $query = "SELECT testudiantes.nombre as nombre, testudiantes.apellido as apellido, dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE testudiantes.email = thorarios.email AND testudiantes.email= '".$_COOKIE['user_id']."'";
+  $query = "SELECT testudiantes.nombre as user_nombre, testudiantes.apellido as user_apellido, dia1 as user_dia1, dia2 as user_dia2, dia3 as user_dia3, hora1 as user_hora1, testudiantes.hora2 as user_hora2, hora3 as user_hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE testudiantes.email = thorarios.email AND testudiantes.email= '".$_COOKIE['user_id']."'";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
-  $results = mysqli_fetch_array($consul);
-
-  $ADATA['user_nombre']= $results["nombre"];
-  $ADATA['user_apellido']= $results["apellido"];
-  $ADATA['user_dia1']= $results["dia1"];
-  $ADATA['user_dia2']= $results["dia2"];
-  $ADATA['user_dia3']= $results["dia3"];
-  $ADATA['user_hora1']= $results["hora1"];
-  $ADATA['user_hora2']= $results["hora2"];
-  $ADATA['user_hora3']= $results["hora3"];
+  $ADATA = mysqli_fetch_array($consul);
   
   $message = "<h4> Sesión iniciada como: ".$ADATA['user_nombre']." ".$ADATA['user_apellido']."</h4>";
 ?>
@@ -281,5 +274,3 @@
 
 </body>  
 </html>
-
-
