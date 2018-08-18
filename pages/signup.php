@@ -1,5 +1,9 @@
 <?php
 
+    $master = "Inscripciones Terminadas";
+
+    if(!empty(master)) header('Location: ../index.php');
+
   if (isset($_COOKIE['user_id'])) {
     header('Location: logout.php');    
   }else{

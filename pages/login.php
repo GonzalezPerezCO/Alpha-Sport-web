@@ -5,6 +5,9 @@
   }else{
     require '../controller/database.php';    
       
+    $master = "Inscripciones Terminadas";
+
+    if(!empty(master)) header('Location: ../index.php');
 
     if (!empty($_POST['email']) && !empty($_POST['password'])) {   
       #date_default_timezone_set('America/Bogota');     
