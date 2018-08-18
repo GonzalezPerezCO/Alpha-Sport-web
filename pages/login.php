@@ -7,12 +7,13 @@
       
 
     if (!empty($_POST['email']) && !empty($_POST['password'])) {   
-      /*date_default_timezone_set('America/Bogota');     
+      #date_default_timezone_set('America/Bogota');     
 
-      $query = "SELECT email, hora, hora2 as horaS FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+      #$query = "SELECT email, hora, hora2 as horaS FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+      $query = "SELECT email FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
       $results = mysqli_fetch_array($consul);
-
+      /*
       $actual = date('h:i:s');
       $inferior= $results['hora'];
       $superior = $results['horaS'];*/

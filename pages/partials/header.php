@@ -74,7 +74,7 @@
 
 
 
-  $query = "SELECT testudiantes.nombre as user_nombre, testudiantes.apellido as user_apellido, dia1 as user_dia1, dia2 as user_dia2, dia3 as user_dia3, hora1 as user_hora1, testudiantes.hora2 as user_hora2, hora3 as user_hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE testudiantes.email = thorarios.email AND testudiantes.email= '".$_COOKIE['user_id']."'";
+  $query = "SELECT testudiantes.nombre as user_nombre, testudiantes.apellido as user_apellido, dia1 as user_dia1, dia2 as user_dia2, dia3 as user_dia3, hora1 as user_hora1, thorarios.hora2 as user_hora2, hora3 as user_hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE testudiantes.email = thorarios.email AND testudiantes.email= '".$_COOKIE['user_id']."'";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
   $ADATA = mysqli_fetch_array($consul);
   
