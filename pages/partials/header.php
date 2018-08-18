@@ -90,9 +90,7 @@
   <?php endif; ?>
   <span><a href="../logout.php">LogOut</a></span> 
   <br>
-  <br>
-  <br>
-
+  
   <?php if(!empty($_GET['message_h'])): ?>
   <p><?= $_GET['message_h']?></p>
   <?php endif; ?>

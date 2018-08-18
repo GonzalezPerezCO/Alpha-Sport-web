@@ -24,6 +24,12 @@ $new['hora1']= $_POST['hora1'];
 $new['hora2']= $_POST['hora2'];
 $new['hora3']= $_POST['hora3'];
 
+# Convertir a dia de la semana y hora
+
+$new['dia1']= $_POST['dia1'];
+$new['dia2']= $_POST['dia2'];
+$new['dia3']= $_POST['dia3'];
+
 # SABER CUANTOS APARICIONES HAY DE CADA DIA
 $tlunes=0;
 $tmartes=0;
@@ -32,6 +38,7 @@ $tjueves=0;
 $tviernes=0;
 $tsabado=0;
 $tnada=0;
+
 
 foreach($new as $value){
   if($value=="Lunes"){
@@ -58,27 +65,77 @@ foreach($new as $value){
 -------------------------------------------------------------------- */   
 
 if($tlunes>0){
+
+  $nombres_tablas = "lunesf8, lunesf9, lunesf10, lunesf11, lunesf12, lunesf13, lunesf14, lunesf15, lunesf16";
+  $query = "SELECT ".$nombres_tablas." FROM tcupos";
+  $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+  $results = mysqli_fetch_array($consul);
+
+  $cupos['lunesf8']=$results['lunesf8'];
+  $cupos['lunesf9']=$results['lunesf9'];
+  $cupos['lunesf10']=$results['lunesf10'];
+  $cupos['lunesf11']=$results['lunesf11'];
+  $cupos['lunesf12']=$results['lunesf12'];
+  $cupos['lunesf13']=$results['lunesf13'];
+  $cupos['lunesf14']=$results['lunesf14'];
+  $cupos['lunesf15']=$results['lunesf15'];
+  $cupos['lunesf16']=$results['lunesf16'];
+
   if($tlunes==1){
-    $mensaje_l="Inscrito Lunes a las".$new['hora1'].".";
-  }elseif(!$cupos_lunes>=1){
-    $mensaje_l="No hay cupos para el Lunes a las ".$new['hora1'].".";;
-  }
-  else{
+    
+    if($new['dia1']=='Lunes' && $new['hora1']=='8' && $cupos['lunesf8']>0){      
+      $query = "UPDATE thorarios SET dia='Lunes', hora1='8' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+    }elseif($new['dia1']=='Lunes' && $new['hora1']=='9' && $cupos['lunesf9']>0){
+      $query = "UPDATE thorarios SET dia='Lunes', hora1='9' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+   
+    }elseif($new['dia1']=='Lunes' && $new['hora1']=='10' && $cupos['lunesf10']>0){
+      $query = "UPDATE thorarios SET dia='Lunes', hora1='10' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+      
+    }elseif($new['dia1']=='Lunes' && $new['hora1']=='11' && $cupos['lunesf11']>0){
+      $query = "UPDATE thorarios SET dia='Lunes', hora1='11' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+    
+    }elseif($new['dia1']=='Lunes' && $new['hora1']=='12' && $cupos['lunesf12']>0){
+      $query = "UPDATE thorarios SET dia='Lunes', hora1='12' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+    
+    }elseif($new['dia1']=='Lunes' && $new['hora1']=='13' && $cupos['lunesf13']>0){
+      $query = "UPDATE thorarios SET dia='Lunes', hora1='13' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+   
+    }elseif($new['dia1']=='Lunes' && $new['hora1']=='14' && $cupos['lunesf14']>0){
+      $query = "UPDATE thorarios SET dia='Lunes', hora1='14' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+   
+    }elseif($new['dia1']=='Lunes' && $new['hora1']=='15' && $cupos['lunesf15']>0){
+      $query = "UPDATE thorarios SET dia='Lunes', hora1='15' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+    
+    }elseif($new['dia1']=='Lunes' && $new['hora1']=='16' && $cupos['lunesf16']>0){
+      $query = "UPDATE thorarios SET dia='Lunes', hora1='16' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+    }else{
+      $query = "UPDATE thorarios SET dia='N/A', hora1='N/A' WHERE email=".$_COOKIE['user_id']."";
+      $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
+    }
+    
+    
+  
+  }else{
     $mensaje_l="No es posible inscribir mas de una vez el mismo día";
   }
 
 }
 
-echo $tlunes;
-echo $tmartes;
-echo $tmiercoles;
-echo $tjueves;
-echo $tviernes;
-echo $tsabado;
-echo $tnada;
-
-die();
 
 
-header('Location: header.php?message_h='.$mensaje_l.'');
+
+
+
+header('Location: header.php?message_d1='.$mensaje_d1.'');
 ?>
