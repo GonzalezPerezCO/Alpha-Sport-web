@@ -8,18 +8,24 @@
 
     if (!empty($_POST['email']) && !empty($_POST['password'])) {   
     
-      $query = "SELECT email FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+      $query = "SELECT email, CURRENT_TIME() as current, hora FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
       $results = mysqli_fetch_array($consul);
 
-      $message = '';   
+      $current = $results['current'];
+      $hora= $results['hora'];
+      $maximo =  date('h:i:s', strtotime("+10 minutes", strtotime($results['hora'])));      
+
       
       if ( !empty($results)) {
+        if($current>=$hora && $current<=$maximo){         
+          $tiempo_cook=time()+600; // 10min
+          setcookie('user_id', $results["email"], $tiempo_cook, "/");        
+          header("Location: partials/header.php");
 
-        $tiempo_cook=time()+600; // 10min
-        setcookie('user_id', $results["email"], $tiempo_cook, "/");
-        
-        header("Location: partials/header.php");
+        } else{
+          $message = 'No es su hora de registro';
+        }       
       } else {
         $message = 'Sorry, those credentials do not match';
       }
@@ -38,7 +44,7 @@
   <body>
     <div class="container">
       <?php if(!empty($message)): ?>
-        <p> <?= $message ?></p>
+        <p> <font color='red'> <?= $message ?></font></p>
       <?php endif; ?>
       <header>
         <div class="logoescuela">
