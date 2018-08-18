@@ -62,13 +62,15 @@ $cupos['viernesf16']=$results['viernesf16'];
   </head>
 <body>
   <h1>Deportes de la Escuela</h1>
-  <iframe src="http://free.timeanddate.com/clock/i6dk1lhx/n41/tlco4/pa5/tt0" frameborder="0" width="310" height="26"></iframe>
   <br> 
-  
+  <header>
+    <div class="logoescuela">
+    <img src="../media/logo-ESCUELA.svg" width="650" height="auto">
+    </div>
+  </header>
+  <a href="index.php">Inicio</a>
   <br>
-
-  <hr>
-
+  <iframe src="http://free.timeanddate.com/clock/i6dk1lhx/n41/tlco4/pa5/tt0" frameborder="0" width="310" height="26"></iframe>
   <div id="cupos">
     <h3>Disponibilidad de cupos para franja horaria</h3>
     <table class="gridtable" align="center">

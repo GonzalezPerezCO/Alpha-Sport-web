@@ -54,6 +54,8 @@
       <p>
       <b>Recuerde que tiene 10 minutos para hacer su horario.</b>   
       </p>
+      <br>
+      <h3><a href="cupos_dis.php">Ver Cupos Disponibles</a></h3>
 
       <p class="desc">
         Esta es una <a href=""> iniciativa </a> propia con el apoyo del <a href="http://laboratorio.is.escuelaing.edu.co/"> Laboratorio de Sistemas </a>
