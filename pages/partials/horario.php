@@ -83,6 +83,14 @@ if($tlunes>0){
   $cupos['lunesf15']=$results['lunesf15'];
   $cupos['lunesf16']=$results['lunesf16'];
 
+
+  if($new['hora1']=='N/A'){
+    
+
+  }
+
+  $mensaje_gen=" Peticion realizada: ";
+
   if($tlunes==1){
     
     if($new['dia1']=='Lunes' && $new['hora1']=='8' && $cupos['lunesf8']>0){      
@@ -93,7 +101,7 @@ if($tlunes>0){
       $query = "UPDATE tcupos SET lunesf8 = '".$cupos['lunesf8']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
-      $mensaje_d1 = " Agregado Lunes a las 8. "; die("entro");
+      $mensaje_d1 = " Agregado Lunes a las 8. ";
 
     }elseif($new['dia1']=='Lunes' && $new['hora1']=='9' && $cupos['lunesf9']>0){
       $query = "UPDATE thorarios SET dia1='Lunes', hora1='9' WHERE email='".$_COOKIE['user_id']."'";
@@ -192,5 +200,5 @@ if($tlunes>0){
 
 
 
-header('Location: header.php?message_d1='.$mensaje_d1.'');
+header('Location: header.php?mensaje_d1='.$mensaje_d1.'');
 ?>
