@@ -41,12 +41,26 @@
         o
         <br><a href="pages/signup.php">Registrase</a>
       <?php endif; ?>
-      <p class="desc">
-        Esta es una <a href=""> iniciativa </a> propia con el apoyo del <a href="http://laboratorio.is.escuelaing.edu.co/"> Laboratorio de Sistemas </a> <br>
-      y <a href="https://www.escuelaing.edu.co/es/vida_universitaria/bienestar_universitario/recreacion/programa"> Bienestar Universitario</a>, para la elaboración de horarios de los estudiantes al Gimnasio de la Escuela. <br>
+    
+      <p>
+      <b>Instrucciones:</b><br>
+      Sí necesita ayuda con el sistema o encuentra errores, puede comunicarse a los correos de los desarrolladores que se encuentra en la parte inferior de esta página,
+      Primero registrese en <b>Registrase</b> con su número de reserva y complete los datos que allí se le piden. Para hacer el registro lo puede hacer en cualquier momento de día
+      hoy Agosto 18.
       </p>
       <p>
-      Para saber mas visite,<a href="http://notiweb.escuelaing.edu.co/blog/2018/07/24/ganadores-de-la-trigesima-sexta-version-de-la-vitrina-academica-2018-i/"> el NOTIWEB. </a>
+      Despues de crear su cuenta en <b>Registrase</b> inicie sesión con el correo y la contraseña que registro. Luego de esto puede hacer su horario.      
+      </p>
+      <p>
+      <b>Recuerde que tiene 10 minutos para hacer su horario desde la hora que le corresponde inscribir.</b>   
+      </p>
+
+      <p class="desc">
+        Esta es una <a href=""> iniciativa </a> propia con el apoyo del <a href="http://laboratorio.is.escuelaing.edu.co/"> Laboratorio de Sistemas </a>
+      y <a href="https://www.escuelaing.edu.co/es/vida_universitaria/bienestar_universitario/recreacion/programa"> Bienestar Universitario</a>, para la elaboración de horarios de los estudiantes al Gimnasio de la Escuela.
+      </p>
+      <p>
+      Para saber mas visite<a href="http://notiweb.escuelaing.edu.co/blog/2018/07/24/ganadores-de-la-trigesima-sexta-version-de-la-vitrina-academica-2018-i/"> el NOTIWEB. </a>
       </p>
     </section>
 
@@ -54,8 +68,8 @@
       <p>
       <b>Cordialmente:</b><br>
       <br>Desarrolladores:<br>    
-      Juan Francisco Gonzalez<br>
-      Manuel Sergio Pérez<br>
+      Juan Francisco Gonzalez <font color="blue">juan.gonzalez@mail.escuelaing.edu.co</font><br>
+      Manuel Sergio Pérez <font color="blue">manuel.perez-e@mail.escuelaing.edu.co</font><br>
       Directora:
       Ing. Claudia Patricia Castañeda<br>
       <i>Decanatura de Ingeniería de Sistemas</i><br>
