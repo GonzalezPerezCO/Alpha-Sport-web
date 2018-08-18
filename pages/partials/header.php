@@ -181,8 +181,8 @@
   </div>
 
   <br>
-  <?php if(!empty($_GET['mensaje_d1'])): ?>
-  <p><?= $_GET['mensaje_d1']?></p>
+  <?php if(!empty($_GET['mensajes'])): ?>
+  <p><?= $_GET['mensajes']?></p>
   <?php endif; ?>
   
   <div id = "tabla"> 
