@@ -16,7 +16,7 @@
       
       if ( !empty($results)) {
 
-        $tiempo_cook=time()+900; // 15min
+        $tiempo_cook=time()+600; // 10min
         setcookie('user_id', $results["email"], $tiempo_cook, "/");
         
         header("Location: partials/header.php");
