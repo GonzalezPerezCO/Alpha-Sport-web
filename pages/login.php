@@ -18,7 +18,7 @@
 
       
       if ( !empty($results)) {
-        if($current>=$hora && $current<=$maximo){         
+        if(true || $current>=$hora && $current<=$maximo){         
           $tiempo_cook=time()+600; // 10min
           setcookie('user_id', $results["email"], $tiempo_cook, "/");        
           header("Location: partials/header.php");

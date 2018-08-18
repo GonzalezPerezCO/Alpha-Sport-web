@@ -14,7 +14,7 @@ $current = $results['current'];
 $hora= $results['hora'];
 $maximo =  date('h:i:s', strtotime("+10 minutes", strtotime($results['hora'])));      
 
-if($current<$hora || $current>$maximo){
+if(false){
   header('Location: ../logout.php');
 }         
 
