@@ -13,12 +13,16 @@
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
       $results = mysqli_fetch_array($consul);
 
-      $actual = date('h:m:s');
+      $actual = date('h:i:s');
       $inferior= $results['hora'];
       $superior = $results['horaS'];
 
       
       if ( !empty($results)) {
+        echo $actual;
+        echo $inferior;
+        echo $superior;
+       
         if($actual>=$inferior && $actual<=$superior){         
           $tiempo_cook=time()+600; // 10min
           setcookie('user_id', $results["email"], $tiempo_cook, "/");        

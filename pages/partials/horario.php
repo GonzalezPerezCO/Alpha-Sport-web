@@ -12,7 +12,7 @@ $query = "SELECT hora, hora2 as horaS FROM testudiantes WHERE email= '".$_COOKIE
 $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
 $results = mysqli_fetch_array($consul);
 
-$actual = date('h:m:s');
+$actual = date('h:i:s');
 $inferior= $results['hora'];
 $superior = $results['horaS'];
 
