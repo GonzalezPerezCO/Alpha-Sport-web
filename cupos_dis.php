@@ -65,7 +65,7 @@ $cupos['viernesf16']=$results['viernesf16'];
   <br> 
   <header>
     <div class="logoescuela">
-    <img src="../media/logo-ESCUELA.svg" width="650" height="auto">
+    <img src="media/logo-ESCUELA.svg" width="650" height="auto">
     </div>
   </header>
   <a href="index.php">Inicio</a>
