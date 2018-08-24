@@ -19,10 +19,10 @@
 
       
       if ( !empty($results)) {
-        echo $actual;
-        echo $inferior;
-        echo $superior;
-        die();
+        #echo $actual;
+        #echo $inferior;
+        #echo $superior;
+        
         if($actual>=$inferior && $actual<=$superior){         
           $tiempo_cook=time()+600; // 10min
           setcookie('user_id', $results["email"], $tiempo_cook, "/");        
