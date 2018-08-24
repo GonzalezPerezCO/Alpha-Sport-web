@@ -193,6 +193,19 @@ Aplicar cambios:
 
 `sudo service php7.0-fpmrestart`
 
+## Para remoto acceso a phpMyAdmin
+Como el servidor no permite acceder a phpmyadmin desde internet, fue necesario incluir phpMyAdmin manualmente, para esto se creo public_html en la raiz y se hizo la isntalación manual.
+
+`mkdir public_html`   
+
+`wget -c https://files.phpmyadmin.net/phpMyAdmin/4.8.3/phpMyAdmin-4.8.3-all-languages.zip`
+
+`unzip /phpMyAdmin-4.8.3-all-languages.zip`
+
+`mv phpMyAdmin-4.8.3-all-languages phpmyadmin`
+
+[phpMyAdmin deportes](http://estudiantes.is.escuelaing.edu.co/deportes/phpmyadmin)
+
 # Bibliografía
 
 [digitalocean.com](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04)
