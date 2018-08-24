@@ -25,7 +25,7 @@
         
         if($actual>=$inferior && $actual<=$superior){         
           $tiempo_cook=time()+600; // 10min
-          setcookie('user_id', $results["email"], $tiempo_cook, "/");        
+          setcookie('user_id', $results["email"],$tiempo_cook,"/",$_SERVER['SERVER_NAME']);        
           header("Location: partials/header.php");
 
         } else{
