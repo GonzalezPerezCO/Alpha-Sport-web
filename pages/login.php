@@ -4,11 +4,7 @@
     header('Location: partials/header.php');    
   }else{
     require '../controller/database.php';    
-      
-    $master = "Inscripciones Terminadas";
-
-    if(!empty(master)) header('Location: ../index.php');
-
+    
     if (!empty($_POST['email']) && !empty($_POST['password'])) {   
       date_default_timezone_set('America/Bogota');     
 
@@ -23,10 +19,10 @@
 
       
       if ( !empty($results)) {
-        #echo $actual;
-        #echo $inferior;
-        #echo $superior;
-       
+        echo $actual;
+        echo $inferior;
+        echo $superior;
+        die();
         if($actual>=$inferior && $actual<=$superior){         
           $tiempo_cook=time()+600; // 10min
           setcookie('user_id', $results["email"], $tiempo_cook, "/");        
@@ -39,7 +35,7 @@
         $message = 'Sorry, those credentials do not match';
       }
     }
-  }   
+  }  
 ?>
 
 <!DOCTYPE html>
