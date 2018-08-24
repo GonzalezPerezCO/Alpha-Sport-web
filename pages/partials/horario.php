@@ -6,7 +6,7 @@ if (!isset($_COOKIE['user_id'])) {
 header('Location: ../login.php');
 }  
 
-/*date_default_timezone_set('America/Bogota');   
+date_default_timezone_set('America/Bogota');   
 
 $query = "SELECT hora, hora2 as horaS FROM testudiantes WHERE email= '".$_COOKIE["user_id"]."'";
 $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -18,7 +18,7 @@ $superior = $results['horaS'];
 
 if($actual<$inferior || $actual>$superior){
   header('Location: ../logout.php');
-} */   
+}   
 
 $query = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios WHERE email = '".$_COOKIE['user_id']."'";
 $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));

@@ -7,7 +7,7 @@
   }
 
 
-  /*date_default_timezone_set('America/Bogota');   
+  date_default_timezone_set('America/Bogota');   
 
   $query = "SELECT hora, hora2 as horaS FROM testudiantes WHERE email= '".$_COOKIE["user_id"]."'";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -19,7 +19,7 @@
   
   if($actual<$inferior || $actual>$superior){
   header('Location: ../logout.php');
-  }*/
+  }
   
   $nombres_tablas = "lunesf8, lunesf9, lunesf10, lunesf11, lunesf12, lunesf13, lunesf14, lunesf15, lunesf16, martesf8, martesf9, martesf10, martesf11, martesf12, martesf13, martesf14, martesf15, martesf16, miercolesf8, miercolesf9, miercolesf10, miercolesf11, miercolesf12, miercolesf13, miercolesf14, miercolesf15, miercolesf16, juevesf8, juevesf9, juevesf10, juevesf11, juevesf12, juevesf13, juevesf14, juevesf15, juevesf16, viernesf8, viernesf9, viernesf10, viernesf11, viernesf12, viernesf13, viernesf14, viernesf15, viernesf16";
   $query = "SELECT ".$nombres_tablas." FROM tcupos";

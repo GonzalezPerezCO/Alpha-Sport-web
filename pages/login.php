@@ -10,16 +10,16 @@
     if(!empty(master)) header('Location: ../index.php');
 
     if (!empty($_POST['email']) && !empty($_POST['password'])) {   
-      #date_default_timezone_set('America/Bogota');     
+      date_default_timezone_set('America/Bogota');     
 
-      #$query = "SELECT email, hora, hora2 as horaS FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
-      $query = "SELECT email FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+      $query = "SELECT email, hora, hora2 as horaS FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+      #$query = "SELECT email FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
       $results = mysqli_fetch_array($consul);
-      /*
+      
       $actual = date('h:i:s');
       $inferior= $results['hora'];
-      $superior = $results['horaS'];*/
+      $superior = $results['horaS'];
 
       
       if ( !empty($results)) {
@@ -27,14 +27,14 @@
         #echo $inferior;
         #echo $superior;
        
-        #if($actual>=$inferior && $actual<=$superior){         
+        if($actual>=$inferior && $actual<=$superior){         
           $tiempo_cook=time()+600; // 10min
           setcookie('user_id', $results["email"], $tiempo_cook, "/");        
           header("Location: partials/header.php");
 
-        #} else{
-          #$message = 'No es su hora de registro';
-        #}       
+        } else{
+          $message = 'No es su hora de registro';
+        }       
       } else {
         $message = 'Sorry, those credentials do not match';
       }
