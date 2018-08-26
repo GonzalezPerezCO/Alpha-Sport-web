@@ -52,7 +52,7 @@ SEGURIDAD ADICIONAL (seleccionar no)
 
 Entrar a mysql así:
 
-`sudo mysql -u root -p`
+`sudo mysql -u root -p deportes`
 
 Para ver tablas:
 
