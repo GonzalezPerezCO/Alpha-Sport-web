@@ -204,7 +204,13 @@ Como el servidor no permite acceder a phpmyadmin desde internet, fue necesario i
 
 `mv phpMyAdmin-4.8.3-all-languages phpmyadmin`
 
-[phpMyAdmin deportes](http://estudiantes.is.escuelaing.edu.co/deportes/phpmyadmin)
+[phpMyAdmin deportes](http://estudiantes.is.escuelaing.edu.co/deportes/phpmyadmin)  
+
+Configuraciones adicionales en phpmyadmin instalado manualmente, agregar cambiar las lineas:
+
+`nano phpmyadmin/libraries/config.default.php`
+
+`$cfg['blowfish_secret'] = 'a0sfo49nadf89fa3s8f789sf78asb7p1587balz';`
 
 # Bibliografía
 
