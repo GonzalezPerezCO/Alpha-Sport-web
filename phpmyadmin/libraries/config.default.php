@@ -2968,7 +2968,6 @@ if (defined('TEMP_DIR')) {
     $cfg['TempDir'] = './tmp/';
 }
 
-
 /**
  * Misc. settings
  */
