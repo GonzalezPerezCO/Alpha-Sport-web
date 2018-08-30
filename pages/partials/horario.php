@@ -9,13 +9,13 @@ header('Location: ../login.php');
 
 date_default_timezone_set('America/Bogota');   
 
-$query = "SELECT hora, hora2 as horaS FROM testudiantes".$PERIODO." WHERE email= '".$_COOKIE["user_id"]."'";
+$query = "SELECT hora_inf, hora_sup FROM testudiantes".$PERIODO." WHERE email= '".$_COOKIE["user_id"]."'";
 $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
 $results = mysqli_fetch_array($consul);
 
 $actual = date('h:i:s');
-$inferior= $results['hora'];
-$superior = $results['horaS'];
+$inferior= $results['hora_inf'];
+$superior = $results['hora_sup'];
 
 if($actual<$inferior || $actual>$superior){
   header('Location: ../logout.php');
