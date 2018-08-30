@@ -20,9 +20,6 @@
 
       
       if ( !empty($results)) {
-        #echo $actual;
-        #echo $inferior;
-        #echo $superior;
         
         if($actual>=$inferior && $actual<=$superior){         
           $tiempo_cook=time()+600; // 10min
