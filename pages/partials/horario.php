@@ -49,7 +49,7 @@ for ($i=1; $i < 4; $i++) {
    
   if($bdestudiante['dia'.$i]== 'N/A')continue;
 
-  $query = "UPDATE tcupos SET ".strtolower($bdestudiante['dia'.$i]).'f'.$bdestudiante['hora'.$i]." = ".strtolower($bdestudiante['dia'.$i]).'f'.$bdestudiante['hora'.$i]."+1";
+  $query = "UPDATE tcupos".$PERIODO." SET ".strtolower($bdestudiante['dia'.$i]).'f'.$bdestudiante['hora'.$i]." = ".strtolower($bdestudiante['dia'.$i]).'f'.$bdestudiante['hora'.$i]."+1";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
 }
 
@@ -71,7 +71,7 @@ for ($i=1; $i < 4; $i++) {
     $query = "UPDATE thorarios".$PERIODO." SET dia".$i."='".$new['dia'.$i]."', hora".$i."='".$new['hora'.$i]."' WHERE email='".$_COOKIE['user_id']."'";
     $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
       
-    $query = "UPDATE tcupos SET ".strtolower($new['dia'.$i]).'f'.$new['hora'.$i]." = ".strtolower($new['dia'.$i]).'f'.$new['hora'.$i]."-1";
+    $query = "UPDATE tcupos".$PERIODO." SET ".strtolower($new['dia'.$i]).'f'.$new['hora'.$i]." = ".strtolower($new['dia'.$i]).'f'.$new['hora'.$i]."-1";
     $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
   
     $mensajes .= " Agregado ".$new['dia'.$i]." a las ".$new['hora'.$i]." ";
