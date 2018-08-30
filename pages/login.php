@@ -3,13 +3,14 @@
   if(isset($_COOKIE['user_id'])){
     header('Location: partials/header.php');    
   }else{
-    require '../controller/database.php';    
+    require '../controller/database.php';  
+    include '../controller/global.php';    
     
     if (!empty($_POST['email']) && !empty($_POST['password'])) {   
       date_default_timezone_set('America/Bogota');     
 
-      $query = "SELECT email, hora, hora2 as horaS FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
-      #$query = "SELECT email FROM testudiantes WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+      $query = "SELECT email, hora, hora2 as horaS FROM testudiantes".$PERIODO." WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
+      #$query = "SELECT email FROM testudiantes".$PERIODO." WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
       $results = mysqli_fetch_array($consul);
       

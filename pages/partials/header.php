@@ -1,6 +1,7 @@
 <?php
   
-  require '../../controller/database.php'; 
+  require '../../controller/database.php';  
+  include '../../controller/global.php'; 
 
   if (!isset($_COOKIE['user_id'])) {
     header('Location: ../login.php');
@@ -9,7 +10,7 @@
 
   date_default_timezone_set('America/Bogota');   
 
-  $query = "SELECT hora, hora2 as horaS FROM testudiantes WHERE email= '".$_COOKIE["user_id"]."'";
+  $query = "SELECT hora, hora2 as horaS FROM testudiantes".$PERIODO." WHERE email= '".$_COOKIE["user_id"]."'";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
   $results = mysqli_fetch_array($consul);
 
@@ -22,7 +23,7 @@
   }
   
   $nombres_tablas = "lunesf8, lunesf9, lunesf10, lunesf11, lunesf12, lunesf13, lunesf14, lunesf15, lunesf16, martesf8, martesf9, martesf10, martesf11, martesf12, martesf13, martesf14, martesf15, martesf16, miercolesf8, miercolesf9, miercolesf10, miercolesf11, miercolesf12, miercolesf13, miercolesf14, miercolesf15, miercolesf16, juevesf8, juevesf9, juevesf10, juevesf11, juevesf12, juevesf13, juevesf14, juevesf15, juevesf16, viernesf8, viernesf9, viernesf10, viernesf11, viernesf12, viernesf13, viernesf14, viernesf15, viernesf16";
-  $query = "SELECT ".$nombres_tablas." FROM tcupos";
+  $query = "SELECT ".$nombres_tablas." FROM tcupos".$PERIODO."";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
   $results = mysqli_fetch_array($consul);
 
@@ -74,7 +75,7 @@
 
 
 
-  $query = "SELECT testudiantes.nombre as user_nombre, testudiantes.apellido as user_apellido, dia1 as user_dia1, dia2 as user_dia2, dia3 as user_dia3, hora1 as user_hora1, thorarios.hora2 as user_hora2, hora3 as user_hora3 FROM thorarios INNER JOIN testudiantes ON thorarios.email = testudiantes.email WHERE testudiantes.email = thorarios.email AND testudiantes.email= '".$_COOKIE['user_id']."'";
+  $query = "SELECT testudiantes".$PERIODO.".nombre as user_nombre, testudiantes".$PERIODO.".apellido as user_apellido, dia1 as user_dia1, dia2 as user_dia2, dia3 as user_dia3, hora1 as user_hora1, thorarios".$PERIODO.".hora2 as user_hora2, hora3 as user_hora3 FROM thorarios".$PERIODO." INNER JOIN testudiantes".$PERIODO." ON thorarios".$PERIODO.".email = testudiantes".$PERIODO.".email WHERE testudiantes".$PERIODO.".email = thorarios".$PERIODO.".email AND testudiantes".$PERIODO.".email= '".$_COOKIE['user_id']."'";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
   $ADATA = mysqli_fetch_array($consul);
   

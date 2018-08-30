@@ -8,6 +8,7 @@
     header('Location: logout.php');    
   }else{
     require '../controller/database.php';  
+    include '../controller/global.php';  
 
     $message = '';
 
@@ -16,7 +17,7 @@
 
       if($_POST['password'] == $_POST['confirm_password']){
 
-        $query = "SELECT id, email, reserva FROM testudiantes WHERE reserva ='".$_POST['reserva']."'";
+        $query = "SELECT id, email, reserva FROM testudiantes".$PERIODO." WHERE reserva ='".$_POST['reserva']."'";
         $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
         $results = mysqli_fetch_array($consul);
         
@@ -25,7 +26,7 @@
               $message = 'El código de reserva ya fue usado';
           }
           else{
-            $query = "UPDATE testudiantes SET documento = '".$_POST['documento']."', carrera = '".$_POST['carrera']."', email = '".$_POST['email']."', codigo = '".$_POST['codigo']."', semestre = '".$_POST['semestre']."', password = '".$_POST['password']."' WHERE reserva='".$_POST['reserva']."'";
+            $query = "UPDATE testudiantes".$PERIODO." SET documento = '".$_POST['documento']."', carrera = '".$_POST['carrera']."', email = '".$_POST['email']."', codigo = '".$_POST['codigo']."', semestre = '".$_POST['semestre']."', password = '".$_POST['password']."' WHERE reserva='".$_POST['reserva']."'";
             $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
               
             $message = 'Successfully created new user';

@@ -73,7 +73,7 @@ $cupos['viernesf16']=$results['viernesf16'];
   <br>
   <iframe src="http://free.timeanddate.com/clock/i6dk1lhx/n41/tlco4/pa5/tt0" frameborder="0" width="310" height="26"></iframe>
   <div id="cupos">
-    <h3>Disponibilidad de cupos para franja horaria</h3>
+    <h3>Disponibilidad de cupos para franja horaria - <?= $N_PERIODO?></h3>
     <table class="gridtable" align="center">
     <tr>
       <th>Hora</th>
