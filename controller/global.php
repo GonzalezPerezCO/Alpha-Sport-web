@@ -5,7 +5,7 @@ $MAX_ESTUDIANTES = 350;
 $MAX_NUEVOS = 175;
 $MAX_ANTIGUOS = 175;
 $MAX_TURNOS_DIA=20;
-$PERIODO= '-2018-2-i';
+$PERIODO= '_'.'2018_2_i';
 $N_PERIODO= 'Periodo Acádémico 2018-2-i';
 
 ?>
