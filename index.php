@@ -1,5 +1,4 @@
 <?php  
-
   require 'controller/database.php';
   include 'controller/global.php'; 
   
@@ -10,7 +9,6 @@
       $user=$results["nombre"]." ".$results["apellido"];
     }
 ?>
-
 
 <!DOCTYPE html>
 <html>

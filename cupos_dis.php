@@ -155,11 +155,7 @@ $cupos['viernesf16']=$results['viernesf16'];
       <td><?= $cupos['juevesf16'] ?></td>
       <td><?= $cupos['viernesf16'] ?></td>
     </tr>
-  </table>
-    
+  </table>    
   </div>
-
-
-
 </body>  
 </html>
