@@ -1,5 +1,4 @@
 <?php
-
   if(isset($_COOKIE['user_id'])){
     header('Location: partials/header.php');    
   }else{
@@ -10,7 +9,6 @@
       date_default_timezone_set('America/Bogota');     
 
       $query = "SELECT email, hora_inf, hora_sup FROM testudiantes".$PERIODO." WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
-      #$query = "SELECT email FROM testudiantes".$PERIODO." WHERE email= '".$_POST["email"]."' AND password = '".$_POST['password']."'";
       $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
       $results = mysqli_fetch_array($consul);
       
@@ -19,13 +17,11 @@
       $superior = $results['hora_sup'];
 
       
-      if ( !empty($results)) {
-        
+      if ( !empty($results)) {        
         if($actual>=$inferior && $actual<=$superior){         
           $tiempo_cook=time()+600; // 10min
           setcookie('user_id', $results["email"],$tiempo_cook,"/",$_SERVER['SERVER_NAME']);        
           header("Location: partials/header.php");
-
         } else{
           $message = 'No es su hora de registro';
         }       

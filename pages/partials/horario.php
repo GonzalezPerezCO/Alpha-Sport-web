@@ -1,11 +1,8 @@
 <?php
-
 require '../../controller/database.php';  
 include '../../controller/global.php';  
 
-if (!isset($_COOKIE['user_id'])) {
-header('Location: ../login.php');
-}  
+if (!isset($_COOKIE['user_id'])) header('Location: ../login.php');
 
 date_default_timezone_set('America/Bogota');   
 
@@ -17,9 +14,7 @@ $actual = date('h:i:s');
 $inferior= $results['hora_inf'];
 $superior = $results['hora_sup'];
 
-if($actual<$inferior || $actual>$superior){
-  header('Location: ../logout.php');
-}   
+if($actual<$inferior || $actual>$superior) header('Location: ../logout.php');   
 
 $query = "SELECT dia1, dia2, dia3, hora1, hora2, hora3 FROM thorarios".$PERIODO." WHERE email = '".$_COOKIE['user_id']."'";
 $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -41,8 +36,7 @@ $new['hora3']= $_POST['hora3'];
 4. N/A para un día/hora, por consiguiente N/A para una hora/día    
 -------------------------------------------------------------------- */   
 
-for ($i=1; $i < 4; $i++) {   
-  
+for ($i=1; $i < 4; $i++) {     
   # recuperar cupos
   $query = "UPDATE thorarios".$PERIODO." SET dia".$i."='N/A', hora".$i."='N/A' WHERE email='".$_COOKIE['user_id']."'";
   $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -77,9 +71,5 @@ for ($i=1; $i < 4; $i++) {
     $mensajes .= " Agregado ".$new['dia'.$i]." a las ".$new['hora'.$i]." ";
   }
 }
-
-
 header('Location: header.php?mensajes='.$mensajes.'');
 ?>
-
-

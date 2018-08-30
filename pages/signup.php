@@ -1,17 +1,15 @@
 <?php
-
     $master = "Inscripciones Terminadas";
 
+    #borrar para dejar habilitado
     if(!empty(master)) header('Location: ../index.php');
 
-  if (isset($_COOKIE['user_id'])) {
-    header('Location: logout.php');    
-  }else{
+  if (isset($_COOKIE['user_id'])) header('Location: logout.php');
+  else{
     require '../controller/database.php';  
     include '../controller/global.php';  
 
     $message = '';
-
     
     if (!empty($_POST['reserva']) && !empty($_POST['documento']) && !empty($_POST['carrera']) && !empty($_POST['email']) && !empty($_POST['codigo']) && !empty($_POST['semestre']) && !empty($_POST['password']) && !empty($_POST['confirm_password'])) {  
 
@@ -30,21 +28,16 @@
             $consul = mysqli_query($conn, $query) or die(mysqli_error($conn));
               
             $message = 'Successfully created new user';
-
             header('Location: logout.php');  
           }
-
         }
         else{           
           $message = 'El código de reserva no existe'; 
         }   
-
-      }else{ $message="La contraseña no coincide"; }
-      
+      }else{ $message="La contraseña no coincide"; }      
     }
     else{ $message="Hay campos vacios, llene los campos"; }
   }  
-  
 ?>
 
 <!DOCTYPE html>
