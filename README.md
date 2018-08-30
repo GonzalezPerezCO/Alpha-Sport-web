@@ -204,7 +204,7 @@ Como el servidor no permite acceder a phpmyadmin desde internet, fue necesario i
 
 `mv phpMyAdmin-4.8.3-all-languages phpmyadmin`
 
-[/deportes/phpmyadmin](http://estudiantes.is.escuelaing.edu.co/deportes/phpmyadmin)  
+[Link: /deportes/phpmyadmin](http://estudiantes.is.escuelaing.edu.co/deportes/phpmyadmin)  
 
 Configuraciones adicionales en phpmyadmin instalado manualmente, agregar cambiar las lineas:
 
