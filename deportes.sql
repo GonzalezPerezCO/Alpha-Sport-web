@@ -58,34 +58,24 @@ SELECT * FROM deportes.testudiantes WHERE id = idEstud$$
 
 DELIMITER ;
 
--- Tabla con cupos disponibles
-CREATE TABLE `tncupo` (
-  `id` int(11) NOT NULL,
-  `lunes` int(15) NOT NULL,
-  `martes` int(15) NOT NULL,
-  `miercoles` int(15) NOT NULL,
-  `jueves` int(15) NOT NULL,
-  `viernes` int(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/* EJEMPLOS USO PROCEDIMIENTOS
 
-INSERT INTO `tncupo` (`id`, `lunes`, `martes`, `miercoles`, `jueves`, `viernes`) VALUES
-(8, 13, 12, 12, 13, 11),
-(9, 0, 0, 4, 0, 0),
-(10, 0, 0, 0, 0, 0),
-(11, 0, 0, 7, 0, 0),
-(12, 0, 0, 0, 0, 0),
-(13, 0, 0, 0, 0, 0),
-(14, 0, 8, 1, 6, 2),
-(15, 0, 2, 5, 6, 0),
-(16, 3, 6, 3, 8, 6);
+-- Procedure Add Estudiante
+call addEstud(9999, 'Prueba Nombre', 'Prueba Apellido', 112233, 'Prueba Carrera', 10, 'prueba@mail.com', 555555555, '000', 0, 'ninguna obs')
+
+-- Procedure Add registro de hora en un dia dado
+call addHora(8,'lunes','prueba');
+
+-- Procedure Add registro de un estudiante con horas escogidas
+call addHorario(8,'lunes','prueba');
+
+-- Procedure Check si hay cupos en la hora dada
+call haycupo('8','lunes', @cupo);
+select @cupo;
+
+-- Procedure Muestra un estudiante especifico
 
 
-ALTER TABLE `tncupo`
-  ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `tncupo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+*/
