@@ -61,8 +61,14 @@ DELIMITER ;
 
 -- Consulta SQL para mover datos a registro
 
-SELECT nombre, apellido, codigo, carrera, semestre, testudiantes.email AS email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3
-FROM testudiantes INNER JOIN thorarios ON testudiantes.email = thorarios.email
+CREATE OR REPLACE VIEW vista AS
+SELECT nombre, apellido, codigo, carrera, semestre, testudiantes.email AS email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_nombre, id_periodo
+FROM tperiodos,
+testudiantes INNER JOIN thorarios 
+ON testudiantes.email = thorarios.email;
+
+
+SELECT * from vista;
 
 
 
