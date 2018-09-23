@@ -70,6 +70,11 @@ ON testudiantes.email = thorarios.email;
 
 SELECT * from vista;
 
+INSERT INTO thistorial (nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre)
+SELECT nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre
+from vista;
+
+
 
 -- ALTER IGNORE TABLE thistorial ADD UNIQUE INDEX(email);
 
