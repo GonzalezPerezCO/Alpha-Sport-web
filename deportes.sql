@@ -61,24 +61,52 @@ DELIMITER ;
 
 -- Consulta SQL para mover datos a registro
 
-CREATE OR REPLACE VIEW vista AS
-SELECT nombre, apellido, codigo, carrera, semestre, testudiantes.email AS email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre
-FROM tperiodos,
-testudiantes INNER JOIN thorarios 
-ON testudiantes.email = thorarios.email;
+DROP PROCEDURE IF EXISTS ROWPERROW;
+
+DELIMITER ;;
+
+CREATE OR REPLACE PROCEDURE ROWPERROW()
+BEGIN
+	-- VISTA CON DATOS 
+    CREATE OR REPLACE VIEW vista AS
+    SELECT nombre, apellido, codigo, carrera, semestre, testudiantes.email AS email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre
+    FROM tperiodos,
+    testudiantes INNER JOIN thorarios 
+    ON testudiantes.email = thorarios.email
+    ORDER BY email;
+    -- FIN VISTA
+      
+    -- RECORRER VISTA  
+    DECLARE n INT DEFAULT 0;
+    DECLARE i INT DEFAULT 0;
+    
+    SELECT COUNT(*) FROM table_A INTO n;
+    SET i=0;
+    WHILE i<n DO 
+        IF monthly_value > 4000 AND monthly_value <= 7000 THEN
+        	INSERT INTO table_B(ID, VAL) VALUES(ID, VAL) FROM table_A LIMIT i,1;
+        END IF;      
+        
+    	SET i = i + 1;
+      
+    END WHILE;
+    -- FIN RECORRER
+End;
+;;
 
 
-SELECT * from vista;
+
+DELIMITER ;
+
+
+
+
+-- SELECT * from vista;
 
 INSERT INTO thistorial (nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre)
 SELECT nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre
 from vista;
 
-
-
--- ALTER IGNORE TABLE thistorial ADD UNIQUE INDEX(email);
-
--- ALTER TABLE thistorial DROP INDEX email;
 
 -- DROP VIEW IF EXISTS vista;
 
