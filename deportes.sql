@@ -62,13 +62,22 @@ DELIMITER ;
 -- Consulta SQL para mover datos a registro
 
 CREATE OR REPLACE VIEW vista AS
-SELECT nombre, apellido, codigo, carrera, semestre, testudiantes.email AS email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_nombre, id_periodo
+SELECT nombre, apellido, codigo, carrera, semestre, testudiantes.email AS email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre
 FROM tperiodos,
 testudiantes INNER JOIN thorarios 
 ON testudiantes.email = thorarios.email;
 
 
 SELECT * from vista;
+
+
+-- ALTER IGNORE TABLE thistorial ADD UNIQUE INDEX(email);
+
+-- ALTER TABLE thistorial DROP INDEX email;
+
+-- DROP VIEW IF EXISTS vista;
+
+
 
 
 
