@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 23-09-2018 a las 18:39:27
+-- Tiempo de generación: 23-09-2018 a las 18:42:13
 -- Versión del servidor: 10.1.14-MariaDB
 -- Versión de PHP: 7.0.8
 
@@ -21,6 +21,94 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `deportes`
 --
+
+DELIMITER $$
+--
+-- Procedimientos
+--
+CREATE DEFINER=`deportes`@`localhost` PROCEDURE `addEstud` (IN `reserva` INT(11), IN `nombre` VARCHAR(100), IN `apellido` VARCHAR(100), IN `codigo` INT(11), IN `carrera` VARCHAR(100), IN `semestre` INT(11), IN `email` VARCHAR(100), IN `docu` INT(11), IN `passw` VARCHAR(100), IN `bloq` TINYINT(1), IN `obser` VARCHAR(300))  MODIFIES SQL DATA
+INSERT INTO `testudiantes` 
+(`reserva`, `nombre`, `apellido`, `codigo`, `carrera`, `semestre`, `email`, `documento`, `password`, `bloqueado`, `observacion`) 
+VALUES   
+(reserva, nombre, apellido, codigo, carrera, semestre, email, docu, passw, bloq, obser)$$
+
+CREATE DEFINER=`deportes`@`localhost` PROCEDURE `addHora` (IN `hora` INT(10), IN `dia` VARCHAR(15), IN `email` VARCHAR(50))  MODIFIES SQL DATA
+BEGIN 
+    SET @q = CONCAT('UPDATE tcupos SET ',dia,'=',dia,'-1 WHERE id= ',hora);
+    PREPARE stmt FROM @q;
+    EXECUTE stmt;
+DEALLOCATE PREPARE stmt;
+    INSERT INTO `thorarios`(`email`, `dia1`,`hora1`) VALUES (email, dia, hora);
+END$$
+
+CREATE DEFINER=`deportes`@`localhost` PROCEDURE `addHorario` (IN `hora` INT(11), IN `dia` VARCHAR(15), IN `email` VARCHAR(50))  MODIFIES SQL DATA
+BEGIN
+    SET @C = 0;
+    CALL hayCupo(hora, dia, @C);
+    SELECT @C INTO @cupo;
+   
+ 	IF(@cupo > 0) THEN 
+    	CALL addHora(hora, dia, email);
+    ELSE
+    	SIGNAL SQLSTATE '45000'
+    	SET MESSAGE_TEXT = 'No hay cupo';
+    END IF;
+END$$
+
+CREATE DEFINER=`deportes`@`localhost` PROCEDURE `gen_historial` ()  BEGIN
+	-- variables para id_periodo y nombre_periodo
+    DECLARE id_p varchar(10);
+    DECLARE id_n varchar(60);
+    
+   	select id_periodo into id_p FROM tperiodos LIMIT 1;
+   	select id_nombre into id_n FROM tperiodos LIMIT 1;
+    
+
+	-- TEMPORAL CON DATOS   
+    CALL temporal_historial();    
+    -- FIN TEMPORAL
+      
+    -- ASIGNAR PERIODO TEMPORAL     
+    UPDATE TEMPORAL SET id_periodo =  id_p, id_nombre = id_n;
+    -- FIN ASIGNAR
+    
+    INSERT INTO thistorial(nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre) 
+    SELECT nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre
+    FROM TEMPORAL;
+        
+    DROP TABLE IF EXISTS TEMPORAL;
+END$$
+
+CREATE DEFINER=`deportes`@`localhost` PROCEDURE `hayCupo` (IN `hora` INT(10), IN `dia` VARCHAR(15), OUT `cupo` INT(10))  MODIFIES SQL DATA
+BEGIN
+	SET @c = 0;
+	SET @q = CONCAT('SELECT ',dia,' INTO @c FROM tcupos WHERE id= ',hora);
+    PREPARE stmt FROM @q;
+    EXECUTE stmt;
+    DEALLOCATE PREPARE stmt;
+    SET cupo = @c;
+END$$
+
+CREATE DEFINER=`deportes`@`localhost` PROCEDURE `temporal_historial` ()  MODIFIES SQL DATA
+    COMMENT 'crea tabla TEMPORAL para guardar registros'
+BEGIN
+
+DROP TABLE IF EXISTS TEMPORAL;
+
+CREATE TABLE TEMPORAL AS 
+SELECT nombre, apellido, codigo, carrera, semestre, testudiantes.email AS email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3 
+FROM testudiantes INNER JOIN thorarios
+ON testudiantes.email = thorarios.email;
+
+ALTER TABLE TEMPORAL
+ADD id_periodo varchar(10);
+
+ALTER TABLE TEMPORAL
+ADD id_nombre varchar(60);
+
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
