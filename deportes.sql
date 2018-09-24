@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 23-09-2018 a las 18:42:13
+-- Tiempo de generación: 23-09-2018 a las 19:54:28
 -- Versión del servidor: 10.1.14-MariaDB
 -- Versión de PHP: 7.0.8
 
@@ -75,6 +75,12 @@ CREATE DEFINER=`deportes`@`localhost` PROCEDURE `gen_historial` ()  BEGIN
     INSERT INTO thistorial(nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre) 
     SELECT nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre
     FROM TEMPORAL;
+        
+    -- BORRA DATOS DE TABLAS
+    DELETE FROM tcupos;
+    DELETE FROM testudiantes;
+    DELETE FROM thorarios;
+    DELETE FROM tperiodos;
         
     DROP TABLE IF EXISTS TEMPORAL;
 END$$
