@@ -60,20 +60,25 @@ DELIMITER ;
 
 
 -- Consulta SQL para mover datos a registro
-
 DROP PROCEDURE IF EXISTS ROWPERROW;
 
 DELIMITER ;;
 
 CREATE OR REPLACE PROCEDURE ROWPERROW()
 BEGIN
+	-- variables para id_periodo y nombre_periodo
+    DECLARE id_p varchar(10) DEFAULT "";
+    DECLARE id_n varchar(60) DEFAULT "";
+    
+   	select id_periodo into id_p FROM tperiodos LIMIT 1;
+   	select id_nombre into id_n FROM tperiodos LIMIT 1;
+    
+
 	-- VISTA CON DATOS 
     CREATE OR REPLACE VIEW vista AS
-    SELECT nombre, apellido, codigo, carrera, semestre, testudiantes.email AS email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre
-    FROM tperiodos,
-    testudiantes INNER JOIN thorarios 
-    ON testudiantes.email = thorarios.email
-    ORDER BY email;
+    SELECT nombre, apellido, codigo, carrera, semestre, testudiantes.email AS email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3
+    FROM testudiantes INNER JOIN thorarios 
+    ON testudiantes.email = thorarios.email;
     -- FIN VISTA
       
     -- RECORRER VISTA  
@@ -82,11 +87,9 @@ BEGIN
     
     SELECT COUNT(*) FROM table_A INTO n;
     SET i=0;
-    WHILE i<n DO 
-        IF monthly_value > 4000 AND monthly_value <= 7000 THEN
-        	INSERT INTO table_B(ID, VAL) VALUES(ID, VAL) FROM table_A LIMIT i,1;
-        END IF;      
-        
+    WHILE i<n DO         
+        INSERT INTO thistorial (nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre) 
+        VALUES(nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre) FROM table_A LIMIT i,1;        
     	SET i = i + 1;
       
     END WHILE;
@@ -97,21 +100,6 @@ End;
 
 
 DELIMITER ;
-
-
-
-
--- SELECT * from vista;
-
-INSERT INTO thistorial (nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre)
-SELECT nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre
-from vista;
-
-
--- DROP VIEW IF EXISTS vista;
-
-
-
 
 
 /* EJEMPLOS USO PROCEDIMIENTOS
