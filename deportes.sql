@@ -59,48 +59,57 @@ SELECT * FROM deportes.testudiantes WHERE id = idEstud$$
 DELIMITER ;
 
 
+-- PROCEDIMIENTO PARA GENERAR TABLA TEMPORAL
+BEGIN
+
+DROP TABLE IF EXISTS TEMPORAL;
+
+CREATE TABLE TEMPORAL AS 
+SELECT nombre, apellido, codigo, carrera, semestre, testudiantes.email AS email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3 
+FROM testudiantes INNER JOIN thorarios
+ON testudiantes.email = thorarios.email;
+
+ALTER TABLE TEMPORAL
+ADD id_periodo varchar(10);
+
+ALTER TABLE TEMPORAL
+ADD id_nombre varchar(60);
+
+END
+
+-- FIN
+
 -- Consulta SQL para mover datos a registro
 DROP PROCEDURE IF EXISTS ROWPERROW;
 
-DELIMITER ;;
+DELIMITER //
 
 CREATE OR REPLACE PROCEDURE ROWPERROW()
 BEGIN
 	-- variables para id_periodo y nombre_periodo
-    DECLARE id_p varchar(10) DEFAULT "";
-    DECLARE id_n varchar(60) DEFAULT "";
+    DECLARE id_p varchar(10);
+    DECLARE id_n varchar(60);
     
    	select id_periodo into id_p FROM tperiodos LIMIT 1;
    	select id_nombre into id_n FROM tperiodos LIMIT 1;
     
 
-	-- VISTA CON DATOS 
-    CREATE OR REPLACE VIEW vista AS
-    SELECT nombre, apellido, codigo, carrera, semestre, testudiantes.email AS email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3
-    FROM testudiantes INNER JOIN thorarios 
-    ON testudiantes.email = thorarios.email;
-    -- FIN VISTA
+	-- TEMPORAL CON DATOS   
+    CALL temporal_historial();    
+    -- FIN TEMPORAL
       
-    -- RECORRER VISTA  
-    DECLARE n INT DEFAULT 0;
-    DECLARE i INT DEFAULT 0;
-    
-    SELECT COUNT(*) FROM table_A INTO n;
-    SET i=0;
-    WHILE i<n DO         
-        INSERT INTO thistorial (nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre) 
-        VALUES(nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre) 
-	FROM vista LIMIT i,1;        
-    	SET i = i + 1;
-      
-    END WHILE;
-    -- FIN RECORRER
-End;
-;;
-
+    -- ASIGANR PERIODO TEMPORAL     
+    UPDATE TEMPORAL SET id_periodo = 
+    -- FIN ASIGNAR
+END //
 
 
 DELIMITER ;
+
+
+DELIMITER ;
+-- fin consulta sql mover datos
+
 
 
 /* EJEMPLOS USO PROCEDIMIENTOS
