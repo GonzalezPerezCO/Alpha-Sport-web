@@ -89,7 +89,8 @@ BEGIN
     SET i=0;
     WHILE i<n DO         
         INSERT INTO thistorial (nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre) 
-        VALUES(nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre) FROM table_A LIMIT i,1;        
+        VALUES(nombre, apellido, codigo, carrera, semestre, email, documento, bloqueado, observacion, fallas, dia1, dia2, dia3, id_periodo, id_nombre) 
+	FROM vista LIMIT i,1;        
     	SET i = i + 1;
       
     END WHILE;
