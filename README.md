@@ -212,6 +212,10 @@ Configuraciones adicionales en phpmyadmin instalado manualmente, agregar cambiar
 
 `$cfg['blowfish_secret'] = 'a0sfo49nadf89fa3s8f789sf78asb7p1587balz';`
 
+## Para probar conexión remota con MySQL
+
+`mysql -h estudiantes.is.escuelaing.edu.co -u deportes -p deportes`  
+
 # Bibliografía
 
 [digitalocean.com](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04)
