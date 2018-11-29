@@ -1,4 +1,4 @@
-# Epic-Sport-_Estudiante
+# Alpha Sport - web
 
 Modulo con servicios para la creación y modificación de horarios para los estudiantes de la Escuela. Modulo de estudiantes en servidor LAMP, componente web 
 
